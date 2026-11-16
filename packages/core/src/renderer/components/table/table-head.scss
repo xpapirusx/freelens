@@ -6,7 +6,7 @@
 
 .TableHead {
   background-color: var(--tableHeaderBackground);
-  border-bottom: 1px solid var(--borderFaintColor);
+  border-bottom: 1px solid var(--borderColor);
   color: var(--tableHeaderColor);
   display: flex;
   flex-shrink: 0;
@@ -32,6 +32,12 @@
     display: flex;
     align-items: center;
     word-break: normal;
+    padding: 12px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 
     &.checkbox {
       > .Checkbox {

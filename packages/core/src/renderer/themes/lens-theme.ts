@@ -39,7 +39,7 @@ export interface LensTheme {
    */
   monacoTheme: string;
   /**
-   * `true` on both variants of the built-in theme.
+   * `true` on both variants of the default built-in theme, `freelens`.
    */
   isDefault?: boolean;
 }

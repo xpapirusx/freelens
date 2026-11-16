@@ -1243,7 +1243,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow selected nowrap"
@@ -1321,7 +1321,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -1400,7 +1400,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -2321,7 +2321,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -2399,7 +2399,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -2478,7 +2478,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -3278,7 +3278,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -3356,7 +3356,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -3435,7 +3435,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -4494,7 +4494,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -4572,7 +4572,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -4651,7 +4651,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -5679,7 +5679,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -5757,7 +5757,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -5836,7 +5836,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -6859,7 +6859,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -6937,7 +6937,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -7016,7 +7016,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -8039,7 +8039,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -8117,7 +8117,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -8196,7 +8196,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -9241,7 +9241,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -9319,7 +9319,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -9398,7 +9398,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -10457,7 +10457,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -10535,7 +10535,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -10614,7 +10614,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -11637,7 +11637,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -11715,7 +11715,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -11794,7 +11794,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -12872,7 +12872,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -12950,7 +12950,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -13029,7 +13029,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -14894,7 +14894,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -14972,7 +14972,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -15051,7 +15051,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -15944,7 +15944,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -16022,7 +16022,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow selected nowrap"
@@ -16101,7 +16101,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -17336,7 +17336,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -17414,7 +17414,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -17493,7 +17493,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -18345,7 +18345,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -18423,7 +18423,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -18502,7 +18502,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -19579,7 +19579,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -19657,7 +19657,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -19736,7 +19736,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -20811,7 +20811,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -20889,7 +20889,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -20968,7 +20968,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -21991,7 +21991,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -22069,7 +22069,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -22148,7 +22148,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -23171,7 +23171,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -23249,7 +23249,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -23328,7 +23328,7 @@ exports[`installing helm chart from new tab > given tab for installing chart was
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>

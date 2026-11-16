@@ -58,12 +58,21 @@ describe("the themes directory", () => {
     expect(invalidFiles).toEqual([{ fileName: "b.yaml", error: 'The name "same" is already taken by a.yaml' }]);
   });
 
-  it("refuses the name of the built-in theme", () => {
+  it("refuses the name of a built-in theme", () => {
     const { themes, invalidFiles } = readThemesDirectory([{ fileName: "freelens.yaml", content: theme("freelens") }]);
 
     expect(themes).toEqual([]);
     expect(invalidFiles).toEqual([
-      { fileName: "freelens.yaml", error: 'The name "freelens" is the name of the built-in theme' },
+      { fileName: "freelens.yaml", error: 'The name "freelens" is the name of a built-in theme' },
+    ]);
+  });
+
+  it("refuses the name of a theme that is built in but not the default one", () => {
+    const { themes, invalidFiles } = readThemesDirectory([{ fileName: "radar.yaml", content: theme("radar") }]);
+
+    expect(themes).toEqual([]);
+    expect(invalidFiles).toEqual([
+      { fileName: "radar.yaml", error: 'The name "radar" is the name of a built-in theme' },
     ]);
   });
 

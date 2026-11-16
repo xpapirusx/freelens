@@ -1770,7 +1770,7 @@ exports[`showing details for helm release > given application is started > when 
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -1902,7 +1902,7 @@ exports[`showing details for helm release > given application is started > when 
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -2035,7 +2035,7 @@ exports[`showing details for helm release > given application is started > when 
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -2998,7 +2998,7 @@ exports[`showing details for helm release > given application is started > when 
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -3130,7 +3130,7 @@ exports[`showing details for helm release > given application is started > when 
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -3263,7 +3263,7 @@ exports[`showing details for helm release > given application is started > when 
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -4287,7 +4287,7 @@ exports[`showing details for helm release > given application is started > when 
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -4419,7 +4419,7 @@ exports[`showing details for helm release > given application is started > when 
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -4552,7 +4552,7 @@ exports[`showing details for helm release > given application is started > when 
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -5576,7 +5576,7 @@ exports[`showing details for helm release > given application is started > when 
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -5708,7 +5708,7 @@ exports[`showing details for helm release > given application is started > when 
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -5841,7 +5841,7 @@ exports[`showing details for helm release > given application is started > when 
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -7111,7 +7111,7 @@ exports[`showing details for helm release > given application is started > when 
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -7243,7 +7243,7 @@ exports[`showing details for helm release > given application is started > when 
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -7376,7 +7376,7 @@ exports[`showing details for helm release > given application is started > when 
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -8646,7 +8646,7 @@ exports[`showing details for helm release > given application is started > when 
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -8778,7 +8778,7 @@ exports[`showing details for helm release > given application is started > when 
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -8911,7 +8911,7 @@ exports[`showing details for helm release > given application is started > when 
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -12703,7 +12703,7 @@ exports[`showing details for helm release > given application is started > when 
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -12835,7 +12835,7 @@ exports[`showing details for helm release > given application is started > when 
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -12968,7 +12968,7 @@ exports[`showing details for helm release > given application is started > when 
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -14238,7 +14238,7 @@ exports[`showing details for helm release > given application is started > when 
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -14370,7 +14370,7 @@ exports[`showing details for helm release > given application is started > when 
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -14503,7 +14503,7 @@ exports[`showing details for helm release > given application is started > when 
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -15527,7 +15527,7 @@ exports[`showing details for helm release > given application is started > when 
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -15659,7 +15659,7 @@ exports[`showing details for helm release > given application is started > when 
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -15792,7 +15792,7 @@ exports[`showing details for helm release > given application is started > when 
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -16818,7 +16818,7 @@ exports[`showing details for helm release > given application is started > when 
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -16950,7 +16950,7 @@ exports[`showing details for helm release > given application is started > when 
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -17083,7 +17083,7 @@ exports[`showing details for helm release > given application is started > when 
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -18046,7 +18046,7 @@ exports[`showing details for helm release > given application is started > when 
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -18178,7 +18178,7 @@ exports[`showing details for helm release > given application is started > when 
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -18311,7 +18311,7 @@ exports[`showing details for helm release > given application is started > when 
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -19335,7 +19335,7 @@ exports[`showing details for helm release > given application is started > when 
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -19467,7 +19467,7 @@ exports[`showing details for helm release > given application is started > when 
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -19600,7 +19600,7 @@ exports[`showing details for helm release > given application is started > when 
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -20624,7 +20624,7 @@ exports[`showing details for helm release > given application is started > when 
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -20756,7 +20756,7 @@ exports[`showing details for helm release > given application is started > when 
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -20889,7 +20889,7 @@ exports[`showing details for helm release > given application is started > when 
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>
@@ -21913,7 +21913,7 @@ exports[`showing details for helm release > given application is started > when 
                     >
                       <div
                         data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -22045,7 +22045,7 @@ exports[`showing details for helm release > given application is started > when 
                       </div>
                       <div
                         data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(33px); height: 33px; width: 100%;"
+                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                       >
                         <div
                           class="TableRow nowrap"
@@ -22178,7 +22178,7 @@ exports[`showing details for helm release > given application is started > when 
                       <div
                         aria-hidden="true"
                         data-react-window-sizer=""
-                        style="height: 66px; width: 100%; z-index: -1;"
+                        style="height: 88px; width: 100%; z-index: -1;"
                       />
                     </div>
                   </div>

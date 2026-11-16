@@ -3,7 +3,7 @@
  * Licensed under MIT License. See LICENSE in root directory for more information.
  */
 
-import { builtInThemeName } from "./builtin-theme";
+import { builtInThemeNames } from "./builtin-theme";
 import { parseThemeFile } from "./parse";
 
 import type { ImportedTheme, ImportedThemesState, InvalidThemeFile } from "./channels";
@@ -40,8 +40,8 @@ export const readThemesDirectory = (files: readonly ThemeDirectoryFile[]): Impor
 
     const { name } = result.theme.metadata;
 
-    if (name === builtInThemeName) {
-      invalidFiles.push({ fileName, error: `The name "${name}" is the name of the built-in theme` });
+    if (builtInThemeNames.has(name)) {
+      invalidFiles.push({ fileName, error: `The name "${name}" is the name of a built-in theme` });
       continue;
     }
 

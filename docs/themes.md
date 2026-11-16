@@ -1,8 +1,11 @@
 # Themes
 
-A Freelens theme is a YAML file. Every theme, the built-in one included, has
+A Freelens theme is a YAML file. Every theme, the built-in ones included, has
 the same format: Freelens reads the files, lets the user pick one in
 Preferences → Personalization, import more and export any of them.
+
+Freelens ships two themes: `freelens`, the default, and `radar`, which carries
+the palette and the layered surfaces of the Radar Kubernetes UI.
 
 ## A theme file
 
@@ -42,9 +45,9 @@ The file has the shape of a Kubernetes object:
   `apiVersion` or `kind` is refused.
 - `metadata.name` identifies the theme, and is what the preferences store. It
   takes lowercase letters, digits and `-`, starts and ends with a letter or a
-  digit, and is at most 63 characters long. `freelens` is the name of the
-  built-in theme and cannot be taken. `metadata` may also have `labels` and
-  `annotations`, which Freelens keeps but does not interpret.
+  digit, and is at most 63 characters long. `freelens` and `radar` are the
+  names of the built-in themes and cannot be taken. `metadata` may also have
+  `labels` and `annotations`, which Freelens keeps but does not interpret.
 - `spec.displayName` is the name shown in the preferences. `description` and
   `author` are optional.
 - `spec.dark` and `spec.light` are the two variants. Each is optional, but a
@@ -74,9 +77,9 @@ written as JSON is valid as well, since JSON is YAML.
     when more is needed.
 
 A variant may leave out any token, and the `editor` as a whole. What it
-leaves out comes from the built-in theme, in the same variant, so a theme of
-a few lines is complete. The built-in theme defines every token: exporting
-it from the preferences gives a full starting point.
+leaves out comes from the built-in `freelens` theme, in the same variant, so a
+theme of a few lines is complete. That theme defines every token: exporting it
+from the preferences gives a full starting point.
 
 In the `editor`, the same holds for each field, each editor color and each
 token, so a theme can change a single token:
@@ -155,9 +158,9 @@ built-in theme.
 ## Extensions
 
 `Renderer.Theme.activeTheme` describes the active theme in the variant in
-use: `name` is the theme's `metadata.name`, `freelens` for the built-in theme
-in both variants, so `type` is what tells dark from light. `colors` and
+use: `name` is the theme's `metadata.name`, `freelens` for the default built-in
+theme in both variants, so `type` is what tells dark from light. `colors` and
 `terminalColors` are complete, with the accent color applied, and
 `monacoTheme` is the name the variant's editor theme is registered under in
-Monaco. `clouds-midnight` stays registered as the dark editor theme of the
-built-in theme.
+Monaco. `clouds-midnight` stays registered as the dark editor theme of
+`freelens`.

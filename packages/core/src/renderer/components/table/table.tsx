@@ -130,8 +130,8 @@ class NonInjectedTable<Item extends ItemObject> extends React.Component<TablePro
   static defaultProps: TableProps<any> = {
     scrollable: true,
     autoSize: true,
-    rowPadding: 8,
-    rowLineHeight: 17,
+    rowPadding: 12,
+    rowLineHeight: 20,
     sortSyncWithUrl: true,
     customRowHeights: (item, lineHeight, paddings) => lineHeight + paddings,
   };

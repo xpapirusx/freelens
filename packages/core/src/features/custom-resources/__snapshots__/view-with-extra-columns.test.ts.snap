@@ -610,7 +610,7 @@ exports[`Viewing Custom Resources with extra columns > renders 1`] = `
                   >
                     <div
                       data-react-window-index="0"
-                      style="position: absolute; left: 0px; transform: translateY(0px); height: 33px; width: 100%;"
+                      style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                     >
                       <div
                         class="TableRow nowrap"
@@ -694,7 +694,7 @@ exports[`Viewing Custom Resources with extra columns > renders 1`] = `
                     <div
                       aria-hidden="true"
                       data-react-window-sizer=""
-                      style="height: 33px; width: 100%; z-index: -1;"
+                      style="height: 44px; width: 100%; z-index: -1;"
                     />
                   </div>
                 </div>

@@ -6,7 +6,7 @@
 import Ajv2020 from "ajv/dist/2020";
 import * as yaml from "js-yaml";
 import { describe, expect, it } from "vitest";
-import { builtInTheme, builtInThemeName, builtInThemeSource } from "../builtin-theme";
+import { builtInTheme, builtInThemeName, builtInThemeSources, builtInThemes } from "../builtin-theme";
 import { parseThemeFile, serializeThemeFile } from "../parse";
 import {
   getAvailableVariants,
@@ -434,19 +434,27 @@ describe("theme files", () => {
     });
   });
 
-  describe("the built-in theme", () => {
+  describe("the built-in themes", () => {
+    it("ships freelens and radar", () => {
+      expect(builtInThemes.map(({ metadata }) => metadata.name)).toEqual(["freelens", "radar"]);
+    });
+
     it("is named freelens", () => {
       expect(builtInTheme.metadata.name).toBe(builtInThemeName);
     });
 
-    it.each(["dark", "light"] as const)("defines every token in the %s variant", (variant) => {
-      expect(Object.keys(builtInTheme.spec[variant]?.colors ?? {}).sort()).toEqual([...lensColorNames].sort());
-      expect(builtInTheme.spec[variant]?.editor).toBeDefined();
+    it.each(builtInThemes)("defines every token in every variant of $metadata.name", (theme) => {
+      for (const variant of ["dark", "light"] as const) {
+        expect(Object.keys(theme.spec[variant]?.colors ?? {}).sort()).toEqual([...lensColorNames].sort());
+        expect(theme.spec[variant]?.editor).toBeDefined();
+      }
     });
 
-    it.each(["dark", "light"] as const)("knows every terminal token it sets in the %s variant", (variant) => {
-      for (const token of Object.keys(builtInTheme.spec[variant]?.terminalColors ?? {})) {
-        expect(terminalColorNames).toContain(token);
+    it.each(builtInThemes)("knows every terminal token it sets in every variant of $metadata.name", (theme) => {
+      for (const variant of ["dark", "light"] as const) {
+        for (const token of Object.keys(theme.spec[variant]?.terminalColors ?? {})) {
+          expect(terminalColorNames).toContain(token);
+        }
       }
     });
 
@@ -455,15 +463,19 @@ describe("theme files", () => {
       expect(resolveThemeVariant(builtInTheme, "light", builtInTheme).isDefault).toBe(true);
     });
 
-    it("passes the JSON Schema", () => {
-      const validate = createValidator();
+    it.each(builtInThemes.map((theme, index) => ({ theme, source: builtInThemeSources[index] })))(
+      "passes the JSON Schema: $theme.metadata.name",
+      ({ theme, source }) => {
+        const validate = createValidator();
 
-      expect(validate(yaml.load(builtInThemeSource))).toBe(true);
-      expect(validate.errors ?? []).toEqual([]);
-    });
+        expect(validate(yaml.load(source))).toBe(true);
+        expect(validate.errors ?? []).toEqual([]);
+        expect(theme.spec.displayName).toBeTruthy();
+      },
+    );
 
-    it("points at the JSON Schema", () => {
-      expect(builtInThemeSource.split("\n")[0]).toBe(`# yaml-language-server: $schema=${themeSchemaUrl}`);
+    it.each(builtInThemeSources)("points at the JSON Schema", (source) => {
+      expect(source.split("\n")[0]).toBe(`# yaml-language-server: $schema=${themeSchemaUrl}`);
     });
   });
 

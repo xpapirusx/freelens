@@ -11,8 +11,6 @@
   $spacing: $padding * 1.5;
 
   position: relative;
-  top: 1px;
-  border-top: 1px solid var(--borderFaintColor);
   background: $bgc;
   padding: $spacing $padding * 2;
   font-size: $font-size-small;
