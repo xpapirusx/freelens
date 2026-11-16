@@ -46,6 +46,7 @@ type StubStore = {
 
 const baseProps: ItemListLayoutContentProps<ItemObject, boolean> & {
   columnResizeStorage: StorageLayer<Record<string, any>>;
+  tableColumnOrderStorage: StorageLayer<Record<string, any>>;
   activeTheme: any;
   pageFiltersStore: any;
   openConfirmDialog: any;
@@ -73,6 +74,7 @@ const baseProps: ItemListLayoutContentProps<ItemObject, boolean> & {
   renderTableContents: () => [],
   renderTableHeader: [],
   columnResizeStorage: makeStorage(),
+  tableColumnOrderStorage: makeStorage(),
   activeTheme: { get: () => ({ type: "light" }) },
   pageFiltersStore: {},
   openConfirmDialog: vi.fn(),

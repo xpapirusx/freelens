@@ -9,6 +9,7 @@
 import { registerInjectables as registerColumnResizeStorageInjectables } from "./column-resize-storage/register-injectables";
 import { registerInjectables as registerPageFiltersInjectables } from "./page-filters/register-injectables";
 import itemListLayoutStorageInjectable from "./storage.injectable";
+import { registerInjectables as registerTableColumnOrderInjectables } from "./table-column-order/register-injectables";
 
 import type { DiContainerForInjection } from "@ogre-tools/injectable";
 
@@ -25,6 +26,11 @@ export function registerInjectables(di: DiContainerForInjection): void {
   }
   try {
     registerPageFiltersInjectables(di);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
+  try {
+    registerTableColumnOrderInjectables(di);
   } catch (e) {
     /* Ignore duplicate registration */
   }

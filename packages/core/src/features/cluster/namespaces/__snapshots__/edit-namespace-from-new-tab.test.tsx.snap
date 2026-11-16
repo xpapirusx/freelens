@@ -460,6 +460,17 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                 <h5
                   class="title"
                 >
+                  <i
+                    class="Icon KindIcon material focusable"
+                    data-testid="kind-icon-Namespace"
+                  >
+                    <span
+                      class="icon"
+                      data-icon-name="folder_open"
+                    >
+                      folder_open
+                    </span>
+                  </i>
                   Namespaces
                 </h5>
                 <div
@@ -1290,6 +1301,17 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                 <h5
                   class="title"
                 >
+                  <i
+                    class="Icon KindIcon material focusable"
+                    data-testid="kind-icon-Namespace"
+                  >
+                    <span
+                      class="icon"
+                      data-icon-name="folder_open"
+                    >
+                      folder_open
+                    </span>
+                  </i>
                   Namespaces
                 </h5>
                 <div
@@ -2125,6 +2147,17 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                 <h5
                   class="title"
                 >
+                  <i
+                    class="Icon KindIcon material focusable"
+                    data-testid="kind-icon-Namespace"
+                  >
+                    <span
+                      class="icon"
+                      data-icon-name="folder_open"
+                    >
+                      folder_open
+                    </span>
+                  </i>
                   Namespaces
                 </h5>
                 <div
@@ -3059,6 +3092,17 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                 <h5
                   class="title"
                 >
+                  <i
+                    class="Icon KindIcon material focusable"
+                    data-testid="kind-icon-Namespace"
+                  >
+                    <span
+                      class="icon"
+                      data-icon-name="folder_open"
+                    >
+                      folder_open
+                    </span>
+                  </i>
                   Namespaces
                 </h5>
                 <div
@@ -3941,6 +3985,17 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                 <h5
                   class="title"
                 >
+                  <i
+                    class="Icon KindIcon material focusable"
+                    data-testid="kind-icon-Namespace"
+                  >
+                    <span
+                      class="icon"
+                      data-icon-name="folder_open"
+                    >
+                      folder_open
+                    </span>
+                  </i>
                   Namespaces
                 </h5>
                 <div
@@ -4925,6 +4980,17 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                 <h5
                   class="title"
                 >
+                  <i
+                    class="Icon KindIcon material focusable"
+                    data-testid="kind-icon-Namespace"
+                  >
+                    <span
+                      class="icon"
+                      data-icon-name="folder_open"
+                    >
+                      folder_open
+                    </span>
+                  </i>
                   Namespaces
                 </h5>
                 <div
@@ -5911,6 +5977,17 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                 <h5
                   class="title"
                 >
+                  <i
+                    class="Icon KindIcon material focusable"
+                    data-testid="kind-icon-Namespace"
+                  >
+                    <span
+                      class="icon"
+                      data-icon-name="folder_open"
+                    >
+                      folder_open
+                    </span>
+                  </i>
                   Namespaces
                 </h5>
                 <div
@@ -6859,6 +6936,17 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                 <h5
                   class="title"
                 >
+                  <i
+                    class="Icon KindIcon material focusable"
+                    data-testid="kind-icon-Namespace"
+                  >
+                    <span
+                      class="icon"
+                      data-icon-name="folder_open"
+                    >
+                      folder_open
+                    </span>
+                  </i>
                   Namespaces
                 </h5>
                 <div
@@ -7802,6 +7890,17 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                 <h5
                   class="title"
                 >
+                  <i
+                    class="Icon KindIcon material focusable"
+                    data-testid="kind-icon-Namespace"
+                  >
+                    <span
+                      class="icon"
+                      data-icon-name="folder_open"
+                    >
+                      folder_open
+                    </span>
+                  </i>
                   Namespaces
                 </h5>
                 <div
@@ -8736,6 +8835,17 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                 <h5
                   class="title"
                 >
+                  <i
+                    class="Icon KindIcon material focusable"
+                    data-testid="kind-icon-Namespace"
+                  >
+                    <span
+                      class="icon"
+                      data-icon-name="folder_open"
+                    >
+                      folder_open
+                    </span>
+                  </i>
                   Namespaces
                 </h5>
                 <div
@@ -9670,6 +9780,17 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                 <h5
                   class="title"
                 >
+                  <i
+                    class="Icon KindIcon material focusable"
+                    data-testid="kind-icon-Namespace"
+                  >
+                    <span
+                      class="icon"
+                      data-icon-name="folder_open"
+                    >
+                      folder_open
+                    </span>
+                  </i>
                   Namespaces
                 </h5>
                 <div
@@ -10604,6 +10725,17 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                 <h5
                   class="title"
                 >
+                  <i
+                    class="Icon KindIcon material focusable"
+                    data-testid="kind-icon-Namespace"
+                  >
+                    <span
+                      class="icon"
+                      data-icon-name="folder_open"
+                    >
+                      folder_open
+                    </span>
+                  </i>
                   Namespaces
                 </h5>
                 <div
@@ -11343,6 +11475,17 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                 <h5
                   class="title"
                 >
+                  <i
+                    class="Icon KindIcon material focusable"
+                    data-testid="kind-icon-Namespace"
+                  >
+                    <span
+                      class="icon"
+                      data-icon-name="folder_open"
+                    >
+                      folder_open
+                    </span>
+                  </i>
                   Namespaces
                 </h5>
                 <div
@@ -12286,6 +12429,17 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                 <h5
                   class="title"
                 >
+                  <i
+                    class="Icon KindIcon material focusable"
+                    data-testid="kind-icon-Namespace"
+                  >
+                    <span
+                      class="icon"
+                      data-icon-name="folder_open"
+                    >
+                      folder_open
+                    </span>
+                  </i>
                   Namespaces
                 </h5>
                 <div
@@ -13220,6 +13374,17 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                 <h5
                   class="title"
                 >
+                  <i
+                    class="Icon KindIcon material focusable"
+                    data-testid="kind-icon-Namespace"
+                  >
+                    <span
+                      class="icon"
+                      data-icon-name="folder_open"
+                    >
+                      folder_open
+                    </span>
+                  </i>
                   Namespaces
                 </h5>
                 <div
@@ -14154,6 +14319,17 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                 <h5
                   class="title"
                 >
+                  <i
+                    class="Icon KindIcon material focusable"
+                    data-testid="kind-icon-Namespace"
+                  >
+                    <span
+                      class="icon"
+                      data-icon-name="folder_open"
+                    >
+                      folder_open
+                    </span>
+                  </i>
                   Namespaces
                 </h5>
                 <div

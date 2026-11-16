@@ -23,6 +23,9 @@ catalog:
   '@ogre-tools/injectable-react': 27.0.0
   '@ogre-tools/fp': 27.0.0
   '@ogre-tools/test-utils': 27.0.0
+  # Fonts
+  '@fontsource-variable/dm-sans': 5.3.0
+  '@fontsource/dm-mono': 5.3.0
   # Testing stack
   '@async-fn/vitest': 1.8.0
   '@vitest/coverage-v8': 5.0.5

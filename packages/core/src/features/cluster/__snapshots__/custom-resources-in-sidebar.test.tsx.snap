@@ -3226,6 +3226,16 @@ exports[`cluster - custom resources in sidebar > when custom resource exists > w
                     data-testid="link-for-sidebar-item-custom-resource-definitions"
                     href="/workloads"
                   >
+                    <i
+                      class="Icon material focusable small"
+                    >
+                      <span
+                        class="icon"
+                        data-icon-name="extension"
+                      >
+                        extension
+                      </span>
+                    </i>
                     <span>
                       Definitions
                     </span>

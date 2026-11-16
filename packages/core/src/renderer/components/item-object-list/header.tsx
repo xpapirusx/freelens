@@ -28,6 +28,7 @@ export interface ItemListLayoutHeaderProps<I extends ItemObject, PreLoadStores e
   // header (title, filtering, searching, etc.)
   showHeader?: boolean;
   headerClassName?: IClassName;
+  headerIcon?: StrictReactNode;
   renderHeaderTitle?: StrictReactNode | (() => StrictReactNode);
   customizeHeader?: HeaderCustomizer | HeaderCustomizer[];
 }
@@ -42,6 +43,7 @@ export class ItemListLayoutHeader<I extends ItemObject, PreLoadStores extends bo
       customizeHeader,
       renderHeaderTitle,
       headerClassName,
+      headerIcon,
       searchFilters = [],
       getItems,
       store,
@@ -75,7 +77,12 @@ export class ItemListLayoutHeader<I extends ItemObject, PreLoadStores extends bo
     const { filters, info, searchProps, title } = customizeHeaderFunctions.reduce<HeaderPlaceholders>(
       (prevPlaceholders, customizer) => customizer(prevPlaceholders),
       {
-        title: <h5 className="title">{renderedTitle}</h5>,
+        title: (
+          <h5 className="title">
+            {headerIcon}
+            {renderedTitle}
+          </h5>
+        ),
         info: renderInfo(),
         searchProps: {},
       },

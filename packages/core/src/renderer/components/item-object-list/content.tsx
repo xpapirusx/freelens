@@ -6,6 +6,7 @@
 
 import "./item-list-layout.scss";
 
+import { Icon } from "@freelensapp/icon";
 import { Spinner } from "@freelensapp/spinner";
 import { cssNames, isDefined, isReactNode, noop, prevDefault, stopPropagation } from "@freelensapp/utilities";
 import { withInjectables } from "@ogre-tools/injectable-react";
@@ -25,6 +26,8 @@ import { NoItems } from "../no-items";
 import { Table, TableCell, TableHead, TableRow } from "../table";
 import columnResizeStorageInjectable from "./column-resize-storage/storage.injectable";
 import pageFiltersStoreInjectable from "./page-filters/store.injectable";
+import { getColumnIds, moveColumnInOrder } from "./table-column-order/order";
+import tableColumnOrderStorageInjectable from "./table-column-order/storage.injectable";
 
 import type { ItemObject, TableCellProps } from "@freelensapp/list-layout";
 import type { IClassName, StrictReactNode } from "@freelensapp/utilities";
@@ -42,6 +45,7 @@ import type { TableProps, TableRowProps, TableSortCallbacks } from "../table";
 import type { ColumnResizeStorageState } from "./column-resize-storage/storage.injectable";
 import type { ItemListStore } from "./list-layout";
 import type { Filter, PageFiltersStore } from "./page-filters/store";
+import type { TableColumnOrderStorageState } from "./table-column-order/storage.injectable";
 
 interface ResizeState {
   columnId: string;
@@ -95,6 +99,7 @@ interface Dependencies {
   toggleTableColumnVisibility: ToggleTableColumnVisibility;
   isTableColumnHidden: IsTableColumnHidden;
   columnResizeStorage: StorageLayer<ColumnResizeStorageState>;
+  tableColumnOrderStorage: StorageLayer<TableColumnOrderStorageState>;
 }
 
 @observer
@@ -604,7 +609,32 @@ export class NonInjectedItemListLayoutContent<
   }
 
   renderColumnVisibilityMenu(tableId: string) {
-    const { renderTableHeader = [] } = this.props;
+    const { renderTableHeader = [], tableColumnOrderStorage } = this.props;
+    const headerCells = renderTableHeader.filter(isDefined);
+    const movableColumns = headerCells.filter((cellProps) => !!cellProps.id && !cellProps.showWithColumn);
+    const allIds = getColumnIds(headerCells, (cellProps) => cellProps.id);
+    const savedOrder = tableColumnOrderStorage.get()[tableId] ?? [];
+    const order = [
+      ...savedOrder.filter((id) => allIds.includes(id)),
+      ...allIds.filter((id) => !savedOrder.includes(id)),
+    ];
+
+    const move = (columnId: string, offset: -1 | 1) => {
+      const next = moveColumnInOrder(
+        order,
+        columnId,
+        movableColumns.map((column) => column.id!),
+        offset,
+      );
+
+      if (!next) {
+        return;
+      }
+
+      tableColumnOrderStorage.merge((draft) => {
+        draft[tableId] = next;
+      });
+    };
 
     return (
       <MenuActions
@@ -613,19 +643,55 @@ export class NonInjectedItemListLayoutContent<
         toolbar={false}
         autoCloseOnSelect={false}
       >
-        {renderTableHeader
-          .filter(isDefined)
-          .filter((props): props is TableCellProps & { id: string } => !!props.id)
-          .filter((props) => !props.showWithColumn)
-          .map((cellProps) => (
-            <MenuItem key={cellProps.id} className="input">
+        <div className="menu-header">Columns</div>
+        {movableColumns.map((cellProps, index) => {
+          const columnId = cellProps.id!;
+
+          return (
+            <MenuItem key={columnId} className="input">
               <Checkbox
                 label={cellProps.title ?? `<${cellProps.className}>`}
                 value={this.showColumn(cellProps)}
-                onChange={() => this.props.toggleTableColumnVisibility(tableId, cellProps.id)}
+                onChange={() => this.props.toggleTableColumnVisibility(tableId, columnId)}
               />
+              <span className="column-order-actions">
+                <Icon
+                  material="arrow_upward"
+                  small
+                  className={cssNames({ disabled: index === 0 })}
+                  tooltip="Move column left"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    move(columnId, -1);
+                  }}
+                />
+                <Icon
+                  material="arrow_downward"
+                  small
+                  className={cssNames({ disabled: index === movableColumns.length - 1 })}
+                  tooltip="Move column right"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    move(columnId, 1);
+                  }}
+                />
+              </span>
             </MenuItem>
-          ))}
+          );
+        })}
+        {savedOrder.length > 0 && (
+          <MenuItem
+            onClick={() =>
+              tableColumnOrderStorage.merge((draft) => {
+                delete draft[tableId];
+              })
+            }
+          >
+            Reset column order
+          </MenuItem>
+        )}
       </MenuActions>
     );
   }
@@ -642,6 +708,7 @@ export const ItemListLayoutContent = withInjectables<Dependencies, ItemListLayou
       toggleTableColumnVisibility: di.inject(toggleTableColumnVisibilityInjectable),
       isTableColumnHidden: di.inject(isTableColumnHiddenInjectable),
       columnResizeStorage: di.inject(columnResizeStorageInjectable),
+      tableColumnOrderStorage: di.inject(tableColumnOrderStorageInjectable),
     }),
   },
 ) as <Item extends ItemObject, PreLoadStores extends boolean>(

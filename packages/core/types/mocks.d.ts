@@ -18,6 +18,9 @@ declare module "*.scss" {
   export = content;
 }
 
+// The stylesheets of the bundled fonts, which the exports map of the package does not type
+declare module "@fontsource/dm-mono/*.css";
+
 // Declare everything what's bundled as webpack's type="asset/resource"
 // Should be mocked for tests support in jestConfig.moduleNameMapper (currently in "/package.json")
 declare module "*.svg" {

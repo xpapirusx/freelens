@@ -464,6 +464,17 @@ exports[`workloads / pods > when navigating to workloads / pods view > given a n
                 <h5
                   class="title"
                 >
+                  <i
+                    class="Icon KindIcon material focusable"
+                    data-testid="kind-icon-Pod"
+                  >
+                    <span
+                      class="icon"
+                      data-icon-name="view_in_ar"
+                    >
+                      view_in_ar
+                    </span>
+                  </i>
                   Pods
                 </h5>
                 <div
@@ -1687,6 +1698,17 @@ exports[`workloads / pods > when navigating to workloads / pods view > given no 
                 <h5
                   class="title"
                 >
+                  <i
+                    class="Icon KindIcon material focusable"
+                    data-testid="kind-icon-Pod"
+                  >
+                    <span
+                      class="icon"
+                      data-icon-name="view_in_ar"
+                    >
+                      view_in_ar
+                    </span>
+                  </i>
                   Pods
                 </h5>
                 <div
@@ -2752,6 +2774,17 @@ exports[`workloads / pods > when navigating to workloads / pods view > given pod
                 <h5
                   class="title"
                 >
+                  <i
+                    class="Icon KindIcon material focusable"
+                    data-testid="kind-icon-Pod"
+                  >
+                    <span
+                      class="icon"
+                      data-icon-name="view_in_ar"
+                    >
+                      view_in_ar
+                    </span>
+                  </i>
                   Pods
                 </h5>
                 <div

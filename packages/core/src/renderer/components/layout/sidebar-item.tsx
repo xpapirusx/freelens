@@ -13,6 +13,7 @@ import React from "react";
 import { sideBarItemCustomResourcePrefix } from "../custom-resource-definitions/groups-sidebar-items-computed.injectable";
 import favoritesOverviewSidebarItemInjectable from "../favorites/overview/sidebar-item.injectable";
 import favoritesStoreInjectable, { FavoritesStore } from "../favorites/store.injectable";
+import { getSidebarItemIconName } from "../kind-icon";
 import styles from "./sidebar-items.module.scss";
 import sidebarStorageInjectable from "./sidebar-storage/sidebar-storage.injectable";
 
@@ -66,6 +67,16 @@ const NonInjectedSidebarItem = observer((props: SidebarItemProps & Dependencies)
     );
   };
 
+  const renderIcon = () => {
+    if (item.getIcon) {
+      return item.getIcon();
+    }
+
+    const iconName = getSidebarItemIconName(item.id);
+
+    return iconName ? <Icon material={iconName} small /> : null;
+  };
+
   if (!isShownInSidebarTree(item)) {
     return null;
   }
@@ -93,7 +104,7 @@ const NonInjectedSidebarItem = observer((props: SidebarItemProps & Dependencies)
         }}
         data-testid={`link-for-${id}`}
       >
-        {item.getIcon?.()}
+        {renderIcon()}
         <span>{item.title}</span>
         {isExpandable && (
           <Icon

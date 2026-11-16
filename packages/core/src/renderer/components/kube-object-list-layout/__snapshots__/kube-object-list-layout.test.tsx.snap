@@ -13,6 +13,17 @@ exports[`kube-object-list-layout > given pod store > renders 1`] = `
           <h5
             class="title"
           >
+            <i
+              class="Icon KindIcon material focusable"
+              data-testid="kind-icon-Pod"
+            >
+              <span
+                class="icon"
+                data-icon-name="view_in_ar"
+              >
+                view_in_ar
+              </span>
+            </i>
             Pods
           </h5>
           <div

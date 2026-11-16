@@ -8,7 +8,7 @@
 @use "../vars" as *;
 
 .Menu {
-  --bgc: var(--layoutBackground);
+  --bgc: var(--contentColor);
 
   position: absolute;
   display: flex;
@@ -16,9 +16,10 @@
   background: var(--bgc);
   list-style: none;
   border: 1px solid var(--borderColor);
+  padding: 4px;
   z-index: 101;
-  box-shadow: rgb(0 0 0 / 17%) 0px 6px 9px 0px;
-  border-radius: 4px;
+  box-shadow: 0 12px 32px -6px var(--boxShadow);
+  border-radius: 10px;
 
   &.portal {
     left: -1000px;
@@ -52,20 +53,19 @@
 
 .MenuItem {
   --color: var(--textColorPrimary);
-  --color-active: var(--textColorOnPrimary);
-  --bgc-active: var(--menuActiveBackground);
+  --color-active: var(--textColorAccent);
+  --bgc-active: var(--menuSelectedOptionBgc);
 
   position: relative;
   display: flex;
   align-items: center;
   color: var(--color);
-  padding: calc(var(--padding) / 2) var(--padding);
-  margin-bottom: -3px;
+  padding: 6px 10px;
+  border-radius: 6px;
   white-space: nowrap;
   text-decoration: none;
   text-overflow: ellipsis;
-  border-radius: 6px;
-  border: 3px solid var(--bgc);
+  transition: background-color 120ms ease;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -95,8 +95,9 @@
   &.spacer {
     padding: 0;
     height: 0;
+    margin: 4px 0;
     overflow: hidden;
-    border-top: 1px solid var(--contentColor);
+    border-top: 1px solid var(--borderFaintColor);
     pointer-events: none;
   }
 

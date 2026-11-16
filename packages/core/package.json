@@ -56,6 +56,8 @@
     "@dnd-kit/core": "catalog:",
     "@dnd-kit/sortable": "catalog:",
     "@dnd-kit/utilities": "catalog:",
+    "@fontsource-variable/dm-sans": "catalog:",
+    "@fontsource/dm-mono": "catalog:",
     "@freelensapp/animate": "workspace:^",
     "@freelensapp/application": "workspace:^",
     "@freelensapp/application-for-electron-main": "workspace:^",

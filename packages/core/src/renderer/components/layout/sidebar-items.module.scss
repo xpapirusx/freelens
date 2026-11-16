@@ -10,17 +10,36 @@
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    padding: 6px 8px 6px 10px;
+    padding: 6px 8px;
+    margin: 1px 4px;
+    border-radius: 6px;
     cursor: pointer;
+    transition:
+      background-color 120ms ease,
+      color 120ms ease;
 
-    &:global(.active),
-    &:hover {
-      background: var(--primary);
-      color: var(--sidebarActiveColor);
+    &:global(.active) {
+      background: color-mix(in srgb, var(--primary) 16%, transparent);
+      color: var(--textColorAccent);
 
       + .subMenu {
-        border-color: var(--primary);
+        border-color: transparent;
       }
+    }
+
+    &:hover {
+      background: var(--sidebarItemHoverBackground);
+      color: var(--textColorAccent);
+    }
+
+    :global(.Icon) {
+      flex-shrink: 0;
+      color: var(--textColorTertiary);
+    }
+
+    &:hover :global(.Icon),
+    &:global(.active) :global(.Icon) {
+      color: currentColor;
     }
 
     span {
@@ -61,10 +80,14 @@
         padding-top: 4px;
         padding-bottom: 4px;
 
-        &:global(.active),
         &:hover {
+          color: var(--textColorAccent);
+          background: var(--sidebarItemHoverBackground);
+        }
+
+        &:global(.active) {
           color: var(--sidebarSubmenuActiveColor);
-          background: none;
+          background: color-mix(in srgb, var(--primary) 14%, transparent);
         }
       }
     }

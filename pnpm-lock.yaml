@@ -182,6 +182,12 @@ catalogs:
     '@electron/notarize':
       specifier: 3.1.2
       version: 3.1.2
+    '@fontsource-variable/dm-sans':
+      specifier: 5.3.0
+      version: 5.3.0
+    '@fontsource/dm-mono':
+      specifier: 5.3.0
+      version: 5.3.0
     '@hapi/call':
       specifier: 9.0.1
       version: 9.0.1
@@ -952,6 +958,12 @@ importers:
       '@dnd-kit/utilities':
         specifier: 'catalog:'
         version: 3.2.2(react@19.3.1)
+      '@fontsource-variable/dm-sans':
+        specifier: 'catalog:'
+        version: 5.3.0
+      '@fontsource/dm-mono':
+        specifier: 'catalog:'
+        version: 5.3.0
       '@freelensapp/animate':
         specifier: workspace:^
         version: link:../ui-components/animate
@@ -3141,6 +3153,12 @@ packages:
 
   '@floating-ui/dom@1.2.8':
     resolution: {integrity: sha512-XLwhYV90MxiHDq6S0rzFZj00fnDM+A1R9jhSioZoMsa7G0Q0i+Q4x40ajR8FHSdYDE1bgjG45mIWe6jtv9UPmg==}
+
+  '@fontsource-variable/dm-sans@5.3.0':
+    resolution: {integrity: sha512-BpUG5bqePiDFMBM4ZtLSlPdAIOM990uB1dlXzIf4aw21yQR7BmykedLXXXMqGWsR18aMLOsbWccwJNh3ztTQaA==}
+
+  '@fontsource/dm-mono@5.3.0':
+    resolution: {integrity: sha512-OINjI8C1S/wpchhQxl7njZdMn4+hnDCpQ4YtvvOpKNARo+0J8O1x1IcrChxNjHOhfVv1by8C/FQoy3hXK+C1Ug==}
 
   '@gar/promise-retry@1.0.3':
     resolution: {integrity: sha512-GmzA9ckNokPypTg10pgpeHNQe7ph+iIKKmhKu3Ob9ANkswreCx7R3cKmY781K8QK3AqVL3xVh9A42JvIAbkkSA==}
@@ -7943,6 +7961,10 @@ snapshots:
   '@floating-ui/dom@1.2.8':
     dependencies:
       '@floating-ui/core': 1.2.6
+
+  '@fontsource-variable/dm-sans@5.3.0': {}
+
+  '@fontsource/dm-mono@5.3.0': {}
 
   '@gar/promise-retry@1.0.3': {}
 

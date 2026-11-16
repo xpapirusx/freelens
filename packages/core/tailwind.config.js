@@ -16,7 +16,8 @@ module.exports = {
   // automatically.
   theme: {
     fontFamily: {
-      sans: ["Roboto", "Helvetica", "Arial", "sans-serif"],
+      sans: ['"DM Sans Variable"', '"DM Sans"', "system-ui", "-apple-system", '"Segoe UI"', "sans-serif"],
+      mono: ['"DM Mono"', "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
     },
     extend: {
       colors: {

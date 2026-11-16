@@ -8,17 +8,10 @@
 @use "../mixins";
 @use "../vars" as *;
 
-@include mixins.theme-light {
-  .Checkbox {
-    --checkbox-color-active: var(--blue);
-    --checkbox-bgc-active: none;
-  }
-}
-
 .Checkbox {
-  --checkbox-color: var(--textColorPrimary); // tick color [√]
-  --checkbox-color-active: var(--contentColor);
-  --checkbox-bgc-active: var(--blue);
+  --checkbox-color: var(--textColorTertiary); // tick color [√]
+  --checkbox-color-active: var(--textColorOnPrimary);
+  --checkbox-bgc-active: var(--primary);
 
   flex-shrink: 0;
 
@@ -66,14 +59,14 @@
   }
 
   > .check-icon {
-    $boxSize: math.round(1.7 * $unit);
+    $boxSize: math.round(2 * $unit);
 
     position: relative;
     width: $boxSize;
     height: $boxSize;
-    border-radius: 2px;
+    border-radius: 4px;
     color: var(--checkbox-color);
-    border: 2px solid currentColor;
+    border: 1.5px solid currentColor;
     flex-shrink: 0;
 
     &:after {

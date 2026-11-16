@@ -40,9 +40,9 @@
   --unit: 8px;
   --padding: var(--unit);
   --margin: var(--unit);
-  --border-radius: 3px;
-  --font-main: "Roboto", "Helvetica", "Arial", sans-serif;
-  --font-monospace: Lucida Console, Monaco, Consolas, monospace; // some defaults
+  --border-radius: 6px;
+  --font-main: "DM Sans Variable", "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-monospace: "DM Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --font-terminal: var(--font-monospace); // overridden in terminal.ts, managed by common/user-store.ts
   --font-size-small: calc(1.5 * var(--unit));
   --font-size: calc(1.75 * var(--unit));

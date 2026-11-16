@@ -101,6 +101,7 @@ export type ItemListLayoutProps<Item extends ItemObject, PreLoadStores extends b
   // header (title, filtering, searching, etc.)
   showHeader?: boolean;
   headerClassName?: IClassName;
+  headerIcon?: StrictReactNode;
   renderHeaderTitle?: RenderHeaderTitle<Item, PreLoadStores>;
   customizeHeader?: HeaderCustomizer | HeaderCustomizer[];
 
@@ -309,6 +310,7 @@ export class NonInjectedItemListLayout<I extends ItemObject, PreLoadStores exten
           searchFilters={this.props.searchFilters}
           showHeader={this.props.showHeader}
           headerClassName={this.props.headerClassName}
+          headerIcon={this.props.headerIcon}
           renderHeaderTitle={
             typeof renderHeaderTitle === "function" ? () => renderHeaderTitle(this) : renderHeaderTitle
           }

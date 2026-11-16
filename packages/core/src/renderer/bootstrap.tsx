@@ -4,6 +4,9 @@
  * Licensed under MIT License. See LICENSE in root directory for more information.
  */
 
+import "@fontsource-variable/dm-sans";
+import "@fontsource/dm-mono/400.css";
+import "@fontsource/dm-mono/500.css";
 import "./components/app.scss";
 
 import assert from "node:assert";
