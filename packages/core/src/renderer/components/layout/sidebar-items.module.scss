@@ -34,7 +34,6 @@
 
     :global(.Icon) {
       flex-shrink: 0;
-      color: var(--textColorTertiary);
     }
 
     &:hover :global(.Icon),

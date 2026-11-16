@@ -29,6 +29,11 @@ export interface DrawerProps {
   title: StrictReactNode;
 
   /**
+   * An icon shown before the title, such as the icon of the kind of the object the drawer shows.
+   */
+  titleIcon?: StrictReactNode;
+
+  /**
    * The width or heigh (depending on `position`) of the Drawer.
    *
    * If not set then the Drawer will be resizable.
@@ -200,6 +205,7 @@ class NonInjectedDrawer extends React.Component<DrawerProps & Dependencies & typ
       open,
       position,
       title,
+      titleIcon,
       children,
       toolbar,
       size,
@@ -226,6 +232,7 @@ class NonInjectedDrawer extends React.Component<DrawerProps & Dependencies & typ
         >
           <div className="drawer-wrapper flex flex-col">
             <div className="drawer-title flex items-center">
+              {titleIcon}
               <div className="drawer-title-text flex gap-2 items-center">
                 {title}
                 {canCopyTitle && (

@@ -1,0 +1,30 @@
+/**
+ * Copyright (c) Freelens Authors. All rights reserved.
+ * Licensed under MIT License. See LICENSE in root directory for more information.
+ */
+
+.KindIcon {
+  &.kind-tone-green {
+    color: var(--colorOk);
+  }
+
+  &.kind-tone-blue {
+    color: var(--colorInfo);
+  }
+
+  &.kind-tone-amber {
+    color: var(--colorWarning);
+  }
+
+  &.kind-tone-red {
+    color: var(--colorError);
+  }
+
+  &.kind-tone-pink {
+    color: var(--magenta);
+  }
+
+  &.kind-tone-neutral {
+    color: var(--textColorTertiary);
+  }
+}

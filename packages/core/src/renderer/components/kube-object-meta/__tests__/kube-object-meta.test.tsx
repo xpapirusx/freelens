@@ -86,7 +86,8 @@ describe("<KubeObjectMeta />", () => {
 
       const annotations = screen.getByText("Annotations").closest(".DrawerItem") as HTMLElement;
 
-      expect(within(annotations).getByText("some-annotation=some-value")).toBeInTheDocument();
+      expect(within(annotations).getByText("some-annotation")).toBeInTheDocument();
+      expect(within(annotations).getByText("some-value")).toBeInTheDocument();
       expect(within(annotations).queryByText(new RegExp(lastAppliedConfigurationAnnotation))).toBeNull();
     });
 

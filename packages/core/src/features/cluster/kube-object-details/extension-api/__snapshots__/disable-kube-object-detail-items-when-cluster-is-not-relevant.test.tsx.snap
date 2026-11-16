@@ -60,6 +60,11 @@ exports[`disable kube object detail items when cluster is not relevant > given e
           class="drawer-content flex flex-col grow shrink-0 basis-0"
         >
           <div
+            class="DrawerTitle sub-title"
+          >
+            Metadata
+          </div>
+          <div
             class="DrawerItem"
           >
             <span
@@ -857,6 +862,11 @@ exports[`disable kube object detail items when cluster is not relevant > given e
           class="drawer-content flex flex-col grow shrink-0 basis-0"
         >
           <div
+            class="DrawerTitle sub-title"
+          >
+            Metadata
+          </div>
+          <div
             class="DrawerItem"
           >
             <span
@@ -1648,6 +1658,11 @@ exports[`disable kube object detail items when cluster is not relevant > given n
         <div
           class="drawer-content flex flex-col grow shrink-0 basis-0"
         >
+          <div
+            class="DrawerTitle sub-title"
+          >
+            Metadata
+          </div>
           <div
             class="DrawerItem"
           >

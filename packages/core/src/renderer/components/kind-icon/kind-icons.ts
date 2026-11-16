@@ -133,6 +133,70 @@ const SIDEBAR_ITEM_KINDS: Record<string, string> = {
 const sidebarItemPrefix = "sidebar-item-";
 
 /**
+ * The color family of a kind. A kind keeps the family of its area, so the icons of one area read as
+ * one group in the sidebar and in the title of a resource list.
+ */
+export type KindTone = "green" | "blue" | "amber" | "red" | "pink" | "neutral";
+
+const KIND_TONES: Record<string, KindTone> = {
+  pod: "green",
+  deployment: "green",
+  daemonset: "green",
+  statefulset: "green",
+  replicaset: "green",
+  replicationcontroller: "green",
+  job: "green",
+  cronjob: "green",
+
+  service: "blue",
+  endpoints: "blue",
+  endpointslice: "blue",
+  ingress: "blue",
+  ingressclass: "blue",
+  networkpolicy: "blue",
+  portforward: "blue",
+
+  configmap: "amber",
+  limitrange: "amber",
+  resourcequota: "amber",
+  priorityclass: "amber",
+  runtimeclass: "amber",
+  secret: "red",
+
+  persistentvolumeclaim: "pink",
+  persistentvolume: "pink",
+  storageclass: "pink",
+
+  node: "neutral",
+  namespace: "neutral",
+  serviceaccount: "pink",
+  event: "neutral",
+  lease: "neutral",
+
+  horizontalpodautoscaler: "amber",
+  verticalpodautoscaler: "amber",
+  poddisruptionbudget: "amber",
+
+  role: "pink",
+  clusterrole: "pink",
+  rolebinding: "pink",
+  clusterrolebinding: "pink",
+
+  mutatingwebhookconfiguration: "red",
+  validatingwebhookconfiguration: "red",
+  mutatingadmissionpolicy: "red",
+  mutatingadmissionpolicybinding: "red",
+  validatingadmissionpolicy: "red",
+  validatingadmissionpolicybinding: "red",
+  podsecuritypolicy: "red",
+
+  customresourcedefinition: "blue",
+
+  helmrelease: "blue",
+  helmchart: "blue",
+};
+
+/**
  * The name of the icon of a kind, or `undefined` for a kind the application knows no icon for. The
  * name of the kind is case-insensitive, and the plural is understood for the kinds the sidebar
  * shows.
@@ -145,16 +209,25 @@ export const getKindIconName = (kind: string): string | undefined => {
 };
 
 /**
- * The name of the icon of the kind a sidebar item leads to, by the identifier of the item, or
- * `undefined` for an item that is not a kind.
+ * The color family of a kind, `neutral` for a kind without one.
  */
-export const getSidebarItemIconName = (sidebarItemId: string): string | undefined => {
+export const getKindTone = (kind: string): KindTone => {
+  const normalized = kind.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const singular = normalized.endsWith("s") ? normalized.slice(0, -1) : normalized;
+
+  return KIND_TONES[normalized] ?? KIND_TONES[singular] ?? "neutral";
+};
+
+/**
+ * The kind a sidebar item leads to, by the identifier of the item, or `undefined` for an item that
+ * is not a kind.
+ */
+export const getSidebarItemKind = (sidebarItemId: string): string | undefined => {
   if (!sidebarItemId.startsWith(sidebarItemPrefix)) {
     return undefined;
   }
 
   const suffix = sidebarItemId.slice(sidebarItemPrefix.length);
-  const kind = SIDEBAR_ITEM_KINDS[suffix] ?? suffix.replace(/-/g, "");
 
-  return getKindIconName(kind);
+  return SIDEBAR_ITEM_KINDS[suffix] ?? suffix.replace(/-/g, "");
 };

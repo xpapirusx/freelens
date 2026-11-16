@@ -465,7 +465,7 @@ exports[`workloads / pods > when navigating to workloads / pods view > given a n
                   class="title"
                 >
                   <i
-                    class="Icon KindIcon material focusable"
+                    class="Icon KindIcon kind-tone-green material focusable"
                     data-testid="kind-icon-Pod"
                   >
                     <span
@@ -1699,7 +1699,7 @@ exports[`workloads / pods > when navigating to workloads / pods view > given no 
                   class="title"
                 >
                   <i
-                    class="Icon KindIcon material focusable"
+                    class="Icon KindIcon kind-tone-green material focusable"
                     data-testid="kind-icon-Pod"
                   >
                     <span
@@ -2775,7 +2775,7 @@ exports[`workloads / pods > when navigating to workloads / pods view > given pod
                   class="title"
                 >
                   <i
-                    class="Icon KindIcon material focusable"
+                    class="Icon KindIcon kind-tone-green material focusable"
                     data-testid="kind-icon-Pod"
                   >
                     <span

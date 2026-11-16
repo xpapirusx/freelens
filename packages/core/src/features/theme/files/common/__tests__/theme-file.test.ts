@@ -435,8 +435,8 @@ describe("theme files", () => {
   });
 
   describe("the built-in themes", () => {
-    it("ships freelens and radar", () => {
-      expect(builtInThemes.map(({ metadata }) => metadata.name)).toEqual(["freelens", "radar"]);
+    it("ships freelens, radar and dracula", () => {
+      expect(builtInThemes.map(({ metadata }) => metadata.name)).toEqual(["freelens", "radar", "dracula"]);
     });
 
     it("is named freelens", () => {
@@ -444,14 +444,14 @@ describe("theme files", () => {
     });
 
     it.each(builtInThemes)("defines every token in every variant of $metadata.name", (theme) => {
-      for (const variant of ["dark", "light"] as const) {
+      for (const variant of getAvailableVariants(theme)) {
         expect(Object.keys(theme.spec[variant]?.colors ?? {}).sort()).toEqual([...lensColorNames].sort());
         expect(theme.spec[variant]?.editor).toBeDefined();
       }
     });
 
     it.each(builtInThemes)("knows every terminal token it sets in every variant of $metadata.name", (theme) => {
-      for (const variant of ["dark", "light"] as const) {
+      for (const variant of getAvailableVariants(theme)) {
         for (const token of Object.keys(theme.spec[variant]?.terminalColors ?? {})) {
           expect(terminalColorNames).toContain(token);
         }

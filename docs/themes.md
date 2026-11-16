@@ -4,8 +4,9 @@ A Freelens theme is a YAML file. Every theme, the built-in ones included, has
 the same format: Freelens reads the files, lets the user pick one in
 Preferences → Personalization, import more and export any of them.
 
-Freelens ships two themes: `freelens`, the default, and `radar`, which carries
-the palette and the layered surfaces of the Radar Kubernetes UI.
+Freelens ships three themes: `freelens`, the default, `radar`, which carries
+the palette and the layered surfaces of the Radar Kubernetes UI, and `dracula`,
+the dark theme of <https://github.com/dracula/terminal-app>.
 
 ## A theme file
 
@@ -45,9 +46,9 @@ The file has the shape of a Kubernetes object:
   `apiVersion` or `kind` is refused.
 - `metadata.name` identifies the theme, and is what the preferences store. It
   takes lowercase letters, digits and `-`, starts and ends with a letter or a
-  digit, and is at most 63 characters long. `freelens` and `radar` are the
-  names of the built-in themes and cannot be taken. `metadata` may also have
-  `labels` and `annotations`, which Freelens keeps but does not interpret.
+  digit, and is at most 63 characters long. `freelens`, `radar` and `dracula`
+  are the names of the built-in themes and cannot be taken. `metadata` may also
+  have `labels` and `annotations`, which Freelens keeps but does not interpret.
 - `spec.displayName` is the name shown in the preferences. `description` and
   `author` are optional.
 - `spec.dark` and `spec.light` are the two variants. Each is optional, but a

@@ -85,7 +85,7 @@ class NonInjectedReplicaSetDetails extends React.Component<ReplicaSetDetailsProp
           </DrawerItem>
         )}
         {images.length > 0 && (
-          <DrawerItem name="Images">
+          <DrawerItem name="Images" className="images">
             {images.map((image) => (
               <p key={image}>{image}</p>
             ))}

@@ -52,15 +52,18 @@
   }
 
   .drawer-title {
-    background: var(--blue);
-    color: var(--drawerTitleText);
-    padding: $padding $padding * 2.5;
+    background: var(--contentColor);
+    color: var(--textColorAccent);
+    border-bottom: 1px solid var(--borderColor);
+    padding: 12px 20px;
+    gap: 8px;
     word-break: break-all;
     position: relative;
-    min-height: 54px;
+    min-height: 56px;
 
     .drawer-title-text {
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 15px;
       flex-grow: 2;
       padding-right: $padding;
     }
@@ -76,7 +79,7 @@
     }
 
     .MenuActions.toolbar .Icon {
-      color: var(--drawerTitleText);
+      color: var(--textColorSecondary);
     }
 
     .Menu {

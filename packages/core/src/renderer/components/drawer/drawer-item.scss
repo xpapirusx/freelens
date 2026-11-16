@@ -7,14 +7,14 @@
 @use "../vars" as *;
 
 .DrawerItem {
-  --drawer-item-title-width: 30%;
+  --drawer-item-title-width: 34%;
 
   display: grid;
   grid-template-columns:
     minmax(var(--drawer-item-title-width), min-content)
     auto;
   border-bottom: 1px solid var(--borderFaintColor);
-  padding: $padding 0;
+  padding: 7px 0;
 
   &.WithoutName {
     grid-template-columns: auto;
@@ -25,10 +25,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
     color: var(--drawerItemNameColor);
+    font-size: 12px;
+    line-height: 1.45;
   }
 
   > .value {
     color: var(--drawerItemValueColor);
+    font-size: 13px;
+    line-height: 1.45;
     word-break: break-word;
     max-width: 100%;
     min-width: 0;
@@ -73,6 +77,26 @@
           opacity: 0.5;
         }
       }
+    }
+  }
+
+  &.images {
+    > .value {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    p {
+      margin: 0;
+      padding: 3px 6px;
+      border-radius: 6px;
+      background: var(--colorVague);
+      color: var(--textColorSecondary);
+      font-family: var(--font-monospace);
+      font-size: 12px;
+      line-height: 1.4;
+      word-break: break-all;
     }
   }
 

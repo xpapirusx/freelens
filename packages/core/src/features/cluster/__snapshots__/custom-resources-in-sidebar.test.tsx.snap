@@ -3227,7 +3227,8 @@ exports[`cluster - custom resources in sidebar > when custom resource exists > w
                     href="/workloads"
                   >
                     <i
-                      class="Icon material focusable small"
+                      class="Icon KindIcon kind-tone-blue material focusable small"
+                      data-testid="kind-icon-customresourcedefinition"
                     >
                       <span
                         class="icon"

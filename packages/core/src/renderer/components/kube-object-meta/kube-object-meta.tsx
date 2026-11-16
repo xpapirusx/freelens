@@ -4,6 +4,8 @@
  * Licensed under MIT License. See LICENSE in root directory for more information.
  */
 
+import "./kube-object-meta.scss";
+
 import { KubeObject } from "@freelensapp/kube-object";
 import { loggerInjectionToken } from "@freelensapp/logger";
 import { Link } from "@freelensapp/routing";
@@ -12,12 +14,11 @@ import * as yaml from "js-yaml";
 import { observer } from "mobx-react";
 import apiManagerInjectable from "../../../common/k8s-api/api-manager/manager.injectable";
 import { defaultYamlDumpOptions } from "../../../common/kube-helpers";
-import { DrawerItem, DrawerItemLabels, DrawerParamToggler } from "../drawer";
+import { DrawerItem, DrawerItemLabels, DrawerParamToggler, DrawerTitle } from "../drawer";
 import { DurationAbsoluteTimestamp } from "../events";
 import getDetailsUrlInjectable from "../kube-detail-params/get-details-url.injectable";
 import { KubeObjectAge } from "../kube-object/age";
 import { LinkToNamespace } from "../kube-object-link";
-import { LocaleDate } from "../locale-date";
 import { MonacoEditor } from "../monaco-editor";
 import { WithTooltip } from "../with-tooltip";
 
@@ -73,6 +74,36 @@ function ManagedFieldEntryLabel({ entry }: { entry: ManagedFieldsEntry }) {
   );
 }
 
+/**
+ * Annotations are long and often contain URLs, so they read as rows of key and value rather than
+ * as pills.
+ */
+function MetadataAnnotations({ annotations }: { annotations: string[] | Partial<Record<string, string>> }) {
+  const annotationStrings = Array.isArray(annotations) ? annotations : KubeObject.stringifyLabels(annotations);
+  const entries = annotationStrings.map((annotation) => {
+    const separator = annotation.indexOf("=");
+
+    return separator === -1
+      ? ([annotation, ""] as const)
+      : ([annotation.slice(0, separator), annotation.slice(separator + 1)] as const);
+  });
+
+  if (entries.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="MetadataAnnotations">
+      {entries.map(([key, value]) => (
+        <div className="annotation" key={key}>
+          <span className="annotation-key">{key}</span>
+          <span className="annotation-value">{value}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 const NonInjectedKubeObjectMeta = observer((props: Dependencies & KubeObjectMetaProps) => {
   const { apiManager, getDetailsUrl, object, hideFields = ["uid", "resourceVersion", "selfLink"], logger } = props;
 
@@ -106,21 +137,19 @@ const NonInjectedKubeObjectMeta = observer((props: Dependencies & KubeObjectMeta
     metadata: { creationTimestamp, deletionTimestamp, managedFields, annotations },
   } = object;
   const lastAppliedConfiguration = annotations?.[lastAppliedConfigurationAnnotation];
+  const displayedAnnotations = object.getAnnotations(true);
+  const hasDisplayedAnnotations = Array.isArray(displayedAnnotations)
+    ? displayedAnnotations.length > 0
+    : Object.keys(displayedAnnotations).length > 0;
   const ownerRefs = object.getOwnerRefs();
   const namespace = object.getNs();
 
   return (
     <>
+      <DrawerTitle size="sub-title">Metadata</DrawerTitle>
       <DrawerItem name="Created" hidden={isHidden("creationTimestamp") || !creationTimestamp}>
-        <KubeObjectAge object={object} compact={false} withTooltip={false} />
-        {" ago "}
-        {creationTimestamp && (
-          <>
-            {"("}
-            <LocaleDate date={creationTimestamp} />
-            {")"}
-          </>
-        )}
+        <KubeObjectAge object={object} compact withTooltip />
+        {" ago"}
       </DrawerItem>
       <DrawerItem name="Deleted" hidden={isHidden("deletionTimestamp") || !deletionTimestamp}>
         <DurationAbsoluteTimestamp timestamp={deletionTimestamp} />
@@ -141,7 +170,11 @@ const NonInjectedKubeObjectMeta = observer((props: Dependencies & KubeObjectMeta
         {object.getResourceVersion()}
       </DrawerItem>
       <DrawerItemLabels name="Labels" labels={object.getLabels()} hidden={isHidden("labels")} />
-      <DrawerItemLabels name="Annotations" labels={object.getAnnotations(true)} hidden={isHidden("annotations")} />
+      {hasDisplayedAnnotations && (
+        <DrawerItem name="Annotations" hidden={isHidden("annotations")}>
+          <MetadataAnnotations annotations={displayedAnnotations} />
+        </DrawerItem>
+      )}
       {lastAppliedConfiguration !== undefined && (
         <DrawerItem name="Last Applied Configuration" hidden={isHidden("annotations")}>
           <DrawerParamToggler label={lastAppliedConfigurationAnnotation}>

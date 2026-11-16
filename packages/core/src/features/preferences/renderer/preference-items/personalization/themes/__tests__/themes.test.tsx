@@ -89,8 +89,10 @@ describe("themes preference", () => {
     expect(screen.getByTestId("theme-card-midnight")).toHaveTextContent("Imported");
     expect(screen.getByTestId("theme-card-freelens")).not.toHaveTextContent("Imported");
     expect(screen.getByTestId("theme-card-radar")).not.toHaveTextContent("Imported");
+    expect(screen.getByTestId("theme-card-dracula")).not.toHaveTextContent("Imported");
     expect(screen.queryByTestId("theme-remove-freelens")).not.toBeInTheDocument();
     expect(screen.queryByTestId("theme-remove-radar")).not.toBeInTheDocument();
+    expect(screen.queryByTestId("theme-remove-dracula")).not.toBeInTheDocument();
     expect(screen.getByTestId("theme-remove-midnight")).toBeInTheDocument();
   });
 

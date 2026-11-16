@@ -1,0 +1,159 @@
+/**
+ * Copyright (c) Freelens Authors. All rights reserved.
+ * Licensed under MIT License. See LICENSE in root directory for more information.
+ */
+
+@use "../vars" as *;
+
+.KubeObjectConditions {
+  margin: $margin * 2 0 $margin * 2;
+
+  .conditions-header {
+    display: flex;
+    align-items: baseline;
+    gap: $padding * 0.75;
+    margin-bottom: $padding * 0.75;
+
+    .conditions-title {
+      color: var(--textColorTertiary);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .conditions-count {
+      color: var(--textColorDimmed);
+      font-size: 11px;
+    }
+
+    .conditions-failing {
+      margin-left: auto;
+      padding: 1px 6px;
+      border-radius: 6px;
+      background: color-mix(in srgb, var(--colorError) 14%, transparent);
+      color: var(--colorError);
+      font-size: 11px;
+      font-weight: 500;
+    }
+  }
+
+  .conditions-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .KubeObjectCondition {
+    display: grid;
+    grid-template-columns: 18px minmax(0, 1fr);
+    gap: $padding;
+    align-items: start;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--borderFaintColor);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.fail,
+    &.warning {
+      padding-left: $padding;
+      border-left: 2px solid transparent;
+    }
+
+    &.fail {
+      border-left-color: color-mix(in srgb, var(--colorError) 55%, transparent);
+
+      .condition-type {
+        color: var(--colorError);
+      }
+    }
+
+    &.warning {
+      border-left-color: color-mix(in srgb, var(--colorWarning) 55%, transparent);
+
+      .condition-type {
+        color: var(--colorWarning);
+      }
+    }
+
+    .condition-dot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      margin-top: 1px;
+
+      .Icon {
+        width: 11px;
+        height: 11px;
+        font-size: 11px;
+      }
+    }
+
+    &.ok .condition-dot {
+      background: color-mix(in srgb, var(--colorSuccess) 18%, transparent);
+      color: var(--colorSuccess);
+    }
+
+    &.fail .condition-dot {
+      background: color-mix(in srgb, var(--colorError) 18%, transparent);
+      color: var(--colorError);
+    }
+
+    &.warning .condition-dot {
+      background: color-mix(in srgb, var(--colorWarning) 18%, transparent);
+      color: var(--colorWarning);
+    }
+
+    &.unknown .condition-dot {
+      background: var(--colorVague);
+      color: var(--textColorTertiary);
+    }
+
+    .condition-body {
+      min-width: 0;
+    }
+
+    .condition-head {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: $padding * 0.75;
+    }
+
+    .condition-type {
+      color: var(--textColorAccent);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .condition-status {
+      color: var(--textColorTertiary);
+      font-size: 11px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .condition-reason {
+      color: var(--textColorSecondary);
+      font-size: 11px;
+    }
+
+    .condition-time {
+      margin-left: auto;
+      color: var(--textColorTertiary);
+      font-size: 11px;
+    }
+
+    .condition-message {
+      margin-top: 2px;
+      color: var(--textColorSecondary);
+      font-size: 12px;
+      line-height: 1.45;
+      word-break: break-word;
+    }
+  }
+}

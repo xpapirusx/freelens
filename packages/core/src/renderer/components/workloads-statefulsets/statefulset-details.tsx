@@ -84,7 +84,7 @@ class NonInjectedStatefulSetDetails extends React.Component<StatefulSetDetailsPr
           </DrawerItem>
         )}
         {images.length > 0 && (
-          <DrawerItem name="Images">
+          <DrawerItem name="Images" className="images">
             {images.map((image) => (
               <p key={image}>{image}</p>
             ))}

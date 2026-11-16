@@ -85,7 +85,7 @@ class NonInjectedDaemonSetDetails extends React.Component<DaemonSetDetailsProps 
           </DrawerItem>
         )}
         {images.length > 0 && (
-          <DrawerItem name="Images">
+          <DrawerItem name="Images" className="images">
             {images.map((image) => (
               <p key={image}>{image}</p>
             ))}

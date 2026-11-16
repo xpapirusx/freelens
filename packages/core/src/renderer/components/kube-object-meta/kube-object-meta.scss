@@ -1,0 +1,27 @@
+/**
+ * Copyright (c) Freelens Authors. All rights reserved.
+ * Licensed under MIT License. See LICENSE in root directory for more information.
+ */
+
+.MetadataAnnotations {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-height: 220px;
+  overflow-y: auto;
+
+  .annotation {
+    font-size: 12px;
+    line-height: 1.45;
+    word-break: break-all;
+  }
+
+  .annotation-key {
+    color: var(--textColorTertiary);
+  }
+
+  .annotation-value {
+    margin-left: 4px;
+    color: var(--textColorSecondary);
+  }
+}

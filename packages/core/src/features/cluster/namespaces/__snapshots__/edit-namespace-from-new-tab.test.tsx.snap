@@ -461,7 +461,7 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                   class="title"
                 >
                   <i
-                    class="Icon KindIcon material focusable"
+                    class="Icon KindIcon kind-tone-neutral material focusable"
                     data-testid="kind-icon-Namespace"
                   >
                     <span
@@ -1302,7 +1302,7 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                   class="title"
                 >
                   <i
-                    class="Icon KindIcon material focusable"
+                    class="Icon KindIcon kind-tone-neutral material focusable"
                     data-testid="kind-icon-Namespace"
                   >
                     <span
@@ -2148,7 +2148,7 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                   class="title"
                 >
                   <i
-                    class="Icon KindIcon material focusable"
+                    class="Icon KindIcon kind-tone-neutral material focusable"
                     data-testid="kind-icon-Namespace"
                   >
                     <span
@@ -3093,7 +3093,7 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                   class="title"
                 >
                   <i
-                    class="Icon KindIcon material focusable"
+                    class="Icon KindIcon kind-tone-neutral material focusable"
                     data-testid="kind-icon-Namespace"
                   >
                     <span
@@ -3986,7 +3986,7 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                   class="title"
                 >
                   <i
-                    class="Icon KindIcon material focusable"
+                    class="Icon KindIcon kind-tone-neutral material focusable"
                     data-testid="kind-icon-Namespace"
                   >
                     <span
@@ -4981,7 +4981,7 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                   class="title"
                 >
                   <i
-                    class="Icon KindIcon material focusable"
+                    class="Icon KindIcon kind-tone-neutral material focusable"
                     data-testid="kind-icon-Namespace"
                   >
                     <span
@@ -5978,7 +5978,7 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                   class="title"
                 >
                   <i
-                    class="Icon KindIcon material focusable"
+                    class="Icon KindIcon kind-tone-neutral material focusable"
                     data-testid="kind-icon-Namespace"
                   >
                     <span
@@ -6937,7 +6937,7 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                   class="title"
                 >
                   <i
-                    class="Icon KindIcon material focusable"
+                    class="Icon KindIcon kind-tone-neutral material focusable"
                     data-testid="kind-icon-Namespace"
                   >
                     <span
@@ -7891,7 +7891,7 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                   class="title"
                 >
                   <i
-                    class="Icon KindIcon material focusable"
+                    class="Icon KindIcon kind-tone-neutral material focusable"
                     data-testid="kind-icon-Namespace"
                   >
                     <span
@@ -8836,7 +8836,7 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                   class="title"
                 >
                   <i
-                    class="Icon KindIcon material focusable"
+                    class="Icon KindIcon kind-tone-neutral material focusable"
                     data-testid="kind-icon-Namespace"
                   >
                     <span
@@ -9781,7 +9781,7 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                   class="title"
                 >
                   <i
-                    class="Icon KindIcon material focusable"
+                    class="Icon KindIcon kind-tone-neutral material focusable"
                     data-testid="kind-icon-Namespace"
                   >
                     <span
@@ -10726,7 +10726,7 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                   class="title"
                 >
                   <i
-                    class="Icon KindIcon material focusable"
+                    class="Icon KindIcon kind-tone-neutral material focusable"
                     data-testid="kind-icon-Namespace"
                   >
                     <span
@@ -11476,7 +11476,7 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                   class="title"
                 >
                   <i
-                    class="Icon KindIcon material focusable"
+                    class="Icon KindIcon kind-tone-neutral material focusable"
                     data-testid="kind-icon-Namespace"
                   >
                     <span
@@ -12430,7 +12430,7 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                   class="title"
                 >
                   <i
-                    class="Icon KindIcon material focusable"
+                    class="Icon KindIcon kind-tone-neutral material focusable"
                     data-testid="kind-icon-Namespace"
                   >
                     <span
@@ -13375,7 +13375,7 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                   class="title"
                 >
                   <i
-                    class="Icon KindIcon material focusable"
+                    class="Icon KindIcon kind-tone-neutral material focusable"
                     data-testid="kind-icon-Namespace"
                   >
                     <span
@@ -14320,7 +14320,7 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                   class="title"
                 >
                   <i
-                    class="Icon KindIcon material focusable"
+                    class="Icon KindIcon kind-tone-neutral material focusable"
                     data-testid="kind-icon-Namespace"
                   >
                     <span

@@ -11,6 +11,7 @@ import { withInjectables } from "@ogre-tools/injectable-react";
 import { observer } from "mobx-react";
 import React from "react";
 import { Drawer } from "../drawer";
+import { KindIcon } from "../kind-icon";
 import hideDetailsInjectable from "../kube-detail-params/hide-details.injectable";
 import kubeDetailsUrlParamInjectable from "../kube-detail-params/kube-details-url.injectable";
 import { KubeObjectMenu } from "../kube-object-menu";
@@ -56,6 +57,7 @@ const NonInjectedKubeObjectDetails = observer((props: Dependencies) => {
       className="KubeObjectDetails flex flex-col"
       open={hasSelectedObject && Boolean(isLoading || currentKubeObject)}
       title={currentKubeObject?.object ? `${currentKubeObject.object.kind}: ${currentKubeObject.object.getName()}` : ""}
+      titleIcon={currentKubeObject?.object && <KindIcon kind={currentKubeObject.object.kind} small />}
       toolbar={currentKubeObject?.object && <KubeObjectMenu object={currentKubeObject.object} toolbar={true} />}
       onClose={hideDetails}
     >

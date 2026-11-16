@@ -14,7 +14,7 @@ exports[`kube-object-list-layout > given pod store > renders 1`] = `
             class="title"
           >
             <i
-              class="Icon KindIcon material focusable"
+              class="Icon KindIcon kind-tone-green material focusable"
               data-testid="kind-icon-Pod"
             >
               <span

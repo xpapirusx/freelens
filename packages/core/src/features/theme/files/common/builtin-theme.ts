@@ -3,6 +3,7 @@
  * Licensed under MIT License. See LICENSE in root directory for more information.
  */
 
+import draculaThemeSource from "./dracula.theme.yaml?raw";
 import freelensThemeSource from "./freelens.theme.yaml?raw";
 import { parseThemeFile } from "./parse";
 import radarThemeSource from "./radar.theme.yaml?raw";
@@ -11,7 +12,7 @@ import type { ThemeFile } from "./schema";
 
 export const builtInThemeName = "freelens";
 
-export const builtInThemeSources: readonly string[] = [freelensThemeSource, radarThemeSource];
+export const builtInThemeSources: readonly string[] = [freelensThemeSource, radarThemeSource, draculaThemeSource];
 
 const parseBuiltInTheme = (source: string): ThemeFile => {
   const result = parseThemeFile(source);

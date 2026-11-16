@@ -34,3 +34,60 @@ export function sortConditions(
       (conditionTypePriorities[b.type] ?? 0) - (conditionTypePriorities[a.type] ?? 0),
   );
 }
+
+/**
+ * Condition types for which `status: "True"` records a problem rather than health, the polarity
+ * SIG API Machinery leaves to each controller. Assembled from the kubelet's node conditions, the
+ * conditions of pods and workloads, and the conventional operator conditions.
+ */
+const negativePolarityConditionTypes = new Set([
+  "MemoryPressure",
+  "DiskPressure",
+  "PIDPressure",
+  "NetworkUnavailable",
+  "DisruptionTarget",
+  "ReplicaFailure",
+  "NamespaceDeletionDiscoveryFailure",
+  "NamespaceDeletionGroupVersionParsingFailure",
+  "NamespaceDeletionContentFailure",
+  "NamespaceContentRemaining",
+  "NamespaceFinalizersRemaining",
+  "KernelDeadlock",
+  "ReadonlyFilesystem",
+  "ContainerRuntimeUnhealthy",
+  "KubeletUnhealthy",
+  "ResourceExhausted",
+  "Degraded",
+  "Failed",
+  "Stalled",
+  "OutOfSync",
+  "ComparisonError",
+  "SyncError",
+  "DeletionError",
+  "InvalidSpecError",
+  "ErrorOccurred",
+  "Denied",
+  "Drifted",
+  "Fallback",
+  "ConfigUnsupported",
+  "LowConfidence",
+]);
+
+export type ConditionTone = "ok" | "warning" | "fail" | "unknown";
+
+/**
+ * How a condition reads: `ok` when its status records health, `fail` when it records a problem,
+ * taking the polarity of the condition type into account, and `unknown` for a status that is
+ * neither `True` nor `False`.
+ */
+export const getConditionTone = (condition: Condition): ConditionTone => {
+  if (condition.status !== "True" && condition.status !== "False") {
+    return "unknown";
+  }
+
+  const healthy = negativePolarityConditionTypes.has(condition.type)
+    ? condition.status === "False"
+    : condition.status === "True";
+
+  return healthy ? "ok" : "fail";
+};
