@@ -39,6 +39,8 @@ export interface DrawerProps {
    * If not set then the Drawer will be resizable.
    */
   size?: string; // e.g. 50%, 500px, etc.
+  /** Take the whole frame instead of a resizable panel. */
+  expanded?: boolean;
   usePortal?: boolean;
   className?: string | object;
   contentClass?: string | object;
@@ -209,6 +211,7 @@ class NonInjectedDrawer extends React.Component<DrawerProps & Dependencies & typ
       children,
       toolbar,
       size,
+      expanded,
       usePortal,
       "data-testid": testId,
       testIdForClose,
@@ -223,7 +226,7 @@ class NonInjectedDrawer extends React.Component<DrawerProps & Dependencies & typ
     const drawer = (
       <Animate name={animation} enter={open}>
         <div
-          className={cssNames("Drawer", className, position)}
+          className={cssNames("Drawer", className, position, { expanded })}
           style={{ "--size": drawerSize } as React.CSSProperties}
           ref={(e) => {
             this.contentElem = e;
@@ -252,7 +255,7 @@ class NonInjectedDrawer extends React.Component<DrawerProps & Dependencies & typ
               {children}
             </div>
           </div>
-          {!size && (
+          {!size && !expanded && (
             <ResizingAnchor
               direction={direction}
               placement={placement}

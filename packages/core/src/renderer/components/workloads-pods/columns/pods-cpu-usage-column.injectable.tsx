@@ -6,10 +6,10 @@
 import { podListLayoutColumnInjectionToken } from "@freelensapp/list-layout";
 import { getInjectable } from "@ogre-tools/injectable";
 import { observer } from "mobx-react";
-import podStoreInjectable from "../../workloads-pods/store.injectable";
 import { UsageCell } from "../../usage-cell/usage-cell";
-import { COLUMN_PRIORITY } from "./column-priority";
+import podStoreInjectable from "../../workloads-pods/store.injectable";
 import { formatCores, podResourceTotals } from "../pod-resources";
+import { COLUMN_PRIORITY } from "./column-priority";
 
 import type { Pod } from "@freelensapp/kube-object";
 

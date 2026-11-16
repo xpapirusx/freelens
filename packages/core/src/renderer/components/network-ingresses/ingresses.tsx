@@ -8,9 +8,9 @@ import "./ingresses.scss";
 
 import {
   type ComputedIngressRoute,
+  computeRouteDeclarations,
   type Ingress,
   type IngressSpec,
-  computeRouteDeclarations,
 } from "@freelensapp/kube-object";
 import { withInjectables } from "@ogre-tools/injectable-react";
 import { observer } from "mobx-react";

@@ -3,16 +3,15 @@
  * Licensed under MIT License. See LICENSE in root directory for more information.
  */
 
-import styles from "./pod-container-usage.module.scss";
-
 import { interval } from "@freelensapp/utilities";
 import { withInjectables } from "@ogre-tools/injectable-react";
 import { observer } from "mobx-react";
 import { useEffect } from "react";
-import { MiniBarChart } from "../usage-chart/mini-bar-chart";
-import { seriesLastValue, seriesPointsOf } from "../usage-chart/metrics-series";
 import { formatCores, formatMemoryUsage } from "../usage-chart/formatters";
+import { seriesLastValue, seriesPointsOf } from "../usage-chart/metrics-series";
+import { MiniBarChart } from "../usage-chart/mini-bar-chart";
 import podContainerMetricsInjectable from "./container-metrics.injectable";
+import styles from "./pod-container-usage.module.scss";
 
 import type { Container, Pod } from "@freelensapp/kube-object";
 

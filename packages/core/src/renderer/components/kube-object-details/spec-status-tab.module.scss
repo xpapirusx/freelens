@@ -1,0 +1,31 @@
+/**
+ * Copyright (c) Freelens Authors. All rights reserved.
+ * Licensed under MIT License. See LICENSE in root directory for more information.
+ */
+
+.SpecStatusTab,
+.YamlTab {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 0;
+
+  pre {
+    margin: 0;
+    padding: 12px;
+    overflow: auto;
+    border-radius: 6px;
+    background: var(--secondaryBackground);
+    color: var(--textColorSecondary);
+    font-family: var(--font-monospace);
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+}
+
+.YamlTab {
+  flex: 1;
+  min-height: 400px;
+}

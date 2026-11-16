@@ -10,6 +10,10 @@ import { computedInjectManyInjectionToken } from "@ogre-tools/injectable-extensi
 import { computed } from "mobx";
 import { kubeObjectDetailItemInjectionToken } from "./kube-object-detail-item-injection-token";
 
+/**
+ * The enabled detail items, with the order number kept so that the details
+ * drawer can group them into tabs (metrics, events, the resource itself).
+ */
 const kubeObjectDetailItemsInjectable = getInjectable({
   id: "kube-object-detail-items",
 
@@ -22,7 +26,7 @@ const kubeObjectDetailItemsInjectable = getInjectable({
         .get()
         .filter((item) => item.enabled.get())
         .sort(byValue((item) => item.orderNumber))
-        .map((item) => item.Component),
+        .map((item) => ({ Component: item.Component, orderNumber: item.orderNumber })),
     );
   },
 });

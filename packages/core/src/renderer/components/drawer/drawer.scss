@@ -39,6 +39,12 @@
     max-width: 95vw; /* Prevent drawer to be bigger than viewport */
   }
 
+  &.expanded.left,
+  &.expanded.right {
+    width: 100vw;
+    max-width: 100vw;
+  }
+
   &.top,
   &.bottom {
     left: 0;

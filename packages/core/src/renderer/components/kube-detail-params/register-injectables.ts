@@ -6,6 +6,8 @@
  * This replaces the webpack-based auto-registration system.
  */
 
+import detailsExpandedUrlParamInjectable from "./details-expanded-url-param.injectable";
+import detailsTabUrlParamInjectable from "./details-tab-url-param.injectable";
 import getDetailsUrlInjectable from "./get-details-url.injectable";
 import getMaybeDetailsUrlInjectable from "./get-maybe-details-url.injectable";
 import hideDetailsInjectable from "./hide-details.injectable";
@@ -17,6 +19,16 @@ import toggleKubeDetailsPaneInjectable from "./toggle-details.injectable";
 import type { DiContainerForInjection } from "@ogre-tools/injectable";
 
 export function registerInjectables(di: DiContainerForInjection): void {
+  try {
+    di.register(detailsExpandedUrlParamInjectable);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
+  try {
+    di.register(detailsTabUrlParamInjectable);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
   try {
     di.register(getDetailsUrlInjectable);
   } catch (e) {

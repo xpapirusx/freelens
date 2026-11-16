@@ -21,6 +21,97 @@
     overflow: unset;
   }
 
+  /* The virtual list owns the vertical scroll; this wrapper owns the
+     horizontal one, so the header and the rows scroll together. */
+  &.virtual .TableHorizontalScroll {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  &.horizontalScroll {
+    .TableCell {
+      min-width: var(--table-column-min-width, 96px);
+    }
+
+    .TableCell.checkbox,
+    .TableCell.menu,
+    .TableCell.logs {
+      min-width: 0;
+    }
+
+    .TableCell.age {
+      min-width: 72px;
+    }
+
+    .TableCell.status,
+    .TableCell.ready,
+    .TableCell.upToDate,
+    .TableCell.available,
+    .TableCell.restarts,
+    .TableCell.cpu,
+    .TableCell.memory {
+      min-width: 120px;
+    }
+
+    .TableCell.images,
+    .TableCell.selector,
+    .TableCell.hosts,
+    .TableCell.rules,
+    .TableCell.conditions,
+    .TableCell.labels,
+    .TableCell.message,
+    .TableCell.ports {
+      min-width: 180px;
+    }
+
+    /* Keep the leading columns visible while the rest scrolls, like Radar. */
+    .TableCell.checkbox {
+      position: sticky;
+      left: 0;
+      z-index: 4;
+      background-color: var(--contentColor);
+    }
+
+    &.striped .TableRow:nth-child(odd) .TableCell.checkbox,
+    &.striped .TableRow:nth-child(odd) .TableCell.name {
+      background-color: var(--tableBgcStripe);
+    }
+
+    &.selectable .TableRow:hover .TableCell.checkbox,
+    &.selectable .TableRow:hover .TableCell.name {
+      background-color: var(--tableBgcSelected);
+    }
+
+    &.selectable .TableRow.selected .TableCell.checkbox,
+    &.selectable .TableRow.selected .TableCell.name {
+      background-color: color-mix(in srgb, var(--primary) 15%, var(--contentColor));
+    }
+
+    .TableHead .TableCell.checkbox {
+      background-color: var(--tableHeaderBackground);
+    }
+
+    .TableCell.name {
+      position: sticky;
+      left: 0;
+      z-index: 3;
+      background-color: var(--contentColor);
+    }
+
+    &.selectable .TableCell.name {
+      left: 40px;
+    }
+
+    .TableHead .TableCell.name {
+      z-index: 5;
+      background-color: var(--tableHeaderBackground);
+    }
+  }
+
   &.selectable {
     .TableHead,
     .TableRow {

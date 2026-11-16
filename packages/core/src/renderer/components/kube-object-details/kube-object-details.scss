@@ -14,4 +14,20 @@
       border: none;
     }
   }
+
+  .drawer-content {
+    overflow-y: auto;
+  }
+
+  .KubeObjectDetailsTabs {
+    flex: none;
+    margin-bottom: 12px;
+  }
+
+  .KubeObjectDetailsTabContent {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+  }
 }

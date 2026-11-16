@@ -5,8 +5,8 @@
 
 import { podListLayoutColumnInjectionToken } from "@freelensapp/list-layout";
 import { getInjectable } from "@ogre-tools/injectable";
-import { COLUMN_PRIORITY } from "./column-priority";
 import { podGpuTotals } from "../pod-resources";
+import { COLUMN_PRIORITY } from "./column-priority";
 
 import type { Pod } from "@freelensapp/kube-object";
 

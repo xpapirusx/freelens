@@ -127,6 +127,11 @@ interface Dependencies {
 
 @observer
 class NonInjectedTable<Item extends ItemObject> extends React.Component<TableProps<Item> & Dependencies> {
+  state = { contentWidth: 0 };
+
+  private readonly scrollContainerRef = React.createRef<HTMLDivElement>();
+  private scrollResizeObserver?: ResizeObserver;
+
   static defaultProps: TableProps<any> = {
     scrollable: true,
     autoSize: true,
@@ -142,12 +147,61 @@ class NonInjectedTable<Item extends ItemObject> extends React.Component<TablePro
   }
 
   componentDidMount() {
-    const { sortable, tableId } = this.props;
+    const { sortable, tableId, virtual } = this.props;
 
     if (sortable && !tableId) {
       console.error("Table must have props.tableId if props.sortable is specified");
     }
+
+    if (virtual) {
+      this.measureContentWidth();
+      this.scrollResizeObserver = new ResizeObserver(() => this.measureContentWidth());
+
+      if (this.scrollContainerRef.current) {
+        this.scrollResizeObserver.observe(this.scrollContainerRef.current);
+      }
+    }
   }
+
+  componentDidUpdate() {
+    if (this.props.virtual) {
+      this.measureContentWidth();
+    }
+  }
+
+  componentWillUnmount() {
+    this.scrollResizeObserver?.disconnect();
+  }
+
+  /**
+   * The header and the virtual rows must share one width. Sum the minimum
+   * width of every column: when it exceeds the available space the table
+   * scrolls horizontally instead of squeezing the columns to nothing.
+   */
+  private measureContentWidth = () => {
+    const container = this.scrollContainerRef.current;
+
+    if (!container) {
+      return;
+    }
+
+    const cells = container.querySelectorAll<HTMLElement>(".TableHead .TableCell");
+    let minimumWidth = 0;
+
+    cells.forEach((cell) => {
+      const style = window.getComputedStyle(cell);
+      const minWidth = parseFloat(style.minWidth) || 0;
+      const flexBasis = style.flexBasis.endsWith("px") ? parseFloat(style.flexBasis) || 0 : 0;
+
+      minimumWidth += Math.max(minWidth, flexBasis);
+    });
+
+    const nextWidth = Math.max(container.clientWidth, Math.ceil(minimumWidth));
+
+    if (nextWidth !== this.state.contentWidth) {
+      this.setState({ contentWidth: nextWidth });
+    }
+  };
 
   // Plain getters (not @computed): they read this.props, which mobx-react 9
   // forbids inside a derivation. Read from render, reactivity is preserved by
@@ -173,10 +227,15 @@ class NonInjectedTable<Item extends ItemObject> extends React.Component<TablePro
       return null;
     }
 
+    const headProps = this.props.virtual
+      ? { style: { ...headElem.props.style, width: this.state.contentWidth || undefined } }
+      : {};
+
     if (this.isSortable) {
       const columns = React.Children.toArray(headElem.props.children) as TableCellElem[];
 
       return React.cloneElement(headElem, {
+        ...headProps,
         children: columns.map((elem) => {
           if (elem.props.checkbox) {
             return elem;
@@ -197,7 +256,7 @@ class NonInjectedTable<Item extends ItemObject> extends React.Component<TablePro
       });
     }
 
-    return headElem;
+    return React.cloneElement(headElem, headProps);
   }
 
   getSorted(rawItems: Item[]) {
@@ -287,6 +346,7 @@ class NonInjectedTable<Item extends ItemObject> extends React.Component<TablePro
           selectedItemId={selectedItemId}
           className={className}
           fixedHeight={virtualHeight}
+          width={this.state.contentWidth || "100%"}
         />
       );
     }
@@ -302,12 +362,24 @@ class NonInjectedTable<Item extends ItemObject> extends React.Component<TablePro
       sortable: this.isSortable,
       autoSize,
       virtual,
+      horizontalScroll: virtual,
     });
+    const head = this.renderHead();
+    const rows = this.renderRows();
 
     return (
       <div className={classNames}>
-        {this.renderHead()}
-        {this.renderRows()}
+        {virtual ? (
+          <div className="TableHorizontalScroll" ref={this.scrollContainerRef}>
+            {head}
+            {rows}
+          </div>
+        ) : (
+          <>
+            {head}
+            {rows}
+          </>
+        )}
       </div>
     );
   }

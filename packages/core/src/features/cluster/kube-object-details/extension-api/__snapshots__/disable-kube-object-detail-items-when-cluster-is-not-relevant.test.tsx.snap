@@ -47,6 +47,20 @@ exports[`disable kube object detail items when cluster is not relevant > given e
           >
             <span
               class="icon"
+              data-icon-name="fullscreen"
+            >
+              fullscreen
+            </span>
+          </i>
+          <div>
+            Full screen
+          </div>
+          <i
+            class="Icon material interactive focusable"
+            tabindex="0"
+          >
+            <span
+              class="icon"
               data-icon-name="close"
             >
               close
@@ -60,66 +74,126 @@ exports[`disable kube object detail items when cluster is not relevant > given e
           class="drawer-content flex flex-col grow shrink-0 basis-0"
         >
           <div
-            class="DrawerTitle sub-title"
+            class="Tabs KubeObjectDetailsTabs scrollable withBorder"
           >
-            Metadata
-          </div>
-          <div
-            class="DrawerItem"
-          >
-            <span
-              class="name"
-            >
-              Name
-            </span>
-            <span
-              class="value"
-            >
-              some-name
-            </span>
-          </div>
-          <div
-            class="DrawerItem"
-          >
-            <span
-              class="name"
-            >
-              Namespace
-            </span>
-            <span
-              class="value"
-            >
-              <a
-                href="/workloads?kube-details=%2Fapi%2Fv1%2Fnamespaces%2Fsome-namespace&kube-selected=%2Fapi%2Fsome-api-version%2Fnamespaces%2Fsome-namespace%2Fsome-kind%2Fsome-name"
-              >
-                <div
-                  class="badge flat"
-                >
-                  some-namespace
-                </div>
-                <div>
-                  some-namespace
-                </div>
-              </a>
-            </span>
-          </div>
-          <div
-            data-testid="some-kube-object-detail-item"
-          >
-            Some detail
-          </div>
-          <div>
             <div
-              class="DrawerTitle title"
+              class="Tab flex gap-2 items-center active"
+              role="tab"
+              tabindex="0"
             >
-              <span>
-                Events
+              <div
+                class="label"
+              >
+                Overview
+              </div>
+            </div>
+            <div
+              class="Tab flex gap-2 items-center"
+              role="tab"
+              tabindex="0"
+            >
+              <div
+                class="label"
+              >
+                Spec & status
+              </div>
+            </div>
+            <div
+              class="Tab flex gap-2 items-center"
+              role="tab"
+              tabindex="0"
+            >
+              <div
+                class="label"
+              >
+                Timeline
+              </div>
+            </div>
+            <div
+              class="Tab flex gap-2 items-center"
+              role="tab"
+              tabindex="0"
+            >
+              <div
+                class="label"
+              >
+                Logs
+              </div>
+            </div>
+            <div
+              class="Tab flex gap-2 items-center"
+              role="tab"
+              tabindex="0"
+            >
+              <div
+                class="label"
+              >
+                Metrics
+              </div>
+            </div>
+            <div
+              class="Tab flex gap-2 items-center"
+              role="tab"
+              tabindex="0"
+            >
+              <div
+                class="label"
+              >
+                YAML
+              </div>
+            </div>
+          </div>
+          <div
+            class="KubeObjectDetailsTabContent"
+          >
+            <div
+              class="DrawerTitle sub-title"
+            >
+              Metadata
+            </div>
+            <div
+              class="DrawerItem"
+            >
+              <span
+                class="name"
+              >
+                Name
+              </span>
+              <span
+                class="value"
+              >
+                some-name
               </span>
             </div>
             <div
-              class="empty"
+              class="DrawerItem"
             >
-              No events found
+              <span
+                class="name"
+              >
+                Namespace
+              </span>
+              <span
+                class="value"
+              >
+                <a
+                  href="/workloads?kube-details=%2Fapi%2Fv1%2Fnamespaces%2Fsome-namespace&kube-selected=%2Fapi%2Fsome-api-version%2Fnamespaces%2Fsome-namespace%2Fsome-kind%2Fsome-name"
+                >
+                  <div
+                    class="badge flat"
+                  >
+                    some-namespace
+                  </div>
+                  <div>
+                    some-namespace
+                  </div>
+                </a>
+              </span>
+            </div>
+            <div
+              data-testid="some-kube-object-detail-item"
+            >
+              Some detail
             </div>
           </div>
         </div>
@@ -849,6 +923,20 @@ exports[`disable kube object detail items when cluster is not relevant > given e
           >
             <span
               class="icon"
+              data-icon-name="fullscreen"
+            >
+              fullscreen
+            </span>
+          </i>
+          <div>
+            Full screen
+          </div>
+          <i
+            class="Icon material interactive focusable"
+            tabindex="0"
+          >
+            <span
+              class="icon"
               data-icon-name="close"
             >
               close
@@ -862,61 +950,121 @@ exports[`disable kube object detail items when cluster is not relevant > given e
           class="drawer-content flex flex-col grow shrink-0 basis-0"
         >
           <div
-            class="DrawerTitle sub-title"
+            class="Tabs KubeObjectDetailsTabs scrollable withBorder"
           >
-            Metadata
-          </div>
-          <div
-            class="DrawerItem"
-          >
-            <span
-              class="name"
-            >
-              Name
-            </span>
-            <span
-              class="value"
-            >
-              some-name
-            </span>
-          </div>
-          <div
-            class="DrawerItem"
-          >
-            <span
-              class="name"
-            >
-              Namespace
-            </span>
-            <span
-              class="value"
-            >
-              <a
-                href="/workloads?kube-details=%2Fapi%2Fv1%2Fnamespaces%2Fsome-namespace&kube-selected=%2Fapi%2Fsome-api-version%2Fnamespaces%2Fsome-namespace%2Fsome-kind%2Fsome-name"
-              >
-                <div
-                  class="badge flat"
-                >
-                  some-namespace
-                </div>
-                <div>
-                  some-namespace
-                </div>
-              </a>
-            </span>
-          </div>
-          <div>
             <div
-              class="DrawerTitle title"
+              class="Tab flex gap-2 items-center active"
+              role="tab"
+              tabindex="0"
             >
-              <span>
-                Events
+              <div
+                class="label"
+              >
+                Overview
+              </div>
+            </div>
+            <div
+              class="Tab flex gap-2 items-center"
+              role="tab"
+              tabindex="0"
+            >
+              <div
+                class="label"
+              >
+                Spec & status
+              </div>
+            </div>
+            <div
+              class="Tab flex gap-2 items-center"
+              role="tab"
+              tabindex="0"
+            >
+              <div
+                class="label"
+              >
+                Timeline
+              </div>
+            </div>
+            <div
+              class="Tab flex gap-2 items-center"
+              role="tab"
+              tabindex="0"
+            >
+              <div
+                class="label"
+              >
+                Logs
+              </div>
+            </div>
+            <div
+              class="Tab flex gap-2 items-center"
+              role="tab"
+              tabindex="0"
+            >
+              <div
+                class="label"
+              >
+                Metrics
+              </div>
+            </div>
+            <div
+              class="Tab flex gap-2 items-center"
+              role="tab"
+              tabindex="0"
+            >
+              <div
+                class="label"
+              >
+                YAML
+              </div>
+            </div>
+          </div>
+          <div
+            class="KubeObjectDetailsTabContent"
+          >
+            <div
+              class="DrawerTitle sub-title"
+            >
+              Metadata
+            </div>
+            <div
+              class="DrawerItem"
+            >
+              <span
+                class="name"
+              >
+                Name
+              </span>
+              <span
+                class="value"
+              >
+                some-name
               </span>
             </div>
             <div
-              class="empty"
+              class="DrawerItem"
             >
-              No events found
+              <span
+                class="name"
+              >
+                Namespace
+              </span>
+              <span
+                class="value"
+              >
+                <a
+                  href="/workloads?kube-details=%2Fapi%2Fv1%2Fnamespaces%2Fsome-namespace&kube-selected=%2Fapi%2Fsome-api-version%2Fnamespaces%2Fsome-namespace%2Fsome-kind%2Fsome-name"
+                >
+                  <div
+                    class="badge flat"
+                  >
+                    some-namespace
+                  </div>
+                  <div>
+                    some-namespace
+                  </div>
+                </a>
+              </span>
             </div>
           </div>
         </div>
@@ -1646,6 +1794,20 @@ exports[`disable kube object detail items when cluster is not relevant > given n
           >
             <span
               class="icon"
+              data-icon-name="fullscreen"
+            >
+              fullscreen
+            </span>
+          </i>
+          <div>
+            Full screen
+          </div>
+          <i
+            class="Icon material interactive focusable"
+            tabindex="0"
+          >
+            <span
+              class="icon"
               data-icon-name="close"
             >
               close
@@ -1659,61 +1821,121 @@ exports[`disable kube object detail items when cluster is not relevant > given n
           class="drawer-content flex flex-col grow shrink-0 basis-0"
         >
           <div
-            class="DrawerTitle sub-title"
+            class="Tabs KubeObjectDetailsTabs scrollable withBorder"
           >
-            Metadata
-          </div>
-          <div
-            class="DrawerItem"
-          >
-            <span
-              class="name"
-            >
-              Name
-            </span>
-            <span
-              class="value"
-            >
-              some-name
-            </span>
-          </div>
-          <div
-            class="DrawerItem"
-          >
-            <span
-              class="name"
-            >
-              Namespace
-            </span>
-            <span
-              class="value"
-            >
-              <a
-                href="/workloads?kube-details=%2Fapi%2Fv1%2Fnamespaces%2Fsome-namespace&kube-selected=%2Fapi%2Fsome-api-version%2Fnamespaces%2Fsome-namespace%2Fsome-kind%2Fsome-name"
-              >
-                <div
-                  class="badge flat"
-                >
-                  some-namespace
-                </div>
-                <div>
-                  some-namespace
-                </div>
-              </a>
-            </span>
-          </div>
-          <div>
             <div
-              class="DrawerTitle title"
+              class="Tab flex gap-2 items-center active"
+              role="tab"
+              tabindex="0"
             >
-              <span>
-                Events
+              <div
+                class="label"
+              >
+                Overview
+              </div>
+            </div>
+            <div
+              class="Tab flex gap-2 items-center"
+              role="tab"
+              tabindex="0"
+            >
+              <div
+                class="label"
+              >
+                Spec & status
+              </div>
+            </div>
+            <div
+              class="Tab flex gap-2 items-center"
+              role="tab"
+              tabindex="0"
+            >
+              <div
+                class="label"
+              >
+                Timeline
+              </div>
+            </div>
+            <div
+              class="Tab flex gap-2 items-center"
+              role="tab"
+              tabindex="0"
+            >
+              <div
+                class="label"
+              >
+                Logs
+              </div>
+            </div>
+            <div
+              class="Tab flex gap-2 items-center"
+              role="tab"
+              tabindex="0"
+            >
+              <div
+                class="label"
+              >
+                Metrics
+              </div>
+            </div>
+            <div
+              class="Tab flex gap-2 items-center"
+              role="tab"
+              tabindex="0"
+            >
+              <div
+                class="label"
+              >
+                YAML
+              </div>
+            </div>
+          </div>
+          <div
+            class="KubeObjectDetailsTabContent"
+          >
+            <div
+              class="DrawerTitle sub-title"
+            >
+              Metadata
+            </div>
+            <div
+              class="DrawerItem"
+            >
+              <span
+                class="name"
+              >
+                Name
+              </span>
+              <span
+                class="value"
+              >
+                some-name
               </span>
             </div>
             <div
-              class="empty"
+              class="DrawerItem"
             >
-              No events found
+              <span
+                class="name"
+              >
+                Namespace
+              </span>
+              <span
+                class="value"
+              >
+                <a
+                  href="/workloads?kube-details=%2Fapi%2Fv1%2Fnamespaces%2Fsome-namespace&kube-selected=%2Fapi%2Fsome-api-version%2Fnamespaces%2Fsome-namespace%2Fsome-kind%2Fsome-name"
+                >
+                  <div
+                    class="badge flat"
+                  >
+                    some-namespace
+                  </div>
+                  <div>
+                    some-namespace
+                  </div>
+                </a>
+              </span>
             </div>
           </div>
         </div>

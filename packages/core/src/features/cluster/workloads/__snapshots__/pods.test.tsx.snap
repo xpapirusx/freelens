@@ -614,516 +614,520 @@ exports[`workloads / pods > when navigating to workloads / pods view > given a n
                 class="items grow shrink-0 basis-0 flex flex-col"
               >
                 <div
-                  class="Table flex flex-col KubeObjectListLayout Pods grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual"
+                  class="Table flex flex-col KubeObjectListLayout Pods grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual horizontalScroll"
                 >
                   <div
-                    class="TableHead sticky nowrap topLine"
+                    class="TableHorizontalScroll"
                   >
                     <div
-                      class="TableCell checkbox"
-                    >
-                      <label
-                        class="Checkbox flex items-center"
-                      >
-                        <input
-                          type="checkbox"
-                        />
-                        <i
-                          class="check-icon flex items-center"
-                        />
-                      </label>
-                    </div>
-                    <div
-                      class="TableCell name nowrap sorting"
-                      id="name"
+                      class="TableHead sticky nowrap topLine"
                     >
                       <div
-                        class="content"
+                        class="TableCell checkbox"
                       >
-                        Name
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
+                        <label
+                          class="Checkbox flex items-center"
                         >
-                          arrow_drop_down
-                        </span>
-                      </i>
+                          <input
+                            type="checkbox"
+                          />
+                          <i
+                            class="check-icon flex items-center"
+                          />
+                        </label>
+                      </div>
                       <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell warning-header nowrap"
-                      id="warning"
-                    >
-                      <div
-                        class="content"
+                        class="TableCell name nowrap sorting"
+                        id="name"
                       >
+                        <div
+                          class="content"
+                        >
+                          Name
+                        </div>
                         <i
-                          class="Icon material focusable"
+                          class="Icon sortIcon material focusable"
                         >
                           <span
                             class="icon"
-                            data-icon-name="warning_amber"
+                            data-icon-name="arrow_drop_down"
                           >
-                            warning_amber
+                            arrow_drop_down
                           </span>
                         </i>
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell namespace nowrap sorting"
-                      id="namespace"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Namespace
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell containers nowrap sorting"
-                      id="containers"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Containers
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell ports nowrap sorting"
-                      id="ports"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Ports
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell cpu nowrap sorting"
-                      id="cpuUsage"
-                    >
-                      <div
-                        class="content"
-                      >
-                        CPU
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell memory nowrap sorting"
-                      id="memoryUsage"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Memory
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell restarts nowrap sorting"
-                      id="restarts"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Restarts
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell owners nowrap sorting"
-                      id="owners"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Controlled By
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell age nowrap sorting"
-                      id="age"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Age
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell status nowrap sorting"
-                      id="status"
-                    >
-                      <div
-                        class="content"
-                      >
-                        <span
-                          class="header-cell-content"
-                        >
-                          Status
-                        </span>
                         <div
-                          class="ColumnFilterDropdown"
-                          data-testid="column-filter-status"
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell warning-header nowrap"
+                        id="warning"
+                      >
+                        <div
+                          class="content"
                         >
-                          <div
-                            id="column-filter-workloads_pods-status"
+                          <i
+                            class="Icon material focusable"
                           >
-                            <button
-                              aria-label="Filter by Status"
-                              aria-pressed="false"
-                              class="ColumnFilterDropdown-toggle"
-                              type="button"
+                            <span
+                              class="icon"
+                              data-icon-name="warning_amber"
                             >
-                              <i
-                                class="Icon material focusable small"
+                              warning_amber
+                            </span>
+                          </i>
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell namespace nowrap sorting"
+                        id="namespace"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Namespace
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell containers nowrap sorting"
+                        id="containers"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Containers
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell ports nowrap sorting"
+                        id="ports"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Ports
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell cpu nowrap sorting"
+                        id="cpuUsage"
+                      >
+                        <div
+                          class="content"
+                        >
+                          CPU
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell memory nowrap sorting"
+                        id="memoryUsage"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Memory
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell restarts nowrap sorting"
+                        id="restarts"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Restarts
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell owners nowrap sorting"
+                        id="owners"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Controlled By
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell age nowrap sorting"
+                        id="age"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Age
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell status nowrap sorting"
+                        id="status"
+                      >
+                        <div
+                          class="content"
+                        >
+                          <span
+                            class="header-cell-content"
+                          >
+                            Status
+                          </span>
+                          <div
+                            class="ColumnFilterDropdown"
+                            data-testid="column-filter-status"
+                          >
+                            <div
+                              id="column-filter-workloads_pods-status"
+                            >
+                              <button
+                                aria-label="Filter by Status"
+                                aria-pressed="false"
+                                class="ColumnFilterDropdown-toggle"
+                                type="button"
                               >
-                                <span
-                                  class="icon"
-                                  data-icon-name="filter_alt"
+                                <i
+                                  class="Icon material focusable small"
                                 >
-                                  filter_alt
-                                </span>
-                              </i>
-                            </button>
+                                  <span
+                                    class="icon"
+                                    data-icon-name="filter_alt"
+                                  >
+                                    filter_alt
+                                  </span>
+                                </i>
+                              </button>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell logs nowrap"
-                      id="logs"
-                    >
-                      <div
-                        class="content"
-                      >
                         <i
-                          class="Icon material focusable"
+                          class="Icon sortIcon material focusable"
                         >
                           <span
                             class="icon"
-                            data-icon-name="subject"
+                            data-icon-name="arrow_drop_down"
                           >
-                            subject
+                            arrow_drop_down
                           </span>
                         </i>
+                        <div
+                          class="resize-handle"
+                        />
                       </div>
-                    </div>
-                    <div
-                      class="TableCell menu nowrap"
-                    >
                       <div
-                        class="content"
-                      >
-                        <i
-                          class="Icon material interactive focusable"
-                          id="menu-actions-for-item-object-list-content"
-                          tabindex="0"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="more_vert"
-                          >
-                            more_vert
-                          </span>
-                        </i>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="VirtualList KubeObjectListLayout Pods grow shrink-0 basis-0 dark"
-                  >
-                    <div
-                      class="list"
-                      role="list"
-                      style="position: relative; flex-grow: 1; max-height: 100%; overflow-y: auto; width: 100%; height: 100%;"
-                    >
-                      <div
-                        data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
+                        class="TableCell logs nowrap"
+                        id="logs"
                       >
                         <div
-                          class="TableRow nowrap"
-                          id="menu-actions-for-kube-object-menu-for-uuid-1"
+                          class="content"
+                        >
+                          <i
+                            class="Icon material focusable"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="subject"
+                            >
+                              subject
+                            </span>
+                          </i>
+                        </div>
+                      </div>
+                      <div
+                        class="TableCell menu nowrap"
+                      >
+                        <div
+                          class="content"
+                        >
+                          <i
+                            class="Icon material interactive focusable"
+                            id="menu-actions-for-item-object-list-content"
+                            tabindex="0"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="more_vert"
+                            >
+                              more_vert
+                            </span>
+                          </i>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="VirtualList KubeObjectListLayout Pods grow shrink-0 basis-0 dark"
+                    >
+                      <div
+                        class="list"
+                        role="list"
+                        style="position: relative; flex-grow: 1; max-height: 100%; overflow-y: auto; width: 100%; height: 100%;"
+                      >
+                        <div
+                          data-react-window-index="0"
+                          style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                         >
                           <div
-                            class="TableCell checkbox"
-                          >
-                            <label
-                              class="Checkbox flex items-center"
-                            >
-                              <input
-                                type="checkbox"
-                              />
-                              <i
-                                class="check-icon flex items-center"
-                              />
-                            </label>
-                          </div>
-                          <div
-                            class="TableCell name"
+                            class="TableRow nowrap"
+                            id="menu-actions-for-kube-object-menu-for-uuid-1"
                           >
                             <div
-                              class="badge flat"
+                              class="TableCell checkbox"
                             >
-                              test-pod-1
+                              <label
+                                class="Checkbox flex items-center"
+                              >
+                                <input
+                                  type="checkbox"
+                                />
+                                <i
+                                  class="check-icon flex items-center"
+                                />
+                              </label>
                             </div>
-                            <div>
-                              test-pod-1
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell warning-header"
-                          />
-                          <div
-                            class="TableCell namespace"
-                          >
                             <div
-                              class="badge NamespaceSelectBadge flat clickable"
+                              class="TableCell name"
                             >
-                              default
+                              <div
+                                class="badge flat"
+                              >
+                                test-pod-1
+                              </div>
+                              <div>
+                                test-pod-1
+                              </div>
                             </div>
-                            <div>
-                              Set global namespace filter to:
-                              <b>
+                            <div
+                              class="TableCell warning-header"
+                            />
+                            <div
+                              class="TableCell namespace"
+                            >
+                              <div
+                                class="badge NamespaceSelectBadge flat clickable"
+                              >
                                 default
-                              </b>
+                              </div>
+                              <div>
+                                Set global namespace filter to:
+                                <b>
+                                  default
+                                </b>
+                              </div>
                             </div>
-                          </div>
-                          <div
-                            class="TableCell containers"
-                          >
                             <div
-                              class="StatusBrick"
-                            />
-                            <div />
-                            <div
-                              class="StatusBrick"
-                            />
-                            <div />
-                          </div>
-                          <div
-                            class="TableCell ports"
-                          >
-                            <span
-                              class="PodPortsCell none"
+                              class="TableCell containers"
                             >
-                              -
-                            </span>
-                          </div>
-                          <div
-                            class="TableCell cpu"
-                          >
-                            <span
-                              class="usageText"
-                            >
-                              N/A
-                            </span>
-                          </div>
-                          <div
-                            class="TableCell memory"
-                          >
-                            <span
-                              class="usageText"
-                            >
-                              N/A
-                            </span>
-                          </div>
-                          <div
-                            class="TableCell restarts"
-                          >
-                            0
-                          </div>
-                          <div
-                            class="TableCell owners"
-                          />
-                          <div
-                            class="TableCell age"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              &lt;unknown&gt;
+                              <div
+                                class="StatusBrick"
+                              />
+                              <div />
+                              <div
+                                class="StatusBrick"
+                              />
+                              <div />
                             </div>
-                            <div>
-                              2015-10-21T07:28:00Z
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell waiting status"
-                          >
-                            Waiting
-                          </div>
-                          <div
-                            class="TableCell logs"
-                          >
-                            <i
-                              class="Icon material interactive focusable"
-                              style="cursor: pointer;"
-                              tabindex="0"
+                            <div
+                              class="TableCell ports"
                             >
                               <span
-                                class="icon"
-                                data-icon-name="subject"
+                                class="PodPortsCell none"
                               >
-                                subject
+                                -
                               </span>
-                            </i>
-                            <div>
-                              View Logs
                             </div>
-                          </div>
-                          <div
-                            class="TableCell menu"
-                          >
-                            <div>
+                            <div
+                              class="TableCell cpu"
+                            >
+                              <span
+                                class="usageText"
+                              >
+                                N/A
+                              </span>
+                            </div>
+                            <div
+                              class="TableCell memory"
+                            >
+                              <span
+                                class="usageText"
+                              >
+                                N/A
+                              </span>
+                            </div>
+                            <div
+                              class="TableCell restarts"
+                            >
+                              0
+                            </div>
+                            <div
+                              class="TableCell owners"
+                            />
+                            <div
+                              class="TableCell age"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                &lt;unknown&gt;
+                              </div>
+                              <div>
+                                2015-10-21T07:28:00Z
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell waiting status"
+                            >
+                              Waiting
+                            </div>
+                            <div
+                              class="TableCell logs"
+                            >
                               <i
                                 class="Icon material interactive focusable"
-                                data-testid="icon-for-menu-actions-for-kube-object-menu-for-uuid-1"
-                                id="uuid-1"
+                                style="cursor: pointer;"
                                 tabindex="0"
                               >
                                 <span
                                   class="icon"
-                                  data-icon-name="more_vert"
+                                  data-icon-name="subject"
                                 >
-                                  more_vert
+                                  subject
                                 </span>
                               </i>
+                              <div>
+                                View Logs
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell menu"
+                            >
+                              <div>
+                                <i
+                                  class="Icon material interactive focusable"
+                                  data-testid="icon-for-menu-actions-for-kube-object-menu-for-uuid-1"
+                                  id="uuid-1"
+                                  tabindex="0"
+                                >
+                                  <span
+                                    class="icon"
+                                    data-icon-name="more_vert"
+                                  >
+                                    more_vert
+                                  </span>
+                                </i>
+                              </div>
                             </div>
                           </div>
                         </div>
+                        <div
+                          aria-hidden="true"
+                          data-react-window-sizer=""
+                          style="height: 44px; width: 100%; z-index: -1;"
+                        />
                       </div>
-                      <div
-                        aria-hidden="true"
-                        data-react-window-sizer=""
-                        style="height: 44px; width: 100%; z-index: -1;"
-                      />
                     </div>
                   </div>
                 </div>
@@ -1882,354 +1886,358 @@ exports[`workloads / pods > when navigating to workloads / pods view > given no 
                 class="items grow shrink-0 basis-0 flex flex-col"
               >
                 <div
-                  class="Table flex flex-col KubeObjectListLayout Pods grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual"
+                  class="Table flex flex-col KubeObjectListLayout Pods grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual horizontalScroll"
                 >
                   <div
-                    class="TableHead sticky nowrap topLine"
+                    class="TableHorizontalScroll"
                   >
                     <div
-                      class="TableCell checkbox"
-                    >
-                      <label
-                        class="Checkbox flex items-center"
-                      >
-                        <input
-                          type="checkbox"
-                        />
-                        <i
-                          class="check-icon flex items-center"
-                        />
-                      </label>
-                    </div>
-                    <div
-                      class="TableCell name nowrap sorting"
-                      id="name"
+                      class="TableHead sticky nowrap topLine"
                     >
                       <div
-                        class="content"
+                        class="TableCell checkbox"
                       >
-                        Name
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
+                        <label
+                          class="Checkbox flex items-center"
                         >
-                          arrow_drop_down
-                        </span>
-                      </i>
+                          <input
+                            type="checkbox"
+                          />
+                          <i
+                            class="check-icon flex items-center"
+                          />
+                        </label>
+                      </div>
                       <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell warning-header nowrap"
-                      id="warning"
-                    >
-                      <div
-                        class="content"
+                        class="TableCell name nowrap sorting"
+                        id="name"
                       >
+                        <div
+                          class="content"
+                        >
+                          Name
+                        </div>
                         <i
-                          class="Icon material focusable"
+                          class="Icon sortIcon material focusable"
                         >
                           <span
                             class="icon"
-                            data-icon-name="warning_amber"
+                            data-icon-name="arrow_drop_down"
                           >
-                            warning_amber
+                            arrow_drop_down
                           </span>
                         </i>
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell namespace nowrap sorting"
-                      id="namespace"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Namespace
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell containers nowrap sorting"
-                      id="containers"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Containers
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell ports nowrap sorting"
-                      id="ports"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Ports
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell cpu nowrap sorting"
-                      id="cpuUsage"
-                    >
-                      <div
-                        class="content"
-                      >
-                        CPU
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell memory nowrap sorting"
-                      id="memoryUsage"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Memory
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell restarts nowrap sorting"
-                      id="restarts"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Restarts
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell owners nowrap sorting"
-                      id="owners"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Controlled By
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell age nowrap sorting"
-                      id="age"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Age
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell status nowrap sorting"
-                      id="status"
-                    >
-                      <div
-                        class="content"
-                      >
-                        <span
-                          class="header-cell-content"
-                        >
-                          Status
-                        </span>
                         <div
-                          class="ColumnFilterDropdown"
-                          data-testid="column-filter-status"
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell warning-header nowrap"
+                        id="warning"
+                      >
+                        <div
+                          class="content"
                         >
-                          <div
-                            id="column-filter-workloads_pods-status"
+                          <i
+                            class="Icon material focusable"
                           >
-                            <button
-                              aria-label="Filter by Status"
-                              aria-pressed="false"
-                              class="ColumnFilterDropdown-toggle"
-                              type="button"
+                            <span
+                              class="icon"
+                              data-icon-name="warning_amber"
                             >
-                              <i
-                                class="Icon material focusable small"
+                              warning_amber
+                            </span>
+                          </i>
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell namespace nowrap sorting"
+                        id="namespace"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Namespace
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell containers nowrap sorting"
+                        id="containers"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Containers
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell ports nowrap sorting"
+                        id="ports"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Ports
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell cpu nowrap sorting"
+                        id="cpuUsage"
+                      >
+                        <div
+                          class="content"
+                        >
+                          CPU
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell memory nowrap sorting"
+                        id="memoryUsage"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Memory
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell restarts nowrap sorting"
+                        id="restarts"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Restarts
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell owners nowrap sorting"
+                        id="owners"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Controlled By
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell age nowrap sorting"
+                        id="age"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Age
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell status nowrap sorting"
+                        id="status"
+                      >
+                        <div
+                          class="content"
+                        >
+                          <span
+                            class="header-cell-content"
+                          >
+                            Status
+                          </span>
+                          <div
+                            class="ColumnFilterDropdown"
+                            data-testid="column-filter-status"
+                          >
+                            <div
+                              id="column-filter-workloads_pods-status"
+                            >
+                              <button
+                                aria-label="Filter by Status"
+                                aria-pressed="false"
+                                class="ColumnFilterDropdown-toggle"
+                                type="button"
                               >
-                                <span
-                                  class="icon"
-                                  data-icon-name="filter_alt"
+                                <i
+                                  class="Icon material focusable small"
                                 >
-                                  filter_alt
-                                </span>
-                              </i>
-                            </button>
+                                  <span
+                                    class="icon"
+                                    data-icon-name="filter_alt"
+                                  >
+                                    filter_alt
+                                  </span>
+                                </i>
+                              </button>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell logs nowrap"
-                      id="logs"
-                    >
-                      <div
-                        class="content"
-                      >
                         <i
-                          class="Icon material focusable"
+                          class="Icon sortIcon material focusable"
                         >
                           <span
                             class="icon"
-                            data-icon-name="subject"
+                            data-icon-name="arrow_drop_down"
                           >
-                            subject
+                            arrow_drop_down
                           </span>
                         </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell logs nowrap"
+                        id="logs"
+                      >
+                        <div
+                          class="content"
+                        >
+                          <i
+                            class="Icon material focusable"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="subject"
+                            >
+                              subject
+                            </span>
+                          </i>
+                        </div>
+                      </div>
+                      <div
+                        class="TableCell menu nowrap"
+                      >
+                        <div
+                          class="content"
+                        >
+                          <i
+                            class="Icon material interactive focusable"
+                            id="menu-actions-for-item-object-list-content"
+                            tabindex="0"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="more_vert"
+                            >
+                              more_vert
+                            </span>
+                          </i>
+                        </div>
                       </div>
                     </div>
                     <div
-                      class="TableCell menu nowrap"
+                      class="NoItems flex grow shrink-0 basis-0"
                     >
                       <div
-                        class="content"
+                        class="m-auto"
                       >
-                        <i
-                          class="Icon material interactive focusable"
-                          id="menu-actions-for-item-object-list-content"
-                          tabindex="0"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="more_vert"
-                          >
-                            more_vert
-                          </span>
-                        </i>
+                        Item list is empty
                       </div>
-                    </div>
-                  </div>
-                  <div
-                    class="NoItems flex grow shrink-0 basis-0"
-                  >
-                    <div
-                      class="m-auto"
-                    >
-                      Item list is empty
                     </div>
                   </div>
                 </div>
@@ -2988,351 +2996,355 @@ exports[`workloads / pods > when navigating to workloads / pods view > given pod
                 class="items grow shrink-0 basis-0 flex flex-col"
               >
                 <div
-                  class="Table flex flex-col KubeObjectListLayout Pods grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual"
+                  class="Table flex flex-col KubeObjectListLayout Pods grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual horizontalScroll"
                 >
                   <div
-                    class="TableHead sticky nowrap topLine"
+                    class="TableHorizontalScroll"
                   >
                     <div
-                      class="TableCell checkbox"
-                    >
-                      <label
-                        class="Checkbox flex items-center"
-                      >
-                        <input
-                          type="checkbox"
-                        />
-                        <i
-                          class="check-icon flex items-center"
-                        />
-                      </label>
-                    </div>
-                    <div
-                      class="TableCell name nowrap sorting"
-                      id="name"
+                      class="TableHead sticky nowrap topLine"
                     >
                       <div
-                        class="content"
+                        class="TableCell checkbox"
                       >
-                        Name
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
+                        <label
+                          class="Checkbox flex items-center"
                         >
-                          arrow_drop_down
-                        </span>
-                      </i>
+                          <input
+                            type="checkbox"
+                          />
+                          <i
+                            class="check-icon flex items-center"
+                          />
+                        </label>
+                      </div>
                       <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell warning-header nowrap"
-                      id="warning"
-                    >
-                      <div
-                        class="content"
+                        class="TableCell name nowrap sorting"
+                        id="name"
                       >
+                        <div
+                          class="content"
+                        >
+                          Name
+                        </div>
                         <i
-                          class="Icon material focusable"
+                          class="Icon sortIcon material focusable"
                         >
                           <span
                             class="icon"
-                            data-icon-name="warning_amber"
+                            data-icon-name="arrow_drop_down"
                           >
-                            warning_amber
+                            arrow_drop_down
                           </span>
                         </i>
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell namespace nowrap sorting"
-                      id="namespace"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Namespace
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell containers nowrap sorting"
-                      id="containers"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Containers
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell ports nowrap sorting"
-                      id="ports"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Ports
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell cpu nowrap sorting"
-                      id="cpuUsage"
-                    >
-                      <div
-                        class="content"
-                      >
-                        CPU
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell memory nowrap sorting"
-                      id="memoryUsage"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Memory
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell restarts nowrap sorting"
-                      id="restarts"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Restarts
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell owners nowrap sorting"
-                      id="owners"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Controlled By
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell age nowrap sorting"
-                      id="age"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Age
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell status nowrap sorting"
-                      id="status"
-                    >
-                      <div
-                        class="content"
-                      >
-                        <span
-                          class="header-cell-content"
-                        >
-                          Status
-                        </span>
                         <div
-                          class="ColumnFilterDropdown"
-                          data-testid="column-filter-status"
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell warning-header nowrap"
+                        id="warning"
+                      >
+                        <div
+                          class="content"
                         >
-                          <div
-                            id="column-filter-workloads_pods-status"
+                          <i
+                            class="Icon material focusable"
                           >
-                            <button
-                              aria-label="Filter by Status"
-                              aria-pressed="false"
-                              class="ColumnFilterDropdown-toggle"
-                              type="button"
+                            <span
+                              class="icon"
+                              data-icon-name="warning_amber"
                             >
-                              <i
-                                class="Icon material focusable small"
+                              warning_amber
+                            </span>
+                          </i>
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell namespace nowrap sorting"
+                        id="namespace"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Namespace
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell containers nowrap sorting"
+                        id="containers"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Containers
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell ports nowrap sorting"
+                        id="ports"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Ports
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell cpu nowrap sorting"
+                        id="cpuUsage"
+                      >
+                        <div
+                          class="content"
+                        >
+                          CPU
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell memory nowrap sorting"
+                        id="memoryUsage"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Memory
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell restarts nowrap sorting"
+                        id="restarts"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Restarts
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell owners nowrap sorting"
+                        id="owners"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Controlled By
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell age nowrap sorting"
+                        id="age"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Age
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell status nowrap sorting"
+                        id="status"
+                      >
+                        <div
+                          class="content"
+                        >
+                          <span
+                            class="header-cell-content"
+                          >
+                            Status
+                          </span>
+                          <div
+                            class="ColumnFilterDropdown"
+                            data-testid="column-filter-status"
+                          >
+                            <div
+                              id="column-filter-workloads_pods-status"
+                            >
+                              <button
+                                aria-label="Filter by Status"
+                                aria-pressed="false"
+                                class="ColumnFilterDropdown-toggle"
+                                type="button"
                               >
-                                <span
-                                  class="icon"
-                                  data-icon-name="filter_alt"
+                                <i
+                                  class="Icon material focusable small"
                                 >
-                                  filter_alt
-                                </span>
-                              </i>
-                            </button>
+                                  <span
+                                    class="icon"
+                                    data-icon-name="filter_alt"
+                                  >
+                                    filter_alt
+                                  </span>
+                                </i>
+                              </button>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell logs nowrap"
-                      id="logs"
-                    >
-                      <div
-                        class="content"
-                      >
                         <i
-                          class="Icon material focusable"
+                          class="Icon sortIcon material focusable"
                         >
                           <span
                             class="icon"
-                            data-icon-name="subject"
+                            data-icon-name="arrow_drop_down"
                           >
-                            subject
+                            arrow_drop_down
                           </span>
                         </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell logs nowrap"
+                        id="logs"
+                      >
+                        <div
+                          class="content"
+                        >
+                          <i
+                            class="Icon material focusable"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="subject"
+                            >
+                              subject
+                            </span>
+                          </i>
+                        </div>
+                      </div>
+                      <div
+                        class="TableCell menu nowrap"
+                      >
+                        <div
+                          class="content"
+                        >
+                          <i
+                            class="Icon material interactive focusable"
+                            id="menu-actions-for-item-object-list-content"
+                            tabindex="0"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="more_vert"
+                            >
+                              more_vert
+                            </span>
+                          </i>
+                        </div>
                       </div>
                     </div>
                     <div
-                      class="TableCell menu nowrap"
-                    >
-                      <div
-                        class="content"
-                      >
-                        <i
-                          class="Icon material interactive focusable"
-                          id="menu-actions-for-item-object-list-content"
-                          tabindex="0"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="more_vert"
-                          >
-                            more_vert
-                          </span>
-                        </i>
-                      </div>
-                    </div>
+                      class="Spinner singleColor center"
+                      data-testid="kube-object-list-layout-spinner"
+                    />
                   </div>
-                  <div
-                    class="Spinner singleColor center"
-                    data-testid="kube-object-list-layout-spinner"
-                  />
                 </div>
                 <div
                   class="AddRemoveButtons flex gap-2"

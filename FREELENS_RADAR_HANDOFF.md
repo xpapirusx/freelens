@@ -18,7 +18,7 @@
 
 **Незакоммиченное (текущая работа)** — фильтры по значениям колонок:
 
-```
+```text
 M packages/core/src/features/cluster/workloads/__snapshots__/pods.test.tsx.snap
 M packages/core/src/renderer/components/events/events.tsx
 M packages/core/src/renderer/components/item-object-list/__tests__/column-resize.test.tsx

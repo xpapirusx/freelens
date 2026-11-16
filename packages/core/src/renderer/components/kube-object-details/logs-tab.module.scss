@@ -1,0 +1,38 @@
+/**
+ * Copyright (c) Freelens Authors. All rights reserved.
+ * Licensed under MIT License. See LICENSE in root directory for more information.
+ */
+
+.LogsTab {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--borderFaintColor);
+    font-size: 12px;
+  }
+
+  .podName {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .containerName {
+    color: var(--textColorSecondary);
+    font-family: var(--font-monospace);
+  }
+
+  .empty {
+    padding: 8px 0;
+    color: var(--textColorTertiary);
+    font-size: 12px;
+  }
+}

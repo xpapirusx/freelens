@@ -7,8 +7,8 @@ import { interval } from "@freelensapp/utilities";
 import { withInjectables } from "@ogre-tools/injectable-react";
 import { observer } from "mobx-react";
 import { useEffect } from "react";
-import { ResourceUsageSection } from "../usage-chart/resource-usage-section";
 import { seriesLastValue } from "../usage-chart/metrics-series";
+import { ResourceUsageSection } from "../usage-chart/resource-usage-section";
 import nodeMetricsInjectable from "./metrics.injectable";
 
 import type { Node } from "@freelensapp/kube-object";

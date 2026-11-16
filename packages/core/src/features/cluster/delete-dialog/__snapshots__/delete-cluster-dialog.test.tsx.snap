@@ -395,148 +395,152 @@ exports[`Deleting a cluster > when an internal kubeconfig cluster is used > when
                   class="items grow shrink-0 basis-0 flex flex-col"
                 >
                   <div
-                    class="Table flex flex-col Catalog grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual"
+                    class="Table flex flex-col Catalog grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual horizontalScroll"
                   >
                     <div
-                      class="TableHead sticky nowrap topLine"
+                      class="TableHorizontalScroll"
                     >
                       <div
-                        class="TableCell entityName nowrap sorting"
-                        id="name"
+                        class="TableHead sticky nowrap topLine"
                       >
                         <div
-                          class="content"
+                          class="TableCell entityName nowrap sorting"
+                          id="name"
                         >
-                          Name
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
+                          <div
+                            class="content"
                           >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell nowrap sorting"
-                        data-testid="catalog-kind-column"
-                        id="kind"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Kind
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
-                          >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell sourceCell nowrap sorting"
-                        data-testid="catalog-source-column"
-                        id="source"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Source
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
-                          >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell labelsCell scrollable nowrap"
-                        data-testid="catalog-labels-column"
-                        id="labels"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Labels
-                        </div>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell statusCell nowrap sorting"
-                        data-testid="catalog-status-column"
-                        id="status"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Status
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
-                          >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell menu nowrap"
-                      >
-                        <div
-                          class="content"
-                        >
+                            Name
+                          </div>
                           <i
-                            class="Icon material interactive focusable"
-                            id="menu-actions-for-item-object-list-content"
-                            tabindex="0"
+                            class="Icon sortIcon material focusable"
                           >
                             <span
                               class="icon"
-                              data-icon-name="more_vert"
+                              data-icon-name="arrow_drop_down"
                             >
-                              more_vert
+                              arrow_drop_down
                             </span>
                           </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell nowrap sorting"
+                          data-testid="catalog-kind-column"
+                          id="kind"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Kind
+                          </div>
+                          <i
+                            class="Icon sortIcon material focusable"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="arrow_drop_down"
+                            >
+                              arrow_drop_down
+                            </span>
+                          </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell sourceCell nowrap sorting"
+                          data-testid="catalog-source-column"
+                          id="source"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Source
+                          </div>
+                          <i
+                            class="Icon sortIcon material focusable"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="arrow_drop_down"
+                            >
+                              arrow_drop_down
+                            </span>
+                          </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell labelsCell scrollable nowrap"
+                          data-testid="catalog-labels-column"
+                          id="labels"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Labels
+                          </div>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell statusCell nowrap sorting"
+                          data-testid="catalog-status-column"
+                          id="status"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Status
+                          </div>
+                          <i
+                            class="Icon sortIcon material focusable"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="arrow_drop_down"
+                            >
+                              arrow_drop_down
+                            </span>
+                          </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell menu nowrap"
+                        >
+                          <div
+                            class="content"
+                          >
+                            <i
+                              class="Icon material interactive focusable"
+                              id="menu-actions-for-item-object-list-content"
+                              tabindex="0"
+                            >
+                              <span
+                                class="icon"
+                                data-icon-name="more_vert"
+                              >
+                                more_vert
+                              </span>
+                            </i>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      class="NoItems flex grow shrink-0 basis-0"
-                    >
                       <div
-                        class="m-auto"
+                        class="NoItems flex grow shrink-0 basis-0"
                       >
-                        Item list is empty
+                        <div
+                          class="m-auto"
+                        >
+                          Item list is empty
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1173,148 +1177,152 @@ exports[`Deleting a cluster > when the kubeconfig has multiple clusters > when t
                   class="items grow shrink-0 basis-0 flex flex-col"
                 >
                   <div
-                    class="Table flex flex-col Catalog grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual"
+                    class="Table flex flex-col Catalog grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual horizontalScroll"
                   >
                     <div
-                      class="TableHead sticky nowrap topLine"
+                      class="TableHorizontalScroll"
                     >
                       <div
-                        class="TableCell entityName nowrap sorting"
-                        id="name"
+                        class="TableHead sticky nowrap topLine"
                       >
                         <div
-                          class="content"
+                          class="TableCell entityName nowrap sorting"
+                          id="name"
                         >
-                          Name
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
+                          <div
+                            class="content"
                           >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell nowrap sorting"
-                        data-testid="catalog-kind-column"
-                        id="kind"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Kind
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
-                          >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell sourceCell nowrap sorting"
-                        data-testid="catalog-source-column"
-                        id="source"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Source
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
-                          >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell labelsCell scrollable nowrap"
-                        data-testid="catalog-labels-column"
-                        id="labels"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Labels
-                        </div>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell statusCell nowrap sorting"
-                        data-testid="catalog-status-column"
-                        id="status"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Status
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
-                          >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell menu nowrap"
-                      >
-                        <div
-                          class="content"
-                        >
+                            Name
+                          </div>
                           <i
-                            class="Icon material interactive focusable"
-                            id="menu-actions-for-item-object-list-content"
-                            tabindex="0"
+                            class="Icon sortIcon material focusable"
                           >
                             <span
                               class="icon"
-                              data-icon-name="more_vert"
+                              data-icon-name="arrow_drop_down"
                             >
-                              more_vert
+                              arrow_drop_down
                             </span>
                           </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell nowrap sorting"
+                          data-testid="catalog-kind-column"
+                          id="kind"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Kind
+                          </div>
+                          <i
+                            class="Icon sortIcon material focusable"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="arrow_drop_down"
+                            >
+                              arrow_drop_down
+                            </span>
+                          </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell sourceCell nowrap sorting"
+                          data-testid="catalog-source-column"
+                          id="source"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Source
+                          </div>
+                          <i
+                            class="Icon sortIcon material focusable"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="arrow_drop_down"
+                            >
+                              arrow_drop_down
+                            </span>
+                          </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell labelsCell scrollable nowrap"
+                          data-testid="catalog-labels-column"
+                          id="labels"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Labels
+                          </div>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell statusCell nowrap sorting"
+                          data-testid="catalog-status-column"
+                          id="status"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Status
+                          </div>
+                          <i
+                            class="Icon sortIcon material focusable"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="arrow_drop_down"
+                            >
+                              arrow_drop_down
+                            </span>
+                          </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell menu nowrap"
+                        >
+                          <div
+                            class="content"
+                          >
+                            <i
+                              class="Icon material interactive focusable"
+                              id="menu-actions-for-item-object-list-content"
+                              tabindex="0"
+                            >
+                              <span
+                                class="icon"
+                                data-icon-name="more_vert"
+                              >
+                                more_vert
+                              </span>
+                            </i>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      class="NoItems flex grow shrink-0 basis-0"
-                    >
                       <div
-                        class="m-auto"
+                        class="NoItems flex grow shrink-0 basis-0"
                       >
-                        Item list is empty
+                        <div
+                          class="m-auto"
+                        >
+                          Item list is empty
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1984,148 +1992,152 @@ exports[`Deleting a cluster > when the kubeconfig has multiple clusters > when t
                   class="items grow shrink-0 basis-0 flex flex-col"
                 >
                   <div
-                    class="Table flex flex-col Catalog grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual"
+                    class="Table flex flex-col Catalog grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual horizontalScroll"
                   >
                     <div
-                      class="TableHead sticky nowrap topLine"
+                      class="TableHorizontalScroll"
                     >
                       <div
-                        class="TableCell entityName nowrap sorting"
-                        id="name"
+                        class="TableHead sticky nowrap topLine"
                       >
                         <div
-                          class="content"
+                          class="TableCell entityName nowrap sorting"
+                          id="name"
                         >
-                          Name
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
+                          <div
+                            class="content"
                           >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell nowrap sorting"
-                        data-testid="catalog-kind-column"
-                        id="kind"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Kind
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
-                          >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell sourceCell nowrap sorting"
-                        data-testid="catalog-source-column"
-                        id="source"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Source
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
-                          >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell labelsCell scrollable nowrap"
-                        data-testid="catalog-labels-column"
-                        id="labels"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Labels
-                        </div>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell statusCell nowrap sorting"
-                        data-testid="catalog-status-column"
-                        id="status"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Status
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
-                          >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell menu nowrap"
-                      >
-                        <div
-                          class="content"
-                        >
+                            Name
+                          </div>
                           <i
-                            class="Icon material interactive focusable"
-                            id="menu-actions-for-item-object-list-content"
-                            tabindex="0"
+                            class="Icon sortIcon material focusable"
                           >
                             <span
                               class="icon"
-                              data-icon-name="more_vert"
+                              data-icon-name="arrow_drop_down"
                             >
-                              more_vert
+                              arrow_drop_down
                             </span>
                           </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell nowrap sorting"
+                          data-testid="catalog-kind-column"
+                          id="kind"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Kind
+                          </div>
+                          <i
+                            class="Icon sortIcon material focusable"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="arrow_drop_down"
+                            >
+                              arrow_drop_down
+                            </span>
+                          </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell sourceCell nowrap sorting"
+                          data-testid="catalog-source-column"
+                          id="source"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Source
+                          </div>
+                          <i
+                            class="Icon sortIcon material focusable"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="arrow_drop_down"
+                            >
+                              arrow_drop_down
+                            </span>
+                          </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell labelsCell scrollable nowrap"
+                          data-testid="catalog-labels-column"
+                          id="labels"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Labels
+                          </div>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell statusCell nowrap sorting"
+                          data-testid="catalog-status-column"
+                          id="status"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Status
+                          </div>
+                          <i
+                            class="Icon sortIcon material focusable"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="arrow_drop_down"
+                            >
+                              arrow_drop_down
+                            </span>
+                          </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell menu nowrap"
+                        >
+                          <div
+                            class="content"
+                          >
+                            <i
+                              class="Icon material interactive focusable"
+                              id="menu-actions-for-item-object-list-content"
+                              tabindex="0"
+                            >
+                              <span
+                                class="icon"
+                                data-icon-name="more_vert"
+                              >
+                                more_vert
+                              </span>
+                            </i>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      class="NoItems flex grow shrink-0 basis-0"
-                    >
                       <div
-                        class="m-auto"
+                        class="NoItems flex grow shrink-0 basis-0"
                       >
-                        Item list is empty
+                        <div
+                          class="m-auto"
+                        >
+                          Item list is empty
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2876,148 +2888,152 @@ exports[`Deleting a cluster > when the kubeconfig has multiple clusters > when t
                   class="items grow shrink-0 basis-0 flex flex-col"
                 >
                   <div
-                    class="Table flex flex-col Catalog grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual"
+                    class="Table flex flex-col Catalog grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual horizontalScroll"
                   >
                     <div
-                      class="TableHead sticky nowrap topLine"
+                      class="TableHorizontalScroll"
                     >
                       <div
-                        class="TableCell entityName nowrap sorting"
-                        id="name"
+                        class="TableHead sticky nowrap topLine"
                       >
                         <div
-                          class="content"
+                          class="TableCell entityName nowrap sorting"
+                          id="name"
                         >
-                          Name
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
+                          <div
+                            class="content"
                           >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell nowrap sorting"
-                        data-testid="catalog-kind-column"
-                        id="kind"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Kind
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
-                          >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell sourceCell nowrap sorting"
-                        data-testid="catalog-source-column"
-                        id="source"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Source
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
-                          >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell labelsCell scrollable nowrap"
-                        data-testid="catalog-labels-column"
-                        id="labels"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Labels
-                        </div>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell statusCell nowrap sorting"
-                        data-testid="catalog-status-column"
-                        id="status"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Status
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
-                          >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell menu nowrap"
-                      >
-                        <div
-                          class="content"
-                        >
+                            Name
+                          </div>
                           <i
-                            class="Icon material interactive focusable"
-                            id="menu-actions-for-item-object-list-content"
-                            tabindex="0"
+                            class="Icon sortIcon material focusable"
                           >
                             <span
                               class="icon"
-                              data-icon-name="more_vert"
+                              data-icon-name="arrow_drop_down"
                             >
-                              more_vert
+                              arrow_drop_down
                             </span>
                           </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell nowrap sorting"
+                          data-testid="catalog-kind-column"
+                          id="kind"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Kind
+                          </div>
+                          <i
+                            class="Icon sortIcon material focusable"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="arrow_drop_down"
+                            >
+                              arrow_drop_down
+                            </span>
+                          </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell sourceCell nowrap sorting"
+                          data-testid="catalog-source-column"
+                          id="source"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Source
+                          </div>
+                          <i
+                            class="Icon sortIcon material focusable"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="arrow_drop_down"
+                            >
+                              arrow_drop_down
+                            </span>
+                          </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell labelsCell scrollable nowrap"
+                          data-testid="catalog-labels-column"
+                          id="labels"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Labels
+                          </div>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell statusCell nowrap sorting"
+                          data-testid="catalog-status-column"
+                          id="status"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Status
+                          </div>
+                          <i
+                            class="Icon sortIcon material focusable"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="arrow_drop_down"
+                            >
+                              arrow_drop_down
+                            </span>
+                          </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell menu nowrap"
+                        >
+                          <div
+                            class="content"
+                          >
+                            <i
+                              class="Icon material interactive focusable"
+                              id="menu-actions-for-item-object-list-content"
+                              tabindex="0"
+                            >
+                              <span
+                                class="icon"
+                                data-icon-name="more_vert"
+                              >
+                                more_vert
+                              </span>
+                            </i>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      class="NoItems flex grow shrink-0 basis-0"
-                    >
                       <div
-                        class="m-auto"
+                        class="NoItems flex grow shrink-0 basis-0"
                       >
-                        Item list is empty
+                        <div
+                          class="m-auto"
+                        >
+                          Item list is empty
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -3768,148 +3784,152 @@ exports[`Deleting a cluster > when the kubeconfig has only one cluster > when th
                   class="items grow shrink-0 basis-0 flex flex-col"
                 >
                   <div
-                    class="Table flex flex-col Catalog grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual"
+                    class="Table flex flex-col Catalog grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual horizontalScroll"
                   >
                     <div
-                      class="TableHead sticky nowrap topLine"
+                      class="TableHorizontalScroll"
                     >
                       <div
-                        class="TableCell entityName nowrap sorting"
-                        id="name"
+                        class="TableHead sticky nowrap topLine"
                       >
                         <div
-                          class="content"
+                          class="TableCell entityName nowrap sorting"
+                          id="name"
                         >
-                          Name
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
+                          <div
+                            class="content"
                           >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell nowrap sorting"
-                        data-testid="catalog-kind-column"
-                        id="kind"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Kind
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
-                          >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell sourceCell nowrap sorting"
-                        data-testid="catalog-source-column"
-                        id="source"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Source
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
-                          >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell labelsCell scrollable nowrap"
-                        data-testid="catalog-labels-column"
-                        id="labels"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Labels
-                        </div>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell statusCell nowrap sorting"
-                        data-testid="catalog-status-column"
-                        id="status"
-                      >
-                        <div
-                          class="content"
-                        >
-                          Status
-                        </div>
-                        <i
-                          class="Icon sortIcon material focusable"
-                        >
-                          <span
-                            class="icon"
-                            data-icon-name="arrow_drop_down"
-                          >
-                            arrow_drop_down
-                          </span>
-                        </i>
-                        <div
-                          class="resize-handle"
-                        />
-                      </div>
-                      <div
-                        class="TableCell menu nowrap"
-                      >
-                        <div
-                          class="content"
-                        >
+                            Name
+                          </div>
                           <i
-                            class="Icon material interactive focusable"
-                            id="menu-actions-for-item-object-list-content"
-                            tabindex="0"
+                            class="Icon sortIcon material focusable"
                           >
                             <span
                               class="icon"
-                              data-icon-name="more_vert"
+                              data-icon-name="arrow_drop_down"
                             >
-                              more_vert
+                              arrow_drop_down
                             </span>
                           </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell nowrap sorting"
+                          data-testid="catalog-kind-column"
+                          id="kind"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Kind
+                          </div>
+                          <i
+                            class="Icon sortIcon material focusable"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="arrow_drop_down"
+                            >
+                              arrow_drop_down
+                            </span>
+                          </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell sourceCell nowrap sorting"
+                          data-testid="catalog-source-column"
+                          id="source"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Source
+                          </div>
+                          <i
+                            class="Icon sortIcon material focusable"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="arrow_drop_down"
+                            >
+                              arrow_drop_down
+                            </span>
+                          </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell labelsCell scrollable nowrap"
+                          data-testid="catalog-labels-column"
+                          id="labels"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Labels
+                          </div>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell statusCell nowrap sorting"
+                          data-testid="catalog-status-column"
+                          id="status"
+                        >
+                          <div
+                            class="content"
+                          >
+                            Status
+                          </div>
+                          <i
+                            class="Icon sortIcon material focusable"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="arrow_drop_down"
+                            >
+                              arrow_drop_down
+                            </span>
+                          </i>
+                          <div
+                            class="resize-handle"
+                          />
+                        </div>
+                        <div
+                          class="TableCell menu nowrap"
+                        >
+                          <div
+                            class="content"
+                          >
+                            <i
+                              class="Icon material interactive focusable"
+                              id="menu-actions-for-item-object-list-content"
+                              tabindex="0"
+                            >
+                              <span
+                                class="icon"
+                                data-icon-name="more_vert"
+                              >
+                                more_vert
+                              </span>
+                            </i>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      class="NoItems flex grow shrink-0 basis-0"
-                    >
                       <div
-                        class="m-auto"
+                        class="NoItems flex grow shrink-0 basis-0"
                       >
-                        Item list is empty
+                        <div
+                          class="m-auto"
+                        >
+                          Item list is empty
+                        </div>
                       </div>
                     </div>
                   </div>

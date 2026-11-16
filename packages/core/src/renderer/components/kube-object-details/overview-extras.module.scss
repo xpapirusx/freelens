@@ -1,0 +1,43 @@
+/**
+ * Copyright (c) Freelens Authors. All rights reserved.
+ * Licensed under MIT License. See LICENSE in root directory for more information.
+ */
+
+.RelatedResources,
+.AppInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 8px 0;
+
+  .row {
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .label {
+    color: var(--textColorTertiary);
+  }
+
+  .group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .groupTitle {
+    color: var(--textColorSecondary);
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .item {
+    font-family: var(--font-monospace);
+    font-size: 12px;
+
+    a {
+      color: var(--textColorAccent);
+    }
+  }
+}

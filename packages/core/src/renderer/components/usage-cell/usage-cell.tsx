@@ -3,9 +3,8 @@
  * Licensed under MIT License. See LICENSE in root directory for more information.
  */
 
-import styles from "./usage-cell.module.scss";
-
 import { LineProgress } from "../line-progress";
+import styles from "./usage-cell.module.scss";
 
 import type { StrictReactNode } from "@freelensapp/utilities";
 

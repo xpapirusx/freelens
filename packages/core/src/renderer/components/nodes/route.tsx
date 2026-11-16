@@ -23,8 +23,8 @@ import { KubeObjectListLayout } from "../kube-object-list-layout";
 import { TabLayout } from "../layout/tab-layout-2";
 import { LineProgress } from "../line-progress";
 import { WithTooltip } from "../with-tooltip";
-import { nodeAllocatableGpus } from "../workloads-pods/pod-resources";
 import loadPodsFromAllNamespacesInjectable from "../workloads-pods/load-pods-from-all-namespaces.injectable";
+import { nodeAllocatableGpus } from "../workloads-pods/pod-resources";
 import podStoreInjectable from "../workloads-pods/store.injectable";
 import nodeStoreInjectable from "./store.injectable";
 

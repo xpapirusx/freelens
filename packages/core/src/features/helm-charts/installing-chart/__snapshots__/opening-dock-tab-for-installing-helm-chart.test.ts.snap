@@ -516,127 +516,131 @@ exports[`opening dock tab for installing helm chart > given application is start
                 class="items grow shrink-0 basis-0 flex flex-col"
               >
                 <div
-                  class="Table flex flex-col HelmCharts grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual"
+                  class="Table flex flex-col HelmCharts grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual horizontalScroll"
                 >
                   <div
-                    class="TableHead sticky nowrap topLine"
+                    class="TableHorizontalScroll"
                   >
                     <div
-                      class="TableCell icon nowrap"
+                      class="TableHead sticky nowrap topLine"
                     >
                       <div
-                        class="content"
-                      />
-                    </div>
-                    <div
-                      class="TableCell name nowrap sorting"
-                      id="name"
-                    >
-                      <div
-                        class="content"
+                        class="TableCell icon nowrap"
                       >
-                        Name
+                        <div
+                          class="content"
+                        />
                       </div>
-                      <i
-                        class="Icon sortIcon material focusable"
+                      <div
+                        class="TableCell name nowrap sorting"
+                        id="name"
                       >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
+                        <div
+                          class="content"
                         >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell description nowrap"
-                      id="description"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Description
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell version nowrap"
-                      id="version"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Version
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell app-version nowrap"
-                      id="app-version"
-                    >
-                      <div
-                        class="content"
-                      >
-                        App Version
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell repository nowrap sorting"
-                      id="repo"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Repository
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell menu nowrap"
-                    >
-                      <div
-                        class="content"
-                      >
+                          Name
+                        </div>
                         <i
-                          class="Icon material interactive focusable"
-                          id="menu-actions-for-item-object-list-content"
-                          tabindex="0"
+                          class="Icon sortIcon material focusable"
                         >
                           <span
                             class="icon"
-                            data-icon-name="more_vert"
+                            data-icon-name="arrow_drop_down"
                           >
-                            more_vert
+                            arrow_drop_down
                           </span>
                         </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell description nowrap"
+                        id="description"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Description
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell version nowrap"
+                        id="version"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Version
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell app-version nowrap"
+                        id="app-version"
+                      >
+                        <div
+                          class="content"
+                        >
+                          App Version
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell repository nowrap sorting"
+                        id="repo"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Repository
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell menu nowrap"
+                      >
+                        <div
+                          class="content"
+                        >
+                          <i
+                            class="Icon material interactive focusable"
+                            id="menu-actions-for-item-object-list-content"
+                            tabindex="0"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="more_vert"
+                            >
+                              more_vert
+                            </span>
+                          </i>
+                        </div>
                       </div>
                     </div>
+                    <div
+                      class="Spinner singleColor center"
+                    />
                   </div>
-                  <div
-                    class="Spinner singleColor center"
-                  />
                 </div>
                 <div
                   class="AddRemoveButtons flex gap-2"
@@ -1214,293 +1218,297 @@ exports[`opening dock tab for installing helm chart > given application is start
                 class="items grow shrink-0 basis-0 flex flex-col"
               >
                 <div
-                  class="Table flex flex-col HelmCharts grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual"
+                  class="Table flex flex-col HelmCharts grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual horizontalScroll"
                 >
                   <div
-                    class="TableHead sticky nowrap topLine"
+                    class="TableHorizontalScroll"
                   >
                     <div
-                      class="TableCell icon nowrap"
+                      class="TableHead sticky nowrap topLine"
                     >
                       <div
-                        class="content"
-                      />
-                    </div>
-                    <div
-                      class="TableCell name nowrap sorting"
-                      id="name"
-                    >
-                      <div
-                        class="content"
+                        class="TableCell icon nowrap"
                       >
-                        Name
+                        <div
+                          class="content"
+                        />
                       </div>
-                      <i
-                        class="Icon sortIcon material focusable"
+                      <div
+                        class="TableCell name nowrap sorting"
+                        id="name"
                       >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
+                        <div
+                          class="content"
                         >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell description nowrap"
-                      id="description"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Description
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell version nowrap"
-                      id="version"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Version
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell app-version nowrap"
-                      id="app-version"
-                    >
-                      <div
-                        class="content"
-                      >
-                        App Version
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell repository nowrap sorting"
-                      id="repo"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Repository
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell menu nowrap"
-                    >
-                      <div
-                        class="content"
-                      >
+                          Name
+                        </div>
                         <i
-                          class="Icon material interactive focusable"
-                          id="menu-actions-for-item-object-list-content"
-                          tabindex="0"
+                          class="Icon sortIcon material focusable"
                         >
                           <span
                             class="icon"
-                            data-icon-name="more_vert"
+                            data-icon-name="arrow_drop_down"
                           >
-                            more_vert
+                            arrow_drop_down
                           </span>
                         </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell description nowrap"
+                        id="description"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Description
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell version nowrap"
+                        id="version"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Version
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell app-version nowrap"
+                        id="app-version"
+                      >
+                        <div
+                          class="content"
+                        >
+                          App Version
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell repository nowrap sorting"
+                        id="repo"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Repository
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell menu nowrap"
+                      >
+                        <div
+                          class="content"
+                        >
+                          <i
+                            class="Icon material interactive focusable"
+                            id="menu-actions-for-item-object-list-content"
+                            tabindex="0"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="more_vert"
+                            >
+                              more_vert
+                            </span>
+                          </i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="VirtualList HelmCharts grow shrink-0 basis-0 dark"
-                  >
                     <div
-                      class="list"
-                      role="list"
-                      style="position: relative; flex-grow: 1; max-height: 100%; overflow-y: auto; width: 100%; height: 100%;"
+                      class="VirtualList HelmCharts grow shrink-0 basis-0 dark"
                     >
                       <div
-                        data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
+                        class="list"
+                        role="list"
+                        style="position: relative; flex-grow: 1; max-height: 100%; overflow-y: auto; width: 100%; height: 100%;"
                       >
                         <div
-                          class="TableRow nowrap"
-                          data-testid="helm-chart-row-for-some-repository-some-name"
+                          data-react-window-index="0"
+                          style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                         >
                           <div
-                            class="TableCell icon"
+                            class="TableRow nowrap"
+                            data-testid="helm-chart-row-for-some-repository-some-name"
                           >
-                            <figure>
+                            <div
+                              class="TableCell icon"
+                            >
+                              <figure>
+                                <div
+                                  class="chartIcon imageNotLoaded"
+                                  data-testid="image-container"
+                                />
+                              </figure>
+                            </div>
+                            <div
+                              class="TableCell name"
+                            >
                               <div
-                                class="chartIcon imageNotLoaded"
-                                data-testid="image-container"
+                                class="badge flat"
+                              >
+                                some-name
+                              </div>
+                              <div>
+                                some-name
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell description"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-description
+                              </div>
+                              <div>
+                                some-description
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell version"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-version
+                              </div>
+                              <div>
+                                some-version
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell app-version"
+                            >
+                              <div
+                                class="badge flat"
                               />
-                            </figure>
-                          </div>
-                          <div
-                            class="TableCell name"
-                          >
+                            </div>
                             <div
-                              class="badge flat"
+                              class="TableCell some-repository repository"
                             >
-                              some-name
+                              <div
+                                class="badge flat"
+                              >
+                                some-repository
+                              </div>
+                              <div>
+                                some-repository
+                              </div>
                             </div>
-                            <div>
-                              some-name
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell description"
-                          >
                             <div
-                              class="badge flat"
-                            >
-                              some-description
-                            </div>
-                            <div>
-                              some-description
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell version"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-version
-                            </div>
-                            <div>
-                              some-version
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell app-version"
-                          >
-                            <div
-                              class="badge flat"
+                              class="TableCell menu"
                             />
                           </div>
-                          <div
-                            class="TableCell some-repository repository"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-repository
-                            </div>
-                            <div>
-                              some-repository
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell menu"
-                          />
                         </div>
-                      </div>
-                      <div
-                        data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
-                      >
                         <div
-                          class="TableRow nowrap"
-                          data-testid="helm-chart-row-for-some-repository-some-other-name"
+                          data-react-window-index="1"
+                          style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                         >
                           <div
-                            class="TableCell icon"
+                            class="TableRow nowrap"
+                            data-testid="helm-chart-row-for-some-repository-some-other-name"
                           >
-                            <figure>
+                            <div
+                              class="TableCell icon"
+                            >
+                              <figure>
+                                <div
+                                  class="chartIcon imageNotLoaded"
+                                  data-testid="image-container"
+                                />
+                              </figure>
+                            </div>
+                            <div
+                              class="TableCell name"
+                            >
                               <div
-                                class="chartIcon imageNotLoaded"
-                                data-testid="image-container"
+                                class="badge flat"
+                              >
+                                some-other-name
+                              </div>
+                              <div>
+                                some-other-name
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell description"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-description
+                              </div>
+                              <div>
+                                some-description
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell version"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-version
+                              </div>
+                              <div>
+                                some-version
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell app-version"
+                            >
+                              <div
+                                class="badge flat"
                               />
-                            </figure>
-                          </div>
-                          <div
-                            class="TableCell name"
-                          >
+                            </div>
                             <div
-                              class="badge flat"
+                              class="TableCell some-repository repository"
                             >
-                              some-other-name
+                              <div
+                                class="badge flat"
+                              >
+                                some-repository
+                              </div>
+                              <div>
+                                some-repository
+                              </div>
                             </div>
-                            <div>
-                              some-other-name
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell description"
-                          >
                             <div
-                              class="badge flat"
-                            >
-                              some-description
-                            </div>
-                            <div>
-                              some-description
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell version"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-version
-                            </div>
-                            <div>
-                              some-version
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell app-version"
-                          >
-                            <div
-                              class="badge flat"
+                              class="TableCell menu"
                             />
                           </div>
-                          <div
-                            class="TableCell some-repository repository"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-repository
-                            </div>
-                            <div>
-                              some-repository
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell menu"
-                          />
                         </div>
+                        <div
+                          aria-hidden="true"
+                          data-react-window-sizer=""
+                          style="height: 88px; width: 100%; z-index: -1;"
+                        />
                       </div>
-                      <div
-                        aria-hidden="true"
-                        data-react-window-sizer=""
-                        style="height: 88px; width: 100%; z-index: -1;"
-                      />
                     </div>
                   </div>
                 </div>
@@ -2080,293 +2088,297 @@ exports[`opening dock tab for installing helm chart > given application is start
                 class="items grow shrink-0 basis-0 flex flex-col"
               >
                 <div
-                  class="Table flex flex-col HelmCharts grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual"
+                  class="Table flex flex-col HelmCharts grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual horizontalScroll"
                 >
                   <div
-                    class="TableHead sticky nowrap topLine"
+                    class="TableHorizontalScroll"
                   >
                     <div
-                      class="TableCell icon nowrap"
+                      class="TableHead sticky nowrap topLine"
                     >
                       <div
-                        class="content"
-                      />
-                    </div>
-                    <div
-                      class="TableCell name nowrap sorting"
-                      id="name"
-                    >
-                      <div
-                        class="content"
+                        class="TableCell icon nowrap"
                       >
-                        Name
+                        <div
+                          class="content"
+                        />
                       </div>
-                      <i
-                        class="Icon sortIcon material focusable"
+                      <div
+                        class="TableCell name nowrap sorting"
+                        id="name"
                       >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
+                        <div
+                          class="content"
                         >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell description nowrap"
-                      id="description"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Description
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell version nowrap"
-                      id="version"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Version
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell app-version nowrap"
-                      id="app-version"
-                    >
-                      <div
-                        class="content"
-                      >
-                        App Version
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell repository nowrap sorting"
-                      id="repo"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Repository
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell menu nowrap"
-                    >
-                      <div
-                        class="content"
-                      >
+                          Name
+                        </div>
                         <i
-                          class="Icon material interactive focusable"
-                          id="menu-actions-for-item-object-list-content"
-                          tabindex="0"
+                          class="Icon sortIcon material focusable"
                         >
                           <span
                             class="icon"
-                            data-icon-name="more_vert"
+                            data-icon-name="arrow_drop_down"
                           >
-                            more_vert
+                            arrow_drop_down
                           </span>
                         </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell description nowrap"
+                        id="description"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Description
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell version nowrap"
+                        id="version"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Version
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell app-version nowrap"
+                        id="app-version"
+                      >
+                        <div
+                          class="content"
+                        >
+                          App Version
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell repository nowrap sorting"
+                        id="repo"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Repository
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell menu nowrap"
+                      >
+                        <div
+                          class="content"
+                        >
+                          <i
+                            class="Icon material interactive focusable"
+                            id="menu-actions-for-item-object-list-content"
+                            tabindex="0"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="more_vert"
+                            >
+                              more_vert
+                            </span>
+                          </i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="VirtualList HelmCharts grow shrink-0 basis-0 dark"
-                  >
                     <div
-                      class="list"
-                      role="list"
-                      style="position: relative; flex-grow: 1; max-height: 100%; overflow-y: auto; width: 100%; height: 100%;"
+                      class="VirtualList HelmCharts grow shrink-0 basis-0 dark"
                     >
                       <div
-                        data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
+                        class="list"
+                        role="list"
+                        style="position: relative; flex-grow: 1; max-height: 100%; overflow-y: auto; width: 100%; height: 100%;"
                       >
                         <div
-                          class="TableRow selected nowrap"
-                          data-testid="helm-chart-row-for-some-repository-some-name"
+                          data-react-window-index="0"
+                          style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                         >
                           <div
-                            class="TableCell icon"
+                            class="TableRow selected nowrap"
+                            data-testid="helm-chart-row-for-some-repository-some-name"
                           >
-                            <figure>
+                            <div
+                              class="TableCell icon"
+                            >
+                              <figure>
+                                <div
+                                  class="chartIcon imageNotLoaded"
+                                  data-testid="image-container"
+                                />
+                              </figure>
+                            </div>
+                            <div
+                              class="TableCell name"
+                            >
                               <div
-                                class="chartIcon imageNotLoaded"
-                                data-testid="image-container"
+                                class="badge flat"
+                              >
+                                some-name
+                              </div>
+                              <div>
+                                some-name
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell description"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-description
+                              </div>
+                              <div>
+                                some-description
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell version"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-version
+                              </div>
+                              <div>
+                                some-version
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell app-version"
+                            >
+                              <div
+                                class="badge flat"
                               />
-                            </figure>
-                          </div>
-                          <div
-                            class="TableCell name"
-                          >
+                            </div>
                             <div
-                              class="badge flat"
+                              class="TableCell some-repository repository"
                             >
-                              some-name
+                              <div
+                                class="badge flat"
+                              >
+                                some-repository
+                              </div>
+                              <div>
+                                some-repository
+                              </div>
                             </div>
-                            <div>
-                              some-name
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell description"
-                          >
                             <div
-                              class="badge flat"
-                            >
-                              some-description
-                            </div>
-                            <div>
-                              some-description
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell version"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-version
-                            </div>
-                            <div>
-                              some-version
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell app-version"
-                          >
-                            <div
-                              class="badge flat"
+                              class="TableCell menu"
                             />
                           </div>
-                          <div
-                            class="TableCell some-repository repository"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-repository
-                            </div>
-                            <div>
-                              some-repository
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell menu"
-                          />
                         </div>
-                      </div>
-                      <div
-                        data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
-                      >
                         <div
-                          class="TableRow nowrap"
-                          data-testid="helm-chart-row-for-some-repository-some-other-name"
+                          data-react-window-index="1"
+                          style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                         >
                           <div
-                            class="TableCell icon"
+                            class="TableRow nowrap"
+                            data-testid="helm-chart-row-for-some-repository-some-other-name"
                           >
-                            <figure>
+                            <div
+                              class="TableCell icon"
+                            >
+                              <figure>
+                                <div
+                                  class="chartIcon imageNotLoaded"
+                                  data-testid="image-container"
+                                />
+                              </figure>
+                            </div>
+                            <div
+                              class="TableCell name"
+                            >
                               <div
-                                class="chartIcon imageNotLoaded"
-                                data-testid="image-container"
+                                class="badge flat"
+                              >
+                                some-other-name
+                              </div>
+                              <div>
+                                some-other-name
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell description"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-description
+                              </div>
+                              <div>
+                                some-description
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell version"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-version
+                              </div>
+                              <div>
+                                some-version
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell app-version"
+                            >
+                              <div
+                                class="badge flat"
                               />
-                            </figure>
-                          </div>
-                          <div
-                            class="TableCell name"
-                          >
+                            </div>
                             <div
-                              class="badge flat"
+                              class="TableCell some-repository repository"
                             >
-                              some-other-name
+                              <div
+                                class="badge flat"
+                              >
+                                some-repository
+                              </div>
+                              <div>
+                                some-repository
+                              </div>
                             </div>
-                            <div>
-                              some-other-name
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell description"
-                          >
                             <div
-                              class="badge flat"
-                            >
-                              some-description
-                            </div>
-                            <div>
-                              some-description
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell version"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-version
-                            </div>
-                            <div>
-                              some-version
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell app-version"
-                          >
-                            <div
-                              class="badge flat"
+                              class="TableCell menu"
                             />
                           </div>
-                          <div
-                            class="TableCell some-repository repository"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-repository
-                            </div>
-                            <div>
-                              some-repository
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell menu"
-                          />
                         </div>
+                        <div
+                          aria-hidden="true"
+                          data-react-window-sizer=""
+                          style="height: 88px; width: 100%; z-index: -1;"
+                        />
                       </div>
-                      <div
-                        aria-hidden="true"
-                        data-react-window-sizer=""
-                        style="height: 88px; width: 100%; z-index: -1;"
-                      />
                     </div>
                   </div>
                 </div>
@@ -3003,293 +3015,297 @@ exports[`opening dock tab for installing helm chart > given application is start
                 class="items grow shrink-0 basis-0 flex flex-col"
               >
                 <div
-                  class="Table flex flex-col HelmCharts grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual"
+                  class="Table flex flex-col HelmCharts grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual horizontalScroll"
                 >
                   <div
-                    class="TableHead sticky nowrap topLine"
+                    class="TableHorizontalScroll"
                   >
                     <div
-                      class="TableCell icon nowrap"
+                      class="TableHead sticky nowrap topLine"
                     >
                       <div
-                        class="content"
-                      />
-                    </div>
-                    <div
-                      class="TableCell name nowrap sorting"
-                      id="name"
-                    >
-                      <div
-                        class="content"
+                        class="TableCell icon nowrap"
                       >
-                        Name
+                        <div
+                          class="content"
+                        />
                       </div>
-                      <i
-                        class="Icon sortIcon material focusable"
+                      <div
+                        class="TableCell name nowrap sorting"
+                        id="name"
                       >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
+                        <div
+                          class="content"
                         >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell description nowrap"
-                      id="description"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Description
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell version nowrap"
-                      id="version"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Version
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell app-version nowrap"
-                      id="app-version"
-                    >
-                      <div
-                        class="content"
-                      >
-                        App Version
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell repository nowrap sorting"
-                      id="repo"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Repository
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell menu nowrap"
-                    >
-                      <div
-                        class="content"
-                      >
+                          Name
+                        </div>
                         <i
-                          class="Icon material interactive focusable"
-                          id="menu-actions-for-item-object-list-content"
-                          tabindex="0"
+                          class="Icon sortIcon material focusable"
                         >
                           <span
                             class="icon"
-                            data-icon-name="more_vert"
+                            data-icon-name="arrow_drop_down"
                           >
-                            more_vert
+                            arrow_drop_down
                           </span>
                         </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell description nowrap"
+                        id="description"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Description
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell version nowrap"
+                        id="version"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Version
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell app-version nowrap"
+                        id="app-version"
+                      >
+                        <div
+                          class="content"
+                        >
+                          App Version
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell repository nowrap sorting"
+                        id="repo"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Repository
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell menu nowrap"
+                      >
+                        <div
+                          class="content"
+                        >
+                          <i
+                            class="Icon material interactive focusable"
+                            id="menu-actions-for-item-object-list-content"
+                            tabindex="0"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="more_vert"
+                            >
+                              more_vert
+                            </span>
+                          </i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="VirtualList HelmCharts grow shrink-0 basis-0 dark"
-                  >
                     <div
-                      class="list"
-                      role="list"
-                      style="position: relative; flex-grow: 1; max-height: 100%; overflow-y: auto; width: 100%; height: 100%;"
+                      class="VirtualList HelmCharts grow shrink-0 basis-0 dark"
                     >
                       <div
-                        data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
+                        class="list"
+                        role="list"
+                        style="position: relative; flex-grow: 1; max-height: 100%; overflow-y: auto; width: 100%; height: 100%;"
                       >
                         <div
-                          class="TableRow selected nowrap"
-                          data-testid="helm-chart-row-for-some-repository-some-name"
+                          data-react-window-index="0"
+                          style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                         >
                           <div
-                            class="TableCell icon"
+                            class="TableRow selected nowrap"
+                            data-testid="helm-chart-row-for-some-repository-some-name"
                           >
-                            <figure>
+                            <div
+                              class="TableCell icon"
+                            >
+                              <figure>
+                                <div
+                                  class="chartIcon imageNotLoaded"
+                                  data-testid="image-container"
+                                />
+                              </figure>
+                            </div>
+                            <div
+                              class="TableCell name"
+                            >
                               <div
-                                class="chartIcon imageNotLoaded"
-                                data-testid="image-container"
+                                class="badge flat"
+                              >
+                                some-name
+                              </div>
+                              <div>
+                                some-name
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell description"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-description
+                              </div>
+                              <div>
+                                some-description
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell version"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-version
+                              </div>
+                              <div>
+                                some-version
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell app-version"
+                            >
+                              <div
+                                class="badge flat"
                               />
-                            </figure>
-                          </div>
-                          <div
-                            class="TableCell name"
-                          >
+                            </div>
                             <div
-                              class="badge flat"
+                              class="TableCell some-repository repository"
                             >
-                              some-name
+                              <div
+                                class="badge flat"
+                              >
+                                some-repository
+                              </div>
+                              <div>
+                                some-repository
+                              </div>
                             </div>
-                            <div>
-                              some-name
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell description"
-                          >
                             <div
-                              class="badge flat"
-                            >
-                              some-description
-                            </div>
-                            <div>
-                              some-description
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell version"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-version
-                            </div>
-                            <div>
-                              some-version
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell app-version"
-                          >
-                            <div
-                              class="badge flat"
+                              class="TableCell menu"
                             />
                           </div>
-                          <div
-                            class="TableCell some-repository repository"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-repository
-                            </div>
-                            <div>
-                              some-repository
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell menu"
-                          />
                         </div>
-                      </div>
-                      <div
-                        data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
-                      >
                         <div
-                          class="TableRow nowrap"
-                          data-testid="helm-chart-row-for-some-repository-some-other-name"
+                          data-react-window-index="1"
+                          style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                         >
                           <div
-                            class="TableCell icon"
+                            class="TableRow nowrap"
+                            data-testid="helm-chart-row-for-some-repository-some-other-name"
                           >
-                            <figure>
+                            <div
+                              class="TableCell icon"
+                            >
+                              <figure>
+                                <div
+                                  class="chartIcon imageNotLoaded"
+                                  data-testid="image-container"
+                                />
+                              </figure>
+                            </div>
+                            <div
+                              class="TableCell name"
+                            >
                               <div
-                                class="chartIcon imageNotLoaded"
-                                data-testid="image-container"
+                                class="badge flat"
+                              >
+                                some-other-name
+                              </div>
+                              <div>
+                                some-other-name
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell description"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-description
+                              </div>
+                              <div>
+                                some-description
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell version"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-version
+                              </div>
+                              <div>
+                                some-version
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell app-version"
+                            >
+                              <div
+                                class="badge flat"
                               />
-                            </figure>
-                          </div>
-                          <div
-                            class="TableCell name"
-                          >
+                            </div>
                             <div
-                              class="badge flat"
+                              class="TableCell some-repository repository"
                             >
-                              some-other-name
+                              <div
+                                class="badge flat"
+                              >
+                                some-repository
+                              </div>
+                              <div>
+                                some-repository
+                              </div>
                             </div>
-                            <div>
-                              some-other-name
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell description"
-                          >
                             <div
-                              class="badge flat"
-                            >
-                              some-description
-                            </div>
-                            <div>
-                              some-description
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell version"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-version
-                            </div>
-                            <div>
-                              some-version
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell app-version"
-                          >
-                            <div
-                              class="badge flat"
+                              class="TableCell menu"
                             />
                           </div>
-                          <div
-                            class="TableCell some-repository repository"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-repository
-                            </div>
-                            <div>
-                              some-repository
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell menu"
-                          />
                         </div>
+                        <div
+                          aria-hidden="true"
+                          data-react-window-sizer=""
+                          style="height: 88px; width: 100%; z-index: -1;"
+                        />
                       </div>
-                      <div
-                        aria-hidden="true"
-                        data-react-window-sizer=""
-                        style="height: 88px; width: 100%; z-index: -1;"
-                      />
                     </div>
                   </div>
                 </div>
@@ -4075,293 +4091,297 @@ exports[`opening dock tab for installing helm chart > given application is start
                 class="items grow shrink-0 basis-0 flex flex-col"
               >
                 <div
-                  class="Table flex flex-col HelmCharts grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual"
+                  class="Table flex flex-col HelmCharts grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual horizontalScroll"
                 >
                   <div
-                    class="TableHead sticky nowrap topLine"
+                    class="TableHorizontalScroll"
                   >
                     <div
-                      class="TableCell icon nowrap"
+                      class="TableHead sticky nowrap topLine"
                     >
                       <div
-                        class="content"
-                      />
-                    </div>
-                    <div
-                      class="TableCell name nowrap sorting"
-                      id="name"
-                    >
-                      <div
-                        class="content"
+                        class="TableCell icon nowrap"
                       >
-                        Name
+                        <div
+                          class="content"
+                        />
                       </div>
-                      <i
-                        class="Icon sortIcon material focusable"
+                      <div
+                        class="TableCell name nowrap sorting"
+                        id="name"
                       >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
+                        <div
+                          class="content"
                         >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell description nowrap"
-                      id="description"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Description
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell version nowrap"
-                      id="version"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Version
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell app-version nowrap"
-                      id="app-version"
-                    >
-                      <div
-                        class="content"
-                      >
-                        App Version
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell repository nowrap sorting"
-                      id="repo"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Repository
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell menu nowrap"
-                    >
-                      <div
-                        class="content"
-                      >
+                          Name
+                        </div>
                         <i
-                          class="Icon material interactive focusable"
-                          id="menu-actions-for-item-object-list-content"
-                          tabindex="0"
+                          class="Icon sortIcon material focusable"
                         >
                           <span
                             class="icon"
-                            data-icon-name="more_vert"
+                            data-icon-name="arrow_drop_down"
                           >
-                            more_vert
+                            arrow_drop_down
                           </span>
                         </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell description nowrap"
+                        id="description"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Description
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell version nowrap"
+                        id="version"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Version
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell app-version nowrap"
+                        id="app-version"
+                      >
+                        <div
+                          class="content"
+                        >
+                          App Version
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell repository nowrap sorting"
+                        id="repo"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Repository
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell menu nowrap"
+                      >
+                        <div
+                          class="content"
+                        >
+                          <i
+                            class="Icon material interactive focusable"
+                            id="menu-actions-for-item-object-list-content"
+                            tabindex="0"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="more_vert"
+                            >
+                              more_vert
+                            </span>
+                          </i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="VirtualList HelmCharts grow shrink-0 basis-0 dark"
-                  >
                     <div
-                      class="list"
-                      role="list"
-                      style="position: relative; flex-grow: 1; max-height: 100%; overflow-y: auto; width: 100%; height: 100%;"
+                      class="VirtualList HelmCharts grow shrink-0 basis-0 dark"
                     >
                       <div
-                        data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
+                        class="list"
+                        role="list"
+                        style="position: relative; flex-grow: 1; max-height: 100%; overflow-y: auto; width: 100%; height: 100%;"
                       >
                         <div
-                          class="TableRow selected nowrap"
-                          data-testid="helm-chart-row-for-some-repository-some-name"
+                          data-react-window-index="0"
+                          style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                         >
                           <div
-                            class="TableCell icon"
+                            class="TableRow selected nowrap"
+                            data-testid="helm-chart-row-for-some-repository-some-name"
                           >
-                            <figure>
+                            <div
+                              class="TableCell icon"
+                            >
+                              <figure>
+                                <div
+                                  class="chartIcon imageNotLoaded"
+                                  data-testid="image-container"
+                                />
+                              </figure>
+                            </div>
+                            <div
+                              class="TableCell name"
+                            >
                               <div
-                                class="chartIcon imageNotLoaded"
-                                data-testid="image-container"
+                                class="badge flat"
+                              >
+                                some-name
+                              </div>
+                              <div>
+                                some-name
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell description"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-description
+                              </div>
+                              <div>
+                                some-description
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell version"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-version
+                              </div>
+                              <div>
+                                some-version
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell app-version"
+                            >
+                              <div
+                                class="badge flat"
                               />
-                            </figure>
-                          </div>
-                          <div
-                            class="TableCell name"
-                          >
+                            </div>
                             <div
-                              class="badge flat"
+                              class="TableCell some-repository repository"
                             >
-                              some-name
+                              <div
+                                class="badge flat"
+                              >
+                                some-repository
+                              </div>
+                              <div>
+                                some-repository
+                              </div>
                             </div>
-                            <div>
-                              some-name
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell description"
-                          >
                             <div
-                              class="badge flat"
-                            >
-                              some-description
-                            </div>
-                            <div>
-                              some-description
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell version"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-version
-                            </div>
-                            <div>
-                              some-version
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell app-version"
-                          >
-                            <div
-                              class="badge flat"
+                              class="TableCell menu"
                             />
                           </div>
-                          <div
-                            class="TableCell some-repository repository"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-repository
-                            </div>
-                            <div>
-                              some-repository
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell menu"
-                          />
                         </div>
-                      </div>
-                      <div
-                        data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
-                      >
                         <div
-                          class="TableRow nowrap"
-                          data-testid="helm-chart-row-for-some-repository-some-other-name"
+                          data-react-window-index="1"
+                          style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                         >
                           <div
-                            class="TableCell icon"
+                            class="TableRow nowrap"
+                            data-testid="helm-chart-row-for-some-repository-some-other-name"
                           >
-                            <figure>
+                            <div
+                              class="TableCell icon"
+                            >
+                              <figure>
+                                <div
+                                  class="chartIcon imageNotLoaded"
+                                  data-testid="image-container"
+                                />
+                              </figure>
+                            </div>
+                            <div
+                              class="TableCell name"
+                            >
                               <div
-                                class="chartIcon imageNotLoaded"
-                                data-testid="image-container"
+                                class="badge flat"
+                              >
+                                some-other-name
+                              </div>
+                              <div>
+                                some-other-name
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell description"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-description
+                              </div>
+                              <div>
+                                some-description
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell version"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-version
+                              </div>
+                              <div>
+                                some-version
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell app-version"
+                            >
+                              <div
+                                class="badge flat"
                               />
-                            </figure>
-                          </div>
-                          <div
-                            class="TableCell name"
-                          >
+                            </div>
                             <div
-                              class="badge flat"
+                              class="TableCell some-repository repository"
                             >
-                              some-other-name
+                              <div
+                                class="badge flat"
+                              >
+                                some-repository
+                              </div>
+                              <div>
+                                some-repository
+                              </div>
                             </div>
-                            <div>
-                              some-other-name
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell description"
-                          >
                             <div
-                              class="badge flat"
-                            >
-                              some-description
-                            </div>
-                            <div>
-                              some-description
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell version"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-version
-                            </div>
-                            <div>
-                              some-version
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell app-version"
-                          >
-                            <div
-                              class="badge flat"
+                              class="TableCell menu"
                             />
                           </div>
-                          <div
-                            class="TableCell some-repository repository"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-repository
-                            </div>
-                            <div>
-                              some-repository
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell menu"
-                          />
                         </div>
+                        <div
+                          aria-hidden="true"
+                          data-react-window-sizer=""
+                          style="height: 88px; width: 100%; z-index: -1;"
+                        />
                       </div>
-                      <div
-                        aria-hidden="true"
-                        data-react-window-sizer=""
-                        style="height: 88px; width: 100%; z-index: -1;"
-                      />
                     </div>
                   </div>
                 </div>
@@ -5157,293 +5177,297 @@ exports[`opening dock tab for installing helm chart > given application is start
                 class="items grow shrink-0 basis-0 flex flex-col"
               >
                 <div
-                  class="Table flex flex-col HelmCharts grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual"
+                  class="Table flex flex-col HelmCharts grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual horizontalScroll"
                 >
                   <div
-                    class="TableHead sticky nowrap topLine"
+                    class="TableHorizontalScroll"
                   >
                     <div
-                      class="TableCell icon nowrap"
+                      class="TableHead sticky nowrap topLine"
                     >
                       <div
-                        class="content"
-                      />
-                    </div>
-                    <div
-                      class="TableCell name nowrap sorting"
-                      id="name"
-                    >
-                      <div
-                        class="content"
+                        class="TableCell icon nowrap"
                       >
-                        Name
+                        <div
+                          class="content"
+                        />
                       </div>
-                      <i
-                        class="Icon sortIcon material focusable"
+                      <div
+                        class="TableCell name nowrap sorting"
+                        id="name"
                       >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
+                        <div
+                          class="content"
                         >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell description nowrap"
-                      id="description"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Description
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell version nowrap"
-                      id="version"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Version
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell app-version nowrap"
-                      id="app-version"
-                    >
-                      <div
-                        class="content"
-                      >
-                        App Version
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell repository nowrap sorting"
-                      id="repo"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Repository
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell menu nowrap"
-                    >
-                      <div
-                        class="content"
-                      >
+                          Name
+                        </div>
                         <i
-                          class="Icon material interactive focusable"
-                          id="menu-actions-for-item-object-list-content"
-                          tabindex="0"
+                          class="Icon sortIcon material focusable"
                         >
                           <span
                             class="icon"
-                            data-icon-name="more_vert"
+                            data-icon-name="arrow_drop_down"
                           >
-                            more_vert
+                            arrow_drop_down
                           </span>
                         </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell description nowrap"
+                        id="description"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Description
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell version nowrap"
+                        id="version"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Version
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell app-version nowrap"
+                        id="app-version"
+                      >
+                        <div
+                          class="content"
+                        >
+                          App Version
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell repository nowrap sorting"
+                        id="repo"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Repository
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell menu nowrap"
+                      >
+                        <div
+                          class="content"
+                        >
+                          <i
+                            class="Icon material interactive focusable"
+                            id="menu-actions-for-item-object-list-content"
+                            tabindex="0"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="more_vert"
+                            >
+                              more_vert
+                            </span>
+                          </i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="VirtualList HelmCharts grow shrink-0 basis-0 dark"
-                  >
                     <div
-                      class="list"
-                      role="list"
-                      style="position: relative; flex-grow: 1; max-height: 100%; overflow-y: auto; width: 100%; height: 100%;"
+                      class="VirtualList HelmCharts grow shrink-0 basis-0 dark"
                     >
                       <div
-                        data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
+                        class="list"
+                        role="list"
+                        style="position: relative; flex-grow: 1; max-height: 100%; overflow-y: auto; width: 100%; height: 100%;"
                       >
                         <div
-                          class="TableRow selected nowrap"
-                          data-testid="helm-chart-row-for-some-repository-some-name"
+                          data-react-window-index="0"
+                          style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                         >
                           <div
-                            class="TableCell icon"
+                            class="TableRow selected nowrap"
+                            data-testid="helm-chart-row-for-some-repository-some-name"
                           >
-                            <figure>
+                            <div
+                              class="TableCell icon"
+                            >
+                              <figure>
+                                <div
+                                  class="chartIcon imageNotLoaded"
+                                  data-testid="image-container"
+                                />
+                              </figure>
+                            </div>
+                            <div
+                              class="TableCell name"
+                            >
                               <div
-                                class="chartIcon imageNotLoaded"
-                                data-testid="image-container"
+                                class="badge flat"
+                              >
+                                some-name
+                              </div>
+                              <div>
+                                some-name
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell description"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-description
+                              </div>
+                              <div>
+                                some-description
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell version"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-version
+                              </div>
+                              <div>
+                                some-version
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell app-version"
+                            >
+                              <div
+                                class="badge flat"
                               />
-                            </figure>
-                          </div>
-                          <div
-                            class="TableCell name"
-                          >
+                            </div>
                             <div
-                              class="badge flat"
+                              class="TableCell some-repository repository"
                             >
-                              some-name
+                              <div
+                                class="badge flat"
+                              >
+                                some-repository
+                              </div>
+                              <div>
+                                some-repository
+                              </div>
                             </div>
-                            <div>
-                              some-name
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell description"
-                          >
                             <div
-                              class="badge flat"
-                            >
-                              some-description
-                            </div>
-                            <div>
-                              some-description
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell version"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-version
-                            </div>
-                            <div>
-                              some-version
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell app-version"
-                          >
-                            <div
-                              class="badge flat"
+                              class="TableCell menu"
                             />
                           </div>
-                          <div
-                            class="TableCell some-repository repository"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-repository
-                            </div>
-                            <div>
-                              some-repository
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell menu"
-                          />
                         </div>
-                      </div>
-                      <div
-                        data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
-                      >
                         <div
-                          class="TableRow nowrap"
-                          data-testid="helm-chart-row-for-some-repository-some-other-name"
+                          data-react-window-index="1"
+                          style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                         >
                           <div
-                            class="TableCell icon"
+                            class="TableRow nowrap"
+                            data-testid="helm-chart-row-for-some-repository-some-other-name"
                           >
-                            <figure>
+                            <div
+                              class="TableCell icon"
+                            >
+                              <figure>
+                                <div
+                                  class="chartIcon imageNotLoaded"
+                                  data-testid="image-container"
+                                />
+                              </figure>
+                            </div>
+                            <div
+                              class="TableCell name"
+                            >
                               <div
-                                class="chartIcon imageNotLoaded"
-                                data-testid="image-container"
+                                class="badge flat"
+                              >
+                                some-other-name
+                              </div>
+                              <div>
+                                some-other-name
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell description"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-description
+                              </div>
+                              <div>
+                                some-description
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell version"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-version
+                              </div>
+                              <div>
+                                some-version
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell app-version"
+                            >
+                              <div
+                                class="badge flat"
                               />
-                            </figure>
-                          </div>
-                          <div
-                            class="TableCell name"
-                          >
+                            </div>
                             <div
-                              class="badge flat"
+                              class="TableCell some-repository repository"
                             >
-                              some-other-name
+                              <div
+                                class="badge flat"
+                              >
+                                some-repository
+                              </div>
+                              <div>
+                                some-repository
+                              </div>
                             </div>
-                            <div>
-                              some-other-name
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell description"
-                          >
                             <div
-                              class="badge flat"
-                            >
-                              some-description
-                            </div>
-                            <div>
-                              some-description
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell version"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-version
-                            </div>
-                            <div>
-                              some-version
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell app-version"
-                          >
-                            <div
-                              class="badge flat"
+                              class="TableCell menu"
                             />
                           </div>
-                          <div
-                            class="TableCell some-repository repository"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-repository
-                            </div>
-                            <div>
-                              some-repository
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell menu"
-                          />
                         </div>
+                        <div
+                          aria-hidden="true"
+                          data-react-window-sizer=""
+                          style="height: 88px; width: 100%; z-index: -1;"
+                        />
                       </div>
-                      <div
-                        aria-hidden="true"
-                        data-react-window-sizer=""
-                        style="height: 88px; width: 100%; z-index: -1;"
-                      />
                     </div>
                   </div>
                 </div>
@@ -6229,293 +6253,297 @@ exports[`opening dock tab for installing helm chart > given application is start
                 class="items grow shrink-0 basis-0 flex flex-col"
               >
                 <div
-                  class="Table flex flex-col HelmCharts grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual"
+                  class="Table flex flex-col HelmCharts grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual horizontalScroll"
                 >
                   <div
-                    class="TableHead sticky nowrap topLine"
+                    class="TableHorizontalScroll"
                   >
                     <div
-                      class="TableCell icon nowrap"
+                      class="TableHead sticky nowrap topLine"
                     >
                       <div
-                        class="content"
-                      />
-                    </div>
-                    <div
-                      class="TableCell name nowrap sorting"
-                      id="name"
-                    >
-                      <div
-                        class="content"
+                        class="TableCell icon nowrap"
                       >
-                        Name
+                        <div
+                          class="content"
+                        />
                       </div>
-                      <i
-                        class="Icon sortIcon material focusable"
+                      <div
+                        class="TableCell name nowrap sorting"
+                        id="name"
                       >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
+                        <div
+                          class="content"
                         >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell description nowrap"
-                      id="description"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Description
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell version nowrap"
-                      id="version"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Version
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell app-version nowrap"
-                      id="app-version"
-                    >
-                      <div
-                        class="content"
-                      >
-                        App Version
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell repository nowrap sorting"
-                      id="repo"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Repository
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell menu nowrap"
-                    >
-                      <div
-                        class="content"
-                      >
+                          Name
+                        </div>
                         <i
-                          class="Icon material interactive focusable"
-                          id="menu-actions-for-item-object-list-content"
-                          tabindex="0"
+                          class="Icon sortIcon material focusable"
                         >
                           <span
                             class="icon"
-                            data-icon-name="more_vert"
+                            data-icon-name="arrow_drop_down"
                           >
-                            more_vert
+                            arrow_drop_down
                           </span>
                         </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell description nowrap"
+                        id="description"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Description
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell version nowrap"
+                        id="version"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Version
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell app-version nowrap"
+                        id="app-version"
+                      >
+                        <div
+                          class="content"
+                        >
+                          App Version
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell repository nowrap sorting"
+                        id="repo"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Repository
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell menu nowrap"
+                      >
+                        <div
+                          class="content"
+                        >
+                          <i
+                            class="Icon material interactive focusable"
+                            id="menu-actions-for-item-object-list-content"
+                            tabindex="0"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="more_vert"
+                            >
+                              more_vert
+                            </span>
+                          </i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="VirtualList HelmCharts grow shrink-0 basis-0 dark"
-                  >
                     <div
-                      class="list"
-                      role="list"
-                      style="position: relative; flex-grow: 1; max-height: 100%; overflow-y: auto; width: 100%; height: 100%;"
+                      class="VirtualList HelmCharts grow shrink-0 basis-0 dark"
                     >
                       <div
-                        data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
+                        class="list"
+                        role="list"
+                        style="position: relative; flex-grow: 1; max-height: 100%; overflow-y: auto; width: 100%; height: 100%;"
                       >
                         <div
-                          class="TableRow selected nowrap"
-                          data-testid="helm-chart-row-for-some-repository-some-name"
+                          data-react-window-index="0"
+                          style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                         >
                           <div
-                            class="TableCell icon"
+                            class="TableRow selected nowrap"
+                            data-testid="helm-chart-row-for-some-repository-some-name"
                           >
-                            <figure>
+                            <div
+                              class="TableCell icon"
+                            >
+                              <figure>
+                                <div
+                                  class="chartIcon imageNotLoaded"
+                                  data-testid="image-container"
+                                />
+                              </figure>
+                            </div>
+                            <div
+                              class="TableCell name"
+                            >
                               <div
-                                class="chartIcon imageNotLoaded"
-                                data-testid="image-container"
+                                class="badge flat"
+                              >
+                                some-name
+                              </div>
+                              <div>
+                                some-name
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell description"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-description
+                              </div>
+                              <div>
+                                some-description
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell version"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-version
+                              </div>
+                              <div>
+                                some-version
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell app-version"
+                            >
+                              <div
+                                class="badge flat"
                               />
-                            </figure>
-                          </div>
-                          <div
-                            class="TableCell name"
-                          >
+                            </div>
                             <div
-                              class="badge flat"
+                              class="TableCell some-repository repository"
                             >
-                              some-name
+                              <div
+                                class="badge flat"
+                              >
+                                some-repository
+                              </div>
+                              <div>
+                                some-repository
+                              </div>
                             </div>
-                            <div>
-                              some-name
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell description"
-                          >
                             <div
-                              class="badge flat"
-                            >
-                              some-description
-                            </div>
-                            <div>
-                              some-description
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell version"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-version
-                            </div>
-                            <div>
-                              some-version
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell app-version"
-                          >
-                            <div
-                              class="badge flat"
+                              class="TableCell menu"
                             />
                           </div>
-                          <div
-                            class="TableCell some-repository repository"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-repository
-                            </div>
-                            <div>
-                              some-repository
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell menu"
-                          />
                         </div>
-                      </div>
-                      <div
-                        data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
-                      >
                         <div
-                          class="TableRow nowrap"
-                          data-testid="helm-chart-row-for-some-repository-some-other-name"
+                          data-react-window-index="1"
+                          style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                         >
                           <div
-                            class="TableCell icon"
+                            class="TableRow nowrap"
+                            data-testid="helm-chart-row-for-some-repository-some-other-name"
                           >
-                            <figure>
+                            <div
+                              class="TableCell icon"
+                            >
+                              <figure>
+                                <div
+                                  class="chartIcon imageNotLoaded"
+                                  data-testid="image-container"
+                                />
+                              </figure>
+                            </div>
+                            <div
+                              class="TableCell name"
+                            >
                               <div
-                                class="chartIcon imageNotLoaded"
-                                data-testid="image-container"
+                                class="badge flat"
+                              >
+                                some-other-name
+                              </div>
+                              <div>
+                                some-other-name
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell description"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-description
+                              </div>
+                              <div>
+                                some-description
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell version"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-version
+                              </div>
+                              <div>
+                                some-version
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell app-version"
+                            >
+                              <div
+                                class="badge flat"
                               />
-                            </figure>
-                          </div>
-                          <div
-                            class="TableCell name"
-                          >
+                            </div>
                             <div
-                              class="badge flat"
+                              class="TableCell some-repository repository"
                             >
-                              some-other-name
+                              <div
+                                class="badge flat"
+                              >
+                                some-repository
+                              </div>
+                              <div>
+                                some-repository
+                              </div>
                             </div>
-                            <div>
-                              some-other-name
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell description"
-                          >
                             <div
-                              class="badge flat"
-                            >
-                              some-description
-                            </div>
-                            <div>
-                              some-description
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell version"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-version
-                            </div>
-                            <div>
-                              some-version
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell app-version"
-                          >
-                            <div
-                              class="badge flat"
+                              class="TableCell menu"
                             />
                           </div>
-                          <div
-                            class="TableCell some-repository repository"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-repository
-                            </div>
-                            <div>
-                              some-repository
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell menu"
-                          />
                         </div>
+                        <div
+                          aria-hidden="true"
+                          data-react-window-sizer=""
+                          style="height: 88px; width: 100%; z-index: -1;"
+                        />
                       </div>
-                      <div
-                        aria-hidden="true"
-                        data-react-window-sizer=""
-                        style="height: 88px; width: 100%; z-index: -1;"
-                      />
                     </div>
                   </div>
                 </div>
@@ -7305,293 +7333,297 @@ exports[`opening dock tab for installing helm chart > given application is start
                 class="items grow shrink-0 basis-0 flex flex-col"
               >
                 <div
-                  class="Table flex flex-col HelmCharts grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual"
+                  class="Table flex flex-col HelmCharts grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual horizontalScroll"
                 >
                   <div
-                    class="TableHead sticky nowrap topLine"
+                    class="TableHorizontalScroll"
                   >
                     <div
-                      class="TableCell icon nowrap"
+                      class="TableHead sticky nowrap topLine"
                     >
                       <div
-                        class="content"
-                      />
-                    </div>
-                    <div
-                      class="TableCell name nowrap sorting"
-                      id="name"
-                    >
-                      <div
-                        class="content"
+                        class="TableCell icon nowrap"
                       >
-                        Name
+                        <div
+                          class="content"
+                        />
                       </div>
-                      <i
-                        class="Icon sortIcon material focusable"
+                      <div
+                        class="TableCell name nowrap sorting"
+                        id="name"
                       >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
+                        <div
+                          class="content"
                         >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell description nowrap"
-                      id="description"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Description
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell version nowrap"
-                      id="version"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Version
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell app-version nowrap"
-                      id="app-version"
-                    >
-                      <div
-                        class="content"
-                      >
-                        App Version
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell repository nowrap sorting"
-                      id="repo"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Repository
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell menu nowrap"
-                    >
-                      <div
-                        class="content"
-                      >
+                          Name
+                        </div>
                         <i
-                          class="Icon material interactive focusable"
-                          id="menu-actions-for-item-object-list-content"
-                          tabindex="0"
+                          class="Icon sortIcon material focusable"
                         >
                           <span
                             class="icon"
-                            data-icon-name="more_vert"
+                            data-icon-name="arrow_drop_down"
                           >
-                            more_vert
+                            arrow_drop_down
                           </span>
                         </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell description nowrap"
+                        id="description"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Description
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell version nowrap"
+                        id="version"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Version
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell app-version nowrap"
+                        id="app-version"
+                      >
+                        <div
+                          class="content"
+                        >
+                          App Version
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell repository nowrap sorting"
+                        id="repo"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Repository
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell menu nowrap"
+                      >
+                        <div
+                          class="content"
+                        >
+                          <i
+                            class="Icon material interactive focusable"
+                            id="menu-actions-for-item-object-list-content"
+                            tabindex="0"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="more_vert"
+                            >
+                              more_vert
+                            </span>
+                          </i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="VirtualList HelmCharts grow shrink-0 basis-0 dark"
-                  >
                     <div
-                      class="list"
-                      role="list"
-                      style="position: relative; flex-grow: 1; max-height: 100%; overflow-y: auto; width: 100%; height: 100%;"
+                      class="VirtualList HelmCharts grow shrink-0 basis-0 dark"
                     >
                       <div
-                        data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
+                        class="list"
+                        role="list"
+                        style="position: relative; flex-grow: 1; max-height: 100%; overflow-y: auto; width: 100%; height: 100%;"
                       >
                         <div
-                          class="TableRow selected nowrap"
-                          data-testid="helm-chart-row-for-some-repository-some-name"
+                          data-react-window-index="0"
+                          style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                         >
                           <div
-                            class="TableCell icon"
+                            class="TableRow selected nowrap"
+                            data-testid="helm-chart-row-for-some-repository-some-name"
                           >
-                            <figure>
+                            <div
+                              class="TableCell icon"
+                            >
+                              <figure>
+                                <div
+                                  class="chartIcon imageNotLoaded"
+                                  data-testid="image-container"
+                                />
+                              </figure>
+                            </div>
+                            <div
+                              class="TableCell name"
+                            >
                               <div
-                                class="chartIcon imageNotLoaded"
-                                data-testid="image-container"
+                                class="badge flat"
+                              >
+                                some-name
+                              </div>
+                              <div>
+                                some-name
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell description"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-description
+                              </div>
+                              <div>
+                                some-description
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell version"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-version
+                              </div>
+                              <div>
+                                some-version
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell app-version"
+                            >
+                              <div
+                                class="badge flat"
                               />
-                            </figure>
-                          </div>
-                          <div
-                            class="TableCell name"
-                          >
+                            </div>
                             <div
-                              class="badge flat"
+                              class="TableCell some-repository repository"
                             >
-                              some-name
+                              <div
+                                class="badge flat"
+                              >
+                                some-repository
+                              </div>
+                              <div>
+                                some-repository
+                              </div>
                             </div>
-                            <div>
-                              some-name
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell description"
-                          >
                             <div
-                              class="badge flat"
-                            >
-                              some-description
-                            </div>
-                            <div>
-                              some-description
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell version"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-version
-                            </div>
-                            <div>
-                              some-version
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell app-version"
-                          >
-                            <div
-                              class="badge flat"
+                              class="TableCell menu"
                             />
                           </div>
-                          <div
-                            class="TableCell some-repository repository"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-repository
-                            </div>
-                            <div>
-                              some-repository
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell menu"
-                          />
                         </div>
-                      </div>
-                      <div
-                        data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
-                      >
                         <div
-                          class="TableRow nowrap"
-                          data-testid="helm-chart-row-for-some-repository-some-other-name"
+                          data-react-window-index="1"
+                          style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                         >
                           <div
-                            class="TableCell icon"
+                            class="TableRow nowrap"
+                            data-testid="helm-chart-row-for-some-repository-some-other-name"
                           >
-                            <figure>
+                            <div
+                              class="TableCell icon"
+                            >
+                              <figure>
+                                <div
+                                  class="chartIcon imageNotLoaded"
+                                  data-testid="image-container"
+                                />
+                              </figure>
+                            </div>
+                            <div
+                              class="TableCell name"
+                            >
                               <div
-                                class="chartIcon imageNotLoaded"
-                                data-testid="image-container"
+                                class="badge flat"
+                              >
+                                some-other-name
+                              </div>
+                              <div>
+                                some-other-name
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell description"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-description
+                              </div>
+                              <div>
+                                some-description
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell version"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-version
+                              </div>
+                              <div>
+                                some-version
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell app-version"
+                            >
+                              <div
+                                class="badge flat"
                               />
-                            </figure>
-                          </div>
-                          <div
-                            class="TableCell name"
-                          >
+                            </div>
                             <div
-                              class="badge flat"
+                              class="TableCell some-repository repository"
                             >
-                              some-other-name
+                              <div
+                                class="badge flat"
+                              >
+                                some-repository
+                              </div>
+                              <div>
+                                some-repository
+                              </div>
                             </div>
-                            <div>
-                              some-other-name
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell description"
-                          >
                             <div
-                              class="badge flat"
-                            >
-                              some-description
-                            </div>
-                            <div>
-                              some-description
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell version"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-version
-                            </div>
-                            <div>
-                              some-version
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell app-version"
-                          >
-                            <div
-                              class="badge flat"
+                              class="TableCell menu"
                             />
                           </div>
-                          <div
-                            class="TableCell some-repository repository"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-repository
-                            </div>
-                            <div>
-                              some-repository
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell menu"
-                          />
                         </div>
+                        <div
+                          aria-hidden="true"
+                          data-react-window-sizer=""
+                          style="height: 88px; width: 100%; z-index: -1;"
+                        />
                       </div>
-                      <div
-                        aria-hidden="true"
-                        data-react-window-sizer=""
-                        style="height: 88px; width: 100%; z-index: -1;"
-                      />
                     </div>
                   </div>
                 </div>
@@ -8387,293 +8419,297 @@ exports[`opening dock tab for installing helm chart > given application is start
                 class="items grow shrink-0 basis-0 flex flex-col"
               >
                 <div
-                  class="Table flex flex-col HelmCharts grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual"
+                  class="Table flex flex-col HelmCharts grow shrink-0 basis-0 dark selectable scrollable sortable autoSize virtual horizontalScroll"
                 >
                   <div
-                    class="TableHead sticky nowrap topLine"
+                    class="TableHorizontalScroll"
                   >
                     <div
-                      class="TableCell icon nowrap"
+                      class="TableHead sticky nowrap topLine"
                     >
                       <div
-                        class="content"
-                      />
-                    </div>
-                    <div
-                      class="TableCell name nowrap sorting"
-                      id="name"
-                    >
-                      <div
-                        class="content"
+                        class="TableCell icon nowrap"
                       >
-                        Name
+                        <div
+                          class="content"
+                        />
                       </div>
-                      <i
-                        class="Icon sortIcon material focusable"
+                      <div
+                        class="TableCell name nowrap sorting"
+                        id="name"
                       >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
+                        <div
+                          class="content"
                         >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell description nowrap"
-                      id="description"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Description
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell version nowrap"
-                      id="version"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Version
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell app-version nowrap"
-                      id="app-version"
-                    >
-                      <div
-                        class="content"
-                      >
-                        App Version
-                      </div>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell repository nowrap sorting"
-                      id="repo"
-                    >
-                      <div
-                        class="content"
-                      >
-                        Repository
-                      </div>
-                      <i
-                        class="Icon sortIcon material focusable"
-                      >
-                        <span
-                          class="icon"
-                          data-icon-name="arrow_drop_down"
-                        >
-                          arrow_drop_down
-                        </span>
-                      </i>
-                      <div
-                        class="resize-handle"
-                      />
-                    </div>
-                    <div
-                      class="TableCell menu nowrap"
-                    >
-                      <div
-                        class="content"
-                      >
+                          Name
+                        </div>
                         <i
-                          class="Icon material interactive focusable"
-                          id="menu-actions-for-item-object-list-content"
-                          tabindex="0"
+                          class="Icon sortIcon material focusable"
                         >
                           <span
                             class="icon"
-                            data-icon-name="more_vert"
+                            data-icon-name="arrow_drop_down"
                           >
-                            more_vert
+                            arrow_drop_down
                           </span>
                         </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell description nowrap"
+                        id="description"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Description
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell version nowrap"
+                        id="version"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Version
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell app-version nowrap"
+                        id="app-version"
+                      >
+                        <div
+                          class="content"
+                        >
+                          App Version
+                        </div>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell repository nowrap sorting"
+                        id="repo"
+                      >
+                        <div
+                          class="content"
+                        >
+                          Repository
+                        </div>
+                        <i
+                          class="Icon sortIcon material focusable"
+                        >
+                          <span
+                            class="icon"
+                            data-icon-name="arrow_drop_down"
+                          >
+                            arrow_drop_down
+                          </span>
+                        </i>
+                        <div
+                          class="resize-handle"
+                        />
+                      </div>
+                      <div
+                        class="TableCell menu nowrap"
+                      >
+                        <div
+                          class="content"
+                        >
+                          <i
+                            class="Icon material interactive focusable"
+                            id="menu-actions-for-item-object-list-content"
+                            tabindex="0"
+                          >
+                            <span
+                              class="icon"
+                              data-icon-name="more_vert"
+                            >
+                              more_vert
+                            </span>
+                          </i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="VirtualList HelmCharts grow shrink-0 basis-0 dark"
-                  >
                     <div
-                      class="list"
-                      role="list"
-                      style="position: relative; flex-grow: 1; max-height: 100%; overflow-y: auto; width: 100%; height: 100%;"
+                      class="VirtualList HelmCharts grow shrink-0 basis-0 dark"
                     >
                       <div
-                        data-react-window-index="0"
-                        style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
+                        class="list"
+                        role="list"
+                        style="position: relative; flex-grow: 1; max-height: 100%; overflow-y: auto; width: 100%; height: 100%;"
                       >
                         <div
-                          class="TableRow nowrap"
-                          data-testid="helm-chart-row-for-some-repository-some-name"
+                          data-react-window-index="0"
+                          style="position: absolute; left: 0px; transform: translateY(0px); height: 44px; width: 100%;"
                         >
                           <div
-                            class="TableCell icon"
+                            class="TableRow nowrap"
+                            data-testid="helm-chart-row-for-some-repository-some-name"
                           >
-                            <figure>
+                            <div
+                              class="TableCell icon"
+                            >
+                              <figure>
+                                <div
+                                  class="chartIcon imageNotLoaded"
+                                  data-testid="image-container"
+                                />
+                              </figure>
+                            </div>
+                            <div
+                              class="TableCell name"
+                            >
                               <div
-                                class="chartIcon imageNotLoaded"
-                                data-testid="image-container"
+                                class="badge flat"
+                              >
+                                some-name
+                              </div>
+                              <div>
+                                some-name
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell description"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-description
+                              </div>
+                              <div>
+                                some-description
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell version"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-version
+                              </div>
+                              <div>
+                                some-version
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell app-version"
+                            >
+                              <div
+                                class="badge flat"
                               />
-                            </figure>
-                          </div>
-                          <div
-                            class="TableCell name"
-                          >
+                            </div>
                             <div
-                              class="badge flat"
+                              class="TableCell some-repository repository"
                             >
-                              some-name
+                              <div
+                                class="badge flat"
+                              >
+                                some-repository
+                              </div>
+                              <div>
+                                some-repository
+                              </div>
                             </div>
-                            <div>
-                              some-name
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell description"
-                          >
                             <div
-                              class="badge flat"
-                            >
-                              some-description
-                            </div>
-                            <div>
-                              some-description
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell version"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-version
-                            </div>
-                            <div>
-                              some-version
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell app-version"
-                          >
-                            <div
-                              class="badge flat"
+                              class="TableCell menu"
                             />
                           </div>
-                          <div
-                            class="TableCell some-repository repository"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-repository
-                            </div>
-                            <div>
-                              some-repository
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell menu"
-                          />
                         </div>
-                      </div>
-                      <div
-                        data-react-window-index="1"
-                        style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
-                      >
                         <div
-                          class="TableRow nowrap"
-                          data-testid="helm-chart-row-for-some-repository-some-other-name"
+                          data-react-window-index="1"
+                          style="position: absolute; left: 0px; transform: translateY(44px); height: 44px; width: 100%;"
                         >
                           <div
-                            class="TableCell icon"
+                            class="TableRow nowrap"
+                            data-testid="helm-chart-row-for-some-repository-some-other-name"
                           >
-                            <figure>
+                            <div
+                              class="TableCell icon"
+                            >
+                              <figure>
+                                <div
+                                  class="chartIcon imageNotLoaded"
+                                  data-testid="image-container"
+                                />
+                              </figure>
+                            </div>
+                            <div
+                              class="TableCell name"
+                            >
                               <div
-                                class="chartIcon imageNotLoaded"
-                                data-testid="image-container"
+                                class="badge flat"
+                              >
+                                some-other-name
+                              </div>
+                              <div>
+                                some-other-name
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell description"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-description
+                              </div>
+                              <div>
+                                some-description
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell version"
+                            >
+                              <div
+                                class="badge flat"
+                              >
+                                some-version
+                              </div>
+                              <div>
+                                some-version
+                              </div>
+                            </div>
+                            <div
+                              class="TableCell app-version"
+                            >
+                              <div
+                                class="badge flat"
                               />
-                            </figure>
-                          </div>
-                          <div
-                            class="TableCell name"
-                          >
+                            </div>
                             <div
-                              class="badge flat"
+                              class="TableCell some-repository repository"
                             >
-                              some-other-name
+                              <div
+                                class="badge flat"
+                              >
+                                some-repository
+                              </div>
+                              <div>
+                                some-repository
+                              </div>
                             </div>
-                            <div>
-                              some-other-name
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell description"
-                          >
                             <div
-                              class="badge flat"
-                            >
-                              some-description
-                            </div>
-                            <div>
-                              some-description
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell version"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-version
-                            </div>
-                            <div>
-                              some-version
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell app-version"
-                          >
-                            <div
-                              class="badge flat"
+                              class="TableCell menu"
                             />
                           </div>
-                          <div
-                            class="TableCell some-repository repository"
-                          >
-                            <div
-                              class="badge flat"
-                            >
-                              some-repository
-                            </div>
-                            <div>
-                              some-repository
-                            </div>
-                          </div>
-                          <div
-                            class="TableCell menu"
-                          />
                         </div>
+                        <div
+                          aria-hidden="true"
+                          data-react-window-sizer=""
+                          style="height: 88px; width: 100%; z-index: -1;"
+                        />
                       </div>
-                      <div
-                        aria-hidden="true"
-                        data-react-window-sizer=""
-                        style="height: 88px; width: 100%; z-index: -1;"
-                      />
                     </div>
                   </div>
                 </div>

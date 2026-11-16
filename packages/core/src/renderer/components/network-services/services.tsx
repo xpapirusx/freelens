@@ -74,14 +74,18 @@ interface Dependencies {
 @observer
 class NonInjectedServices extends React.Component<Dependencies> {
   render() {
+    // The store is read from the callbacks the table invokes inside its own
+    // MobX derivations, where reading this.props is forbidden (mobx-react 9).
+    const { serviceStore, endpointSliceStore } = this.props;
+
     return (
       <SiblingsInTabLayout>
         <KubeObjectListLayout
           isConfigurable
           tableId="network_services"
           className="Services"
-          store={this.props.serviceStore}
-          dependentStores={[this.props.endpointSliceStore]} // endpoint count column reads the endpoint slices
+          store={serviceStore}
+          dependentStores={[endpointSliceStore]} // endpoint count column reads the endpoint slices
           sortingCallbacks={{
             [columnId.name]: (service) => service.getName(),
             [columnId.namespace]: (service) => service.getNs(),
@@ -91,7 +95,7 @@ class NonInjectedServices extends React.Component<Dependencies> {
             [columnId.age]: (service) => -service.getCreationTimestamp(),
             [columnId.status]: (service) => service.getStatus(),
             [columnId.selector]: (service) => formatSelector(service),
-            [columnId.endpoints]: (service) => countReadyEndpoints(service, this.props.endpointSliceStore),
+            [columnId.endpoints]: (service) => countReadyEndpoints(service, endpointSliceStore),
           }}
           searchFilters={[
             (service) => service.getSearchFields(),
@@ -124,7 +128,7 @@ class NonInjectedServices extends React.Component<Dependencies> {
             <WithTooltip>{service.getClusterIp()}</WithTooltip>,
             <WithTooltip>{formatExternalIps(service)}</WithTooltip>,
             <WithTooltip>{service.getPorts().join(", ")}</WithTooltip>,
-            countReadyEndpoints(service, this.props.endpointSliceStore),
+            countReadyEndpoints(service, endpointSliceStore),
             <KubeObjectAge key="age" object={service} />,
             { title: service.getStatus(), className: service.getStatus().toLowerCase() },
           ]}

@@ -3,17 +3,17 @@
  * Licensed under MIT License. See LICENSE in root directory for more information.
  */
 
-import styles from "./resource-usage-section.module.scss";
-
 import { Icon } from "@freelensapp/icon";
 import { observer } from "mobx-react";
 import { DrawerTitle } from "../drawer";
-import { MiniBarChart } from "./mini-bar-chart";
-import { seriesPointsOf } from "./metrics-series";
 import { formatCores, formatMemoryUsage } from "./formatters";
+import { seriesPointsOf } from "./metrics-series";
+import { MiniBarChart } from "./mini-bar-chart";
+import styles from "./resource-usage-section.module.scss";
+
+import type { ReactNode } from "react";
 
 import type { MetricData } from "../../../common/k8s-api/endpoints/metrics.api";
-import type { ReactNode } from "react";
 
 const CPU_COLOR = "#00a7a0";
 const MEMORY_COLOR = "#c93dce";

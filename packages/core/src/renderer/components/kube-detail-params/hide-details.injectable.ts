@@ -5,6 +5,8 @@
  */
 
 import { getInjectable } from "@ogre-tools/injectable";
+import detailsExpandedUrlParamInjectable from "./details-expanded-url-param.injectable";
+import detailsTabUrlParamInjectable from "./details-tab-url-param.injectable";
 import showDetailsInjectable from "./show-details.injectable";
 
 export type HideDetails = () => void;
@@ -13,8 +15,14 @@ const hideDetailsInjectable = getInjectable({
   id: "hide-details",
   instantiate: (di): HideDetails => {
     const showDetails = di.inject(showDetailsInjectable);
+    const expandedUrlParam = di.inject(detailsExpandedUrlParamInjectable);
+    const tabUrlParam = di.inject(detailsTabUrlParamInjectable);
 
-    return () => showDetails("");
+    return () => {
+      expandedUrlParam.clear();
+      tabUrlParam.clear();
+      showDetails("");
+    };
   },
 });
 

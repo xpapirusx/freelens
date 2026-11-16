@@ -8,6 +8,7 @@ import { observer } from "mobx-react";
 import { useEffect } from "react";
 import { containerResourceTotals, type ResourceContainer } from "../workloads-pods/pod-resources";
 import { ResourceUsageSection } from "./resource-usage-section";
+
 import type { MetricData } from "../../../common/k8s-api/endpoints/metrics.api";
 import type { IAsyncComputed } from "../../../common/utils/async-computed";
 

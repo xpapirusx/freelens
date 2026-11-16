@@ -13,6 +13,7 @@ export type TableHeadElem = React.ReactElement<TableHeadProps>;
 
 export interface TableHeadProps extends React.DOMAttributes<HTMLDivElement> {
   className?: string;
+  style?: React.CSSProperties;
   showTopLine?: boolean; // show border line at the top
   sticky?: boolean; // keep header on top when scrolling
   nowrap?: boolean; // white-space: nowrap, align inner <TableCell> in one line

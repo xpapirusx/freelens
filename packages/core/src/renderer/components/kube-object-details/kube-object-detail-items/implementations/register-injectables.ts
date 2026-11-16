@@ -29,6 +29,12 @@ import mutatingWebhookConfigurationDetailItemInjectable from "./mutating-webhook
 import namespacesDetailItemInjectable from "./namespaces-detail-item.injectable";
 import networkPolicyDetailItemInjectable from "./network-policy-detail-item.injectable";
 import nodeDetailItemInjectable from "./node-detail-item.injectable";
+import {
+  appInfoDetailItemInjectable,
+  permissionsDetailItemInjectable,
+  policyFindingsDetailItemInjectable,
+  relatedResourcesDetailItemInjectable,
+} from "./overview-extras.injectable";
 import persistentVolumeClaimDetailItemInjectable from "./persistent-volume-claim-detail-item.injectable";
 import persistentVolumeDetailItemInjectable from "./persistent-volume-detail-item.injectable";
 import podDetailItemInjectable from "./pod-detail-item.injectable";
@@ -54,6 +60,11 @@ import verticalPodAutoscalerDetailItemInjectable from "./vertical-pod-autoscaler
 import type { DiContainerForInjection } from "@ogre-tools/injectable";
 
 export function registerInjectables(di: DiContainerForInjection): void {
+  try {
+    di.register(appInfoDetailItemInjectable);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
   try {
     di.register(clusterRoleBindingDetailItemInjectable);
   } catch (e) {
@@ -170,6 +181,11 @@ export function registerInjectables(di: DiContainerForInjection): void {
     /* Ignore duplicate registration */
   }
   try {
+    di.register(permissionsDetailItemInjectable);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
+  try {
     di.register(persistentVolumeClaimDetailItemInjectable);
   } catch (e) {
     /* Ignore duplicate registration */
@@ -195,7 +211,17 @@ export function registerInjectables(di: DiContainerForInjection): void {
     /* Ignore duplicate registration */
   }
   try {
+    di.register(policyFindingsDetailItemInjectable);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
+  try {
     di.register(priorityClassDetailItemInjectable);
+  } catch (e) {
+    /* Ignore duplicate registration */
+  }
+  try {
+    di.register(relatedResourcesDetailItemInjectable);
   } catch (e) {
     /* Ignore duplicate registration */
   }
