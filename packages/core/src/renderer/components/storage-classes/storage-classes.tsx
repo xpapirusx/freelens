@@ -23,6 +23,7 @@ enum columnId {
   provisioner = "provision",
   default = "default",
   reclaimPolicy = "reclaim",
+  bindingMode = "binding-mode",
 }
 
 interface Dependencies {
@@ -44,8 +45,15 @@ class NonInjectedStorageClasses extends React.Component<Dependencies> {
             [columnId.age]: (storageClass) => -storageClass.getCreationTimestamp(),
             [columnId.provisioner]: (storageClass) => storageClass.provisioner,
             [columnId.reclaimPolicy]: (storageClass) => storageClass.reclaimPolicy,
+            [columnId.bindingMode]: (storageClass) => storageClass.getVolumeBindingMode(),
           }}
           searchFilters={[(storageClass) => storageClass.getSearchFields(), (storageClass) => storageClass.provisioner]}
+          columnFilters={{
+            [columnId.provisioner]: (storageClass) => storageClass.provisioner,
+            [columnId.reclaimPolicy]: (storageClass) => storageClass.getReclaimPolicy(),
+            [columnId.bindingMode]: (storageClass) => storageClass.getVolumeBindingMode(),
+            [columnId.default]: (storageClass) => (storageClass.isDefault() ? "Yes" : "No"),
+          }}
           renderHeaderTitle="Storage Classes"
           renderTableHeader={[
             { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },
@@ -56,6 +64,12 @@ class NonInjectedStorageClasses extends React.Component<Dependencies> {
               sortBy: columnId.reclaimPolicy,
               id: columnId.reclaimPolicy,
             },
+            {
+              title: "Binding Mode",
+              className: "binding-mode",
+              sortBy: columnId.bindingMode,
+              id: columnId.bindingMode,
+            },
             { title: "Default", className: "is-default", id: columnId.default },
             { title: "Age", className: "age", sortBy: columnId.age, id: columnId.age },
           ]}
@@ -63,6 +77,7 @@ class NonInjectedStorageClasses extends React.Component<Dependencies> {
             <WithTooltip>{storageClass.getName()}</WithTooltip>,
             <WithTooltip>{storageClass.provisioner}</WithTooltip>,
             <WithTooltip>{storageClass.getReclaimPolicy()}</WithTooltip>,
+            <WithTooltip>{storageClass.getVolumeBindingMode()}</WithTooltip>,
             storageClass.isDefault() ? "Yes" : null,
             <KubeObjectAge key="age" object={storageClass} />,
           ]}

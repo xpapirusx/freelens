@@ -52,6 +52,11 @@ class NonInjectedSecrets extends React.Component<Dependencies> {
             [columnId.age]: (secret) => -secret.getCreationTimestamp(),
           }}
           searchFilters={[(secret) => secret.getSearchFields(), (secret) => secret.getKeys()]}
+          columnFilters={{
+            [columnId.namespace]: (secret) => secret.getNs(),
+            [columnId.keys]: (secret) => secret.getKeys(),
+            [columnId.type]: (secret) => secret.type,
+          }}
           renderHeaderTitle="Secrets"
           renderTableHeader={[
             { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },

@@ -23,6 +23,7 @@ import { KubeObjectListLayout } from "../kube-object-list-layout";
 import { TabLayout } from "../layout/tab-layout-2";
 import { LineProgress } from "../line-progress";
 import { WithTooltip } from "../with-tooltip";
+import { nodeAllocatableGpus } from "../workloads-pods/pod-resources";
 import loadPodsFromAllNamespacesInjectable from "../workloads-pods/load-pods-from-all-namespaces.injectable";
 import podStoreInjectable from "../workloads-pods/store.injectable";
 import nodeStoreInjectable from "./store.injectable";
@@ -44,6 +45,7 @@ enum columnId {
   memory = "memory",
   disk = "disk",
   pods = "pods",
+  gpu = "gpu",
   instanceType = "instanceType",
   nodeGroup = "nodeGroup",
   capacityType = "capacityType",
@@ -441,6 +443,7 @@ class NonInjectedNodesRoute extends React.Component<Dependencies> {
           isConfigurable
           defaultHiddenTableColumns={[
             columnId.pods,
+            columnId.gpu,
             columnId.instanceType,
             columnId.nodeGroup,
             columnId.capacityType,
@@ -458,6 +461,7 @@ class NonInjectedNodesRoute extends React.Component<Dependencies> {
             [columnId.memory]: (node) => this.getLastMetricValues(node, ["memoryUsage"]),
             [columnId.disk]: (node) => this.getLastMetricValues(node, ["fsUsage"]),
             [columnId.pods]: (node) => this.getNonTerminatedPods(node).length,
+            [columnId.gpu]: (node) => nodeAllocatableGpus(node),
             [columnId.instanceType]: (node) => getInstanceType(node),
             [columnId.nodeGroup]: (node) => getNodeGroup(node),
             [columnId.capacityType]: (node) => getCapacityType(node),
@@ -489,6 +493,7 @@ class NonInjectedNodesRoute extends React.Component<Dependencies> {
             { title: "Memory", className: "memory", sortBy: columnId.memory, id: columnId.memory },
             { title: "Disk", className: "disk", sortBy: columnId.disk, id: columnId.disk },
             { title: "Pods", className: "pods", sortBy: columnId.pods, id: columnId.pods },
+            { title: "GPUs", className: "gpu", sortBy: columnId.gpu, id: columnId.gpu },
             {
               title: "Instance Type",
               className: "instanceType",
@@ -536,6 +541,7 @@ class NonInjectedNodesRoute extends React.Component<Dependencies> {
               this.renderMemoryUsage(node),
               this.renderDiskUsage(node),
               this.renderPodsUsage(node),
+              <WithTooltip key="gpu">{nodeAllocatableGpus(node) > 0 ? nodeAllocatableGpus(node) : ""}</WithTooltip>,
               <WithTooltip>{getInstanceType(node)}</WithTooltip>,
               <WithTooltip>{getNodeGroup(node)}</WithTooltip>,
               <WithTooltip>{getCapacityType(node)}</WithTooltip>,

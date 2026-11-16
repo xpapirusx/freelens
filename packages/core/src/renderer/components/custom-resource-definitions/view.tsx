@@ -139,6 +139,9 @@ class NonInjectedCustomResourceDefinitions extends React.Component<Dependencies>
             (crd) => crd.getScope(),
             (crd) => -crd.getCreationTimestamp(),
           ]}
+          columnFilters={{
+            [columnId.scope]: (crd) => crd.getScope(),
+          }}
           renderHeaderTitle="Custom Resources"
           customizeHeader={({ filters, ...headerPlaceholders }) => ({
             // todo: move to global filters

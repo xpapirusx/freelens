@@ -24,6 +24,7 @@ import type { PriorityClassStore } from "./store";
 enum columnId {
   name = "name",
   value = "value",
+  preemption = "preemption",
   globalDefault = "global-default",
   age = "age",
 }
@@ -54,14 +55,25 @@ class NonInjectedPriorityClasses extends React.Component<PriorityClassesProps & 
           sortingCallbacks={{
             [columnId.name]: (pc) => pc.getName(),
             [columnId.value]: (pc) => pc.getValue(),
+            [columnId.preemption]: (pc) => pc.getPreemptionPolicy(),
             [columnId.globalDefault]: (pc) => pc.getGlobalDefault(),
             [columnId.age]: (pc) => -pc.getCreationTimestamp(),
           }}
           searchFilters={[(pc) => pc.getSearchFields()]}
+          columnFilters={{
+            [columnId.preemption]: (pc) => pc.getPreemptionPolicy(),
+            [columnId.globalDefault]: (pc) => pc.getGlobalDefault(),
+          }}
           renderHeaderTitle="Priority Classes"
           renderTableHeader={[
             { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },
             { title: "Value", className: "value", sortBy: columnId.value, id: columnId.value },
+            {
+              title: "Preemption",
+              className: "preemption",
+              sortBy: columnId.preemption,
+              id: columnId.preemption,
+            },
             {
               title: "Global Default",
               className: "global-default",
@@ -73,6 +85,7 @@ class NonInjectedPriorityClasses extends React.Component<PriorityClassesProps & 
           renderTableContents={(pc) => [
             <WithTooltip>{pc.getName()}</WithTooltip>,
             <WithTooltip>{pc.getValue()}</WithTooltip>,
+            <WithTooltip>{pc.getPreemptionPolicy()}</WithTooltip>,
             pc.getGlobalDefault(),
             <KubeObjectAge key="age" object={pc} />,
           ]}

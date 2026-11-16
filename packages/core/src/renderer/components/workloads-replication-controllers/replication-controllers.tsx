@@ -15,6 +15,8 @@ import "./replication-controllers.scss";
 
 import { WithTooltip } from "../with-tooltip";
 
+import type { ReplicationController } from "@freelensapp/kube-object";
+
 import type { ReplicationControllerStore } from "./replication-controller-store";
 
 enum columnId {
@@ -23,11 +25,22 @@ enum columnId {
   desired = "desired",
   current = "current",
   ready = "ready",
+  owner = "owner",
+  status = "status",
   selector = "selector",
 }
 
 interface Dependencies {
   store: ReplicationControllerStore;
+}
+
+function getOwnerText(item: ReplicationController): string {
+  const owner = item.metadata.ownerReferences?.[0];
+  return owner ? `${owner.kind}: ${owner.name}` : "";
+}
+
+function getStatusText(item: ReplicationController): string {
+  return item.getDesiredReplicas() > 0 ? "Active" : "Old";
 }
 
 const NonInjectedReplicationControllers = observer((props: Dependencies) => (
@@ -44,8 +57,14 @@ const NonInjectedReplicationControllers = observer((props: Dependencies) => (
         [columnId.desired]: (item) => item.getDesiredReplicas(),
         [columnId.current]: (item) => item.getReplicas(),
         [columnId.ready]: (item) => item.status?.readyReplicas,
+        [columnId.owner]: (item) => getOwnerText(item),
+        [columnId.status]: (item) => getStatusText(item),
       }}
       searchFilters={[(item) => item.getSearchFields(), (item) => item.getSelectorLabels()]}
+      columnFilters={{
+        [columnId.namespace]: (item) => item.getNs(),
+        [columnId.status]: (item) => getStatusText(item),
+      }}
       renderHeaderTitle="Replication Controllers"
       renderTableHeader={[
         { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },
@@ -59,6 +78,13 @@ const NonInjectedReplicationControllers = observer((props: Dependencies) => (
         { title: "Current", className: "current", sortBy: columnId.current, id: columnId.current },
         { title: "Ready", className: "ready", sortBy: columnId.ready, id: columnId.ready },
         {
+          title: "Owner",
+          className: "owner",
+          sortBy: columnId.owner,
+          id: columnId.owner,
+        },
+        { title: "Status", className: "status", sortBy: columnId.status, id: columnId.status },
+        {
           title: "Selector",
           className: "selector",
           sortBy: columnId.selector,
@@ -71,6 +97,8 @@ const NonInjectedReplicationControllers = observer((props: Dependencies) => (
         item.getReplicas() || 0,
         item.getDesiredReplicas(),
         item.status?.readyReplicas || 0,
+        <WithTooltip>{getOwnerText(item)}</WithTooltip>,
+        <WithTooltip>{getStatusText(item)}</WithTooltip>,
         item.getSelectorLabels().map((label) => <Badge key={label} label={label} tooltip={label} />),
       ]}
     />

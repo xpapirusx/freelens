@@ -81,6 +81,9 @@ const NonInjectedNamespacesRoute = ({
         [columnId.status]: (namespace) => namespace.getStatus(),
       }}
       searchFilters={[(namespace) => namespace.getSearchFields(), (namespace) => namespace.getStatus()]}
+      columnFilters={{
+        [columnId.status]: (namespace) => namespace.getStatus(),
+      }}
       renderHeaderTitle="Namespaces"
       renderTableHeader={[
         { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },

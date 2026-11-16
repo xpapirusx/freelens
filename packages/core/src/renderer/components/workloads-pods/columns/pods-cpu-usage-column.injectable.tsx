@@ -7,7 +7,9 @@ import { podListLayoutColumnInjectionToken } from "@freelensapp/list-layout";
 import { getInjectable } from "@ogre-tools/injectable";
 import { observer } from "mobx-react";
 import podStoreInjectable from "../../workloads-pods/store.injectable";
+import { UsageCell } from "../../usage-cell/usage-cell";
 import { COLUMN_PRIORITY } from "./column-priority";
+import { formatCores, podResourceTotals } from "../pod-resources";
 
 import type { Pod } from "@freelensapp/kube-object";
 
@@ -20,8 +22,30 @@ interface PodCpuCellProps {
 
 const PodCpuCell = observer(({ pod, podStore }: PodCpuCellProps) => {
   const { cpu } = podStore.getPodKubeMetrics(pod);
+  const { requests, limits } = podResourceTotals(pod, "cpu");
+  const hasMetrics = !isNaN(cpu);
 
-  return <span>{isNaN(cpu) ? "N/A" : cpu.toFixed(3)}</span>;
+  const tooltipLines: string[] = [];
+
+  if (hasMetrics) {
+    tooltipLines.push(`Usage: ${formatCores(cpu)} cores`);
+  }
+
+  if (requests > 0) {
+    tooltipLines.push(`Requests: ${formatCores(requests)} cores`);
+  }
+
+  if (limits > 0) {
+    tooltipLines.push(`Limit: ${formatCores(limits)} cores`);
+  }
+
+  if (hasMetrics && limits > 0) {
+    tooltipLines.push(`${((cpu * 100) / limits).toFixed(1)}% of limit`);
+  }
+
+  return (
+    <UsageCell usage={cpu} capacity={limits} requests={requests} format={formatCores} tooltipLines={tooltipLines} />
+  );
 });
 
 const columnId = "cpuUsage";

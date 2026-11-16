@@ -43,13 +43,18 @@ class NonInjectedNetworkPolicies extends React.Component<Dependencies> {
             [columnId.name]: (networkPolicy) => networkPolicy.getName(),
             [columnId.namespace]: (networkPolicy) => networkPolicy.getNs(),
             [columnId.age]: (networkPolicy) => -networkPolicy.getCreationTimestamp(),
+            [columnId.types]: (networkPolicy) => networkPolicy.getTypes().join(", "),
           }}
           searchFilters={[(networkPolicy) => networkPolicy.getSearchFields()]}
+          columnFilters={{
+            [columnId.namespace]: (networkPolicy) => networkPolicy.getNs(),
+            [columnId.types]: (networkPolicy) => networkPolicy.getTypes(),
+          }}
           renderHeaderTitle="Network Policies"
           renderTableHeader={[
             { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },
             { title: "Namespace", className: "namespace", sortBy: columnId.namespace, id: columnId.namespace },
-            { title: "Policy Types", className: "type", id: columnId.types },
+            { title: "Policy Types", className: "type", sortBy: columnId.types, id: columnId.types },
             { title: "Age", className: "age", sortBy: columnId.age, id: columnId.age },
           ]}
           renderTableContents={(networkPolicy) => [

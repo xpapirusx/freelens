@@ -6,7 +6,6 @@
 
 import "./vpa.scss";
 
-import { prevDefault } from "@freelensapp/utilities";
 import { withInjectables } from "@ogre-tools/injectable-react";
 import { observer } from "mobx-react";
 import React from "react";
@@ -14,10 +13,9 @@ import { KubeObjectAge } from "../kube-object/age";
 import { KubeObjectConditionsList } from "../kube-object-conditions";
 import { KubeObjectListLayout } from "../kube-object-list-layout";
 import { SiblingsInTabLayout } from "../layout/siblings-in-tab-layout";
-import filterByNamespaceInjectable from "../namespaces/namespace-select-filter-model/filter-by-namespace.injectable";
+import { NamespaceSelectBadge } from "../namespaces/namespace-select-badge";
 import verticalPodAutoscalerStoreInjectable from "./store.injectable";
 
-import type { FilterByNamespace } from "../namespaces/namespace-select-filter-model/filter-by-namespace.injectable";
 import type { VerticalPodAutoscalerStore } from "./store";
 
 enum columnId {
@@ -30,7 +28,6 @@ enum columnId {
 
 interface Dependencies {
   verticalPodAutoscalerStore: VerticalPodAutoscalerStore;
-  filterByNamespace: FilterByNamespace;
 }
 
 @observer
@@ -46,9 +43,13 @@ class NonInjectedVerticalPodAutoscalers extends React.Component<Dependencies> {
           sortingCallbacks={{
             [columnId.name]: (vpa) => vpa.getName(),
             [columnId.namespace]: (vpa) => vpa.getNs(),
+            [columnId.mode]: (vpa) => vpa.getMode(),
             [columnId.age]: (vpa) => -vpa.getCreationTimestamp(),
           }}
           searchFilters={[(vpa) => vpa.getSearchFields()]}
+          columnFilters={{
+            [columnId.namespace]: (vpa) => vpa.getNs(),
+          }}
           renderHeaderTitle="Vertical Pod Autoscalers"
           renderTableHeader={[
             { title: "Name", className: "name", sortBy: columnId.name },
@@ -59,13 +60,7 @@ class NonInjectedVerticalPodAutoscalers extends React.Component<Dependencies> {
           ]}
           renderTableContents={(vpa) => [
             vpa.getName(),
-            <a
-              key="namespace"
-              className="filterNamespace"
-              onClick={prevDefault(() => this.props.filterByNamespace(vpa.getNs()))}
-            >
-              {vpa.getNs()}
-            </a>,
+            <NamespaceSelectBadge key="namespace" namespace={vpa.getNs()} />,
             vpa.getMode(),
             <KubeObjectAge key="age" object={vpa} />,
             <KubeObjectConditionsList key="conditions" object={vpa} />,
@@ -79,7 +74,6 @@ class NonInjectedVerticalPodAutoscalers extends React.Component<Dependencies> {
 export const VerticalPodAutoscalers = withInjectables<Dependencies>(NonInjectedVerticalPodAutoscalers, {
   getProps: (di, props) => ({
     ...props,
-    filterByNamespace: di.inject(filterByNamespaceInjectable),
     verticalPodAutoscalerStore: di.inject(verticalPodAutoscalerStoreInjectable),
   }),
 });

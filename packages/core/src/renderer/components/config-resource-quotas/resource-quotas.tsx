@@ -50,6 +50,9 @@ class NonInjectedResourceQuotas extends React.Component<Dependencies> {
             (resourceQuota) => resourceQuota.getSearchFields(),
             (resourceQuota) => resourceQuota.getName(),
           ]}
+          columnFilters={{
+            [columnId.namespace]: (resourceQuota) => resourceQuota.getNs(),
+          }}
           renderHeaderTitle="Resource Quotas"
           renderTableHeader={[
             { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },

@@ -123,6 +123,10 @@ const NonInjectedJobs = observer((props: Dependencies) => {
           [columnId.age]: (job) => -job.getCreationTimestamp(),
         }}
         searchFilters={[(job) => job.getSearchFields()]}
+        columnFilters={{
+          [columnId.namespace]: (job) => job.getNs(),
+          [columnId.status]: (job) => getStatusText(job),
+        }}
         renderHeaderTitle="Jobs"
         renderTableHeader={[
           { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },

@@ -50,6 +50,9 @@ class NonInjectedServiceAccounts extends React.Component<Dependencies> {
             [columnId.age]: (account) => -account.getCreationTimestamp(),
           }}
           searchFilters={[(account) => account.getSearchFields()]}
+          columnFilters={{
+            [columnId.namespace]: (account) => account.getNs(),
+          }}
           renderHeaderTitle="Service Accounts"
           renderTableHeader={[
             { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },

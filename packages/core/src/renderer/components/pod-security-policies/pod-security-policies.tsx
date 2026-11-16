@@ -12,6 +12,7 @@ import React from "react";
 import { KubeObjectAge } from "../kube-object/age";
 import { KubeObjectListLayout } from "../kube-object-list-layout";
 import { SiblingsInTabLayout } from "../layout/siblings-in-tab-layout";
+import { WithTooltip } from "../with-tooltip";
 import podSecurityPolicyStoreInjectable from "./store.injectable";
 
 import type { PodSecurityPolicyStore } from "./store";
@@ -48,6 +49,9 @@ class NonInjectedPodSecurityPolicies extends React.Component<Dependencies> {
             (podSecurityPolicy) => podSecurityPolicy.getVolumes(),
             (podSecurityPolicy) => Object.values(podSecurityPolicy.getRules()),
           ]}
+          columnFilters={{
+            [columnId.privileged]: (podSecurityPolicy) => (podSecurityPolicy.isPrivileged() ? "Yes" : "No"),
+          }}
           renderHeaderTitle="Pod Security Policies"
           renderTableHeader={[
             { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },
@@ -56,9 +60,9 @@ class NonInjectedPodSecurityPolicies extends React.Component<Dependencies> {
             { title: "Age", className: "age", sortBy: columnId.age, id: columnId.age },
           ]}
           renderTableContents={(podSecurityPolicy) => [
-            podSecurityPolicy.getName(),
+            <WithTooltip>{podSecurityPolicy.getName()}</WithTooltip>,
             podSecurityPolicy.isPrivileged() ? "Yes" : "No",
-            podSecurityPolicy.getVolumes().join(", "),
+            <WithTooltip>{podSecurityPolicy.getVolumes().join(", ")}</WithTooltip>,
             <KubeObjectAge key="age" object={podSecurityPolicy} />,
           ]}
         />

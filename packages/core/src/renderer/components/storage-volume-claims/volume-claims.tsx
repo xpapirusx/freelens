@@ -22,6 +22,7 @@ import podStoreInjectable from "../workloads-pods/store.injectable";
 import persistentVolumeClaimStoreInjectable from "./store.injectable";
 
 import type { StorageClassApi } from "@freelensapp/kube-api";
+import type { PersistentVolumeClaim } from "@freelensapp/kube-object";
 
 import type { GetDetailsUrl } from "../kube-detail-params/get-details-url.injectable";
 import type { PodStore } from "../workloads-pods/store";
@@ -32,10 +33,32 @@ enum columnId {
   namespace = "namespace",
   pods = "pods",
   size = "size",
+  accessModes = "access-modes",
+  volume = "volume",
   storageClass = "storage-class",
   status = "status",
   age = "age",
 }
+
+const accessModeAbbreviations: Record<string, string> = {
+  ReadWriteOnce: "RWO",
+  ReadOnlyMany: "ROX",
+  ReadWriteMany: "RWX",
+  ReadWriteOncePod: "RWOP",
+};
+
+const accessModeFullNames: Record<string, string> = {
+  RWO: "ReadWriteOnce",
+  ROX: "ReadOnlyMany",
+  RWX: "ReadWriteMany",
+  RWOP: "ReadWriteOncePod",
+};
+
+const getAccessModes = (claim: PersistentVolumeClaim): string[] =>
+  (claim.spec.accessModes ?? []).map((mode) => accessModeAbbreviations[mode] ?? mode);
+
+const accessModesTooltip = (modes: string[]): string =>
+  modes.map((mode) => `${mode} (${accessModeFullNames[mode] ?? mode})`).join(", ");
 
 interface Dependencies {
   persistentVolumeClaimStore: PersistentVolumeClaimStore;
@@ -63,6 +86,8 @@ class NonInjectedPersistentVolumeClaims extends React.Component<Dependencies> {
             [columnId.pods]: (pvc) => pvc.getPods(podStore.items).map((pod) => pod.getName()),
             [columnId.status]: (pvc) => pvc.getStatus(),
             [columnId.size]: (pvc) => unitsToBytes(pvc.getStorage()),
+            [columnId.accessModes]: (pvc) => getAccessModes(pvc).join(", "),
+            [columnId.volume]: (pvc) => pvc.spec.volumeName,
             [columnId.storageClass]: (pvc) => pvc.spec.storageClassName,
             [columnId.age]: (pvc) => -pvc.getCreationTimestamp(),
           }}
@@ -70,6 +95,12 @@ class NonInjectedPersistentVolumeClaims extends React.Component<Dependencies> {
             (pvc) => pvc.getSearchFields(),
             (pvc) => pvc.getPods(podStore.items).map((pod) => pod.getName()),
           ]}
+          columnFilters={{
+            [columnId.namespace]: (pvc) => pvc.getNs(),
+            [columnId.status]: (pvc) => pvc.getStatus(),
+            [columnId.storageClass]: (pvc) => pvc.spec.storageClassName,
+            [columnId.accessModes]: (pvc) => getAccessModes(pvc),
+          }}
           renderHeaderTitle="Persistent Volume Claims"
           renderTableHeader={[
             { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },
@@ -81,6 +112,8 @@ class NonInjectedPersistentVolumeClaims extends React.Component<Dependencies> {
               id: columnId.storageClass,
             },
             { title: "Size", className: "size", sortBy: columnId.size, id: columnId.size },
+            { title: "Access Modes", className: "accessModes", sortBy: columnId.accessModes, id: columnId.accessModes },
+            { title: "Volume", className: "volume", sortBy: columnId.volume, id: columnId.volume },
             { title: "Pods", className: "pods", sortBy: columnId.pods, id: columnId.pods },
             { title: "Age", className: "age", sortBy: columnId.age, id: columnId.age },
             { title: "Status", className: "status", sortBy: columnId.status, id: columnId.status },
@@ -101,6 +134,10 @@ class NonInjectedPersistentVolumeClaims extends React.Component<Dependencies> {
                 <WithTooltip>{storageClassName}</WithTooltip>
               </Link>,
               <WithTooltip>{pvc.getStorage()}</WithTooltip>,
+              <WithTooltip key="access-modes" tooltip={accessModesTooltip(getAccessModes(pvc))}>
+                {getAccessModes(pvc).join(", ")}
+              </WithTooltip>,
+              <WithTooltip key="volume">{pvc.spec.volumeName}</WithTooltip>,
               <WithTooltip tooltip={pods.map((pod) => pod.getName()).join(", ")}>
                 {pods.map((pod) => (
                   <Link key={pod.getId()} to={getDetailsUrl(pod.selfLink)} onClick={stopPropagation}>

@@ -20,6 +20,18 @@
       flex-grow: 0.4;
     }
 
+    &.updated {
+      flex-grow: 0.4;
+    }
+
+    &.images {
+      flex-grow: 1.5;
+
+      .image {
+        font-family: var(--font-monospace);
+      }
+    }
+
     &.warning {
       @include table.table-cell-warning;
     }

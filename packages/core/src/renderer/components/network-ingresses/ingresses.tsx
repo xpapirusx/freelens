@@ -6,7 +6,12 @@
 
 import "./ingresses.scss";
 
-import { type ComputedIngressRoute, computeRouteDeclarations } from "@freelensapp/kube-object";
+import {
+  type ComputedIngressRoute,
+  type Ingress,
+  type IngressSpec,
+  computeRouteDeclarations,
+} from "@freelensapp/kube-object";
 import { withInjectables } from "@ogre-tools/injectable-react";
 import { observer } from "mobx-react";
 import { KubeObjectAge } from "../kube-object/age";
@@ -21,8 +26,11 @@ import type { IngressStore } from "./ingress-store";
 enum columnId {
   name = "name",
   namespace = "namespace",
+  ingressClass = "ingress-class",
+  hosts = "hosts",
   loadBalancers = "load-balancers",
   rules = "rules",
+  tls = "tls",
   age = "age",
 }
 
@@ -75,6 +83,25 @@ function showRoutes(routes: ComputedIngressRoute[], max: number) {
   );
 }
 
+// Not in the IngressSpec type yet, so read it defensively.
+const getIngressClassName = (ingress: Ingress) =>
+  (ingress.spec as (IngressSpec & { ingressClassName?: string }) | undefined)?.ingressClassName;
+
+const formatIngressClass = (ingress: Ingress) => getIngressClassName(ingress) ?? "-";
+
+const formatHosts = (ingress: Ingress) => ingress.getHosts().join(", ") || "-";
+
+const formatTls = (ingress: Ingress) => {
+  const tls = ingress.spec.tls ?? [];
+  const secrets = tls.map(({ secretName }) => secretName).filter(Boolean);
+
+  if (secrets.length > 0) {
+    return secrets.join(", ");
+  }
+
+  return tls.length > 0 ? "✓" : "-";
+};
+
 const NonInjectedIngresses = observer((props: Dependencies) => {
   const { ingressStore } = props;
 
@@ -89,14 +116,25 @@ const NonInjectedIngresses = observer((props: Dependencies) => {
           [columnId.name]: (ingress) => ingress.getName(),
           [columnId.namespace]: (ingress) => ingress.getNs(),
           [columnId.age]: (ingress) => -ingress.getCreationTimestamp(),
+          [columnId.ingressClass]: (ingress) => formatIngressClass(ingress),
+          [columnId.hosts]: (ingress) => formatHosts(ingress),
+          [columnId.tls]: (ingress) => ingress.spec.tls?.length ?? 0,
         }}
         searchFilters={[(ingress) => ingress.getSearchFields(), (ingress) => ingress.getPorts()]}
+        columnFilters={{
+          [columnId.namespace]: (ingress) => ingress.getNs(),
+          [columnId.ingressClass]: (ingress) => getIngressClassName(ingress),
+          [columnId.tls]: (ingress) => ((ingress.spec.tls?.length ?? 0) > 0 ? "TLS" : "-"),
+        }}
         renderHeaderTitle="Ingresses"
         renderTableHeader={[
           { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },
           { title: "Namespace", className: "namespace", sortBy: columnId.namespace, id: columnId.namespace },
+          { title: "Class", className: "ingressClass", sortBy: columnId.ingressClass, id: columnId.ingressClass },
+          { title: "Hosts", className: "hosts", sortBy: columnId.hosts, id: columnId.hosts },
           { title: "LoadBalancers", className: "loadbalancers", id: columnId.loadBalancers },
           { title: "Rules", className: "rules", id: columnId.rules },
+          { title: "TLS", className: "tls", sortBy: columnId.tls, id: columnId.tls },
           { title: "Age", className: "age", sortBy: columnId.age, id: columnId.age },
         ]}
         renderTableContents={(ingress) => {
@@ -106,10 +144,13 @@ const NonInjectedIngresses = observer((props: Dependencies) => {
           return [
             <WithTooltip>{ingress.getName()}</WithTooltip>,
             <NamespaceSelectBadge key="namespace" namespace={ingress.getNs()} />,
+            <WithTooltip>{formatIngressClass(ingress)}</WithTooltip>,
+            <WithTooltip>{formatHosts(ingress)}</WithTooltip>,
             <WithTooltip tooltip={showLoadBalancers(loadBalancers, 20)}>
               {showLoadBalancers(loadBalancers, 1)}
             </WithTooltip>,
             <WithTooltip tooltip={showRoutes(routes, 20)}>{showRoutes(routes, MAX_VISIBLE_ROUTES)}</WithTooltip>,
+            <WithTooltip>{formatTls(ingress)}</WithTooltip>,
             <KubeObjectAge key="age" object={ingress} />,
           ];
         }}

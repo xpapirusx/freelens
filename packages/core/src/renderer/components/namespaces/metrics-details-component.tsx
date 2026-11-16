@@ -1,13 +1,11 @@
 /**
  * Copyright (c) Freelens Authors. All rights reserved.
- * Copyright (c) OpenLens Authors. All rights reserved.
  * Licensed under MIT License. See LICENSE in root directory for more information.
  */
 
 import { withInjectables } from "@ogre-tools/injectable-react";
 import { observer } from "mobx-react";
-import { TimeRangedResourceMetrics } from "../resource-metrics";
-import { PodCharts, podMetricTabs } from "../workloads-pods/pod-charts";
+import { WorkloadUsageDetails } from "../usage-chart/workload-usage-details";
 import namespaceMetricsInjectable from "./metrics.injectable";
 
 import type { Namespace } from "@freelensapp/kube-object";
@@ -21,11 +19,7 @@ interface Dependencies {
 }
 
 const NonInjectedNamespaceMetricsDetailsComponent = observer(
-  ({ object, metrics }: KubeObjectDetailsProps<Namespace> & Dependencies) => (
-    <TimeRangedResourceMetrics tabs={podMetricTabs} object={object} metrics={metrics}>
-      <PodCharts />
-    </TimeRangedResourceMetrics>
-  ),
+  ({ metrics }: KubeObjectDetailsProps<Namespace> & Dependencies) => <WorkloadUsageDetails metrics={metrics} />,
 );
 
 export const NamespaceMetricsDetailsComponent = withInjectables<Dependencies, KubeObjectDetailsProps<Namespace>>(

@@ -28,6 +28,14 @@
       flex-grow: 0.4;
     }
 
+    &.owner {
+      flex-grow: 1;
+    }
+
+    &.status {
+      flex-grow: 0.4;
+    }
+
     &.age {
       flex-grow: 0.3;
     }

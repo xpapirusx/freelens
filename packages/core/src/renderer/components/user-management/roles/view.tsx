@@ -49,6 +49,9 @@ class NonInjectedRoles extends React.Component<Dependencies> {
             [columnId.age]: (role) => -role.getCreationTimestamp(),
           }}
           searchFilters={[(role) => role.getSearchFields()]}
+          columnFilters={{
+            [columnId.namespace]: (role) => role.getNs(),
+          }}
           renderHeaderTitle="Roles"
           renderTableHeader={[
             { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },

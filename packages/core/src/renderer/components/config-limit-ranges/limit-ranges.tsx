@@ -44,6 +44,9 @@ class NonInjectedLimitRanges extends React.Component<Dependencies> {
             [columnId.age]: (limitRange) => -limitRange.getCreationTimestamp(),
           }}
           searchFilters={[(item) => item.getName(), (item) => item.getNs()]}
+          columnFilters={{
+            [columnId.namespace]: (limitRange) => limitRange.getNs(),
+          }}
           renderHeaderTitle="Limit Ranges"
           renderTableHeader={[
             { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },

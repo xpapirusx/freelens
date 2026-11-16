@@ -90,6 +90,9 @@ class NonInjectedHorizontalPodAutoscalers extends React.Component<Dependencies> 
             [columnId.age]: (hpa) => -hpa.getCreationTimestamp(),
           }}
           searchFilters={[(hpa) => hpa.getSearchFields()]}
+          columnFilters={{
+            [columnId.namespace]: (hpa) => hpa.getNs(),
+          }}
           renderHeaderTitle="Horizontal Pod Autoscalers"
           renderTableHeader={[
             { title: "Name", className: "name", sortBy: columnId.name },

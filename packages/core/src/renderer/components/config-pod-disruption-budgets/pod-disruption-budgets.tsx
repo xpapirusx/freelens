@@ -57,6 +57,9 @@ class NonInjectedPodDisruptionBudgets extends React.Component<PodDisruptionBudge
             [columnId.age]: (pdb) => -pdb.getCreationTimestamp(),
           }}
           searchFilters={[(pdb) => pdb.getSearchFields()]}
+          columnFilters={{
+            [columnId.namespace]: (pdb) => pdb.getNs(),
+          }}
           renderHeaderTitle="Pod Disruption Budgets"
           renderTableHeader={[
             { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },

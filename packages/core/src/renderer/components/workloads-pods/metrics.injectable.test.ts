@@ -36,7 +36,19 @@ describe("pod-metrics injectable", () => {
       start: 100,
       end: 200,
       range: 100,
-      metrics: ["cpuUsage", "memoryUsage", "fsUsage", "fsWrites", "fsReads", "networkReceive", "networkTransmit"],
+      metrics: [
+        "cpuUsage",
+        "cpuRequests",
+        "cpuLimits",
+        "memoryUsage",
+        "memoryRequests",
+        "memoryLimits",
+        "fsUsage",
+        "fsWrites",
+        "fsReads",
+        "networkReceive",
+        "networkTransmit",
+      ],
     });
   });
 });

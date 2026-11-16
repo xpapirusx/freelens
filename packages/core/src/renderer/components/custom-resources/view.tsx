@@ -138,6 +138,9 @@ class NonInjectedCustomResources extends React.Component<Dependencies> {
             ),
           }}
           searchFilters={[(customResource) => customResource.getSearchFields()]}
+          columnFilters={{
+            [columnId.namespace]: (customResource) => customResource.getNs(),
+          }}
           renderHeaderTitle={resource.kind}
           customizeHeader={({ searchProps, ...headerPlaceholders }) => ({
             searchProps: {

@@ -24,6 +24,14 @@
       flex-grow: 0.4;
     }
 
+    &.owner {
+      flex-grow: 1;
+    }
+
+    &.status {
+      flex-grow: 0.4;
+    }
+
     &.selector {
       flex-grow: 1.5;
       @include table.table-cell-labels-offsets;

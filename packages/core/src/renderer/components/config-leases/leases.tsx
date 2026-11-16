@@ -53,6 +53,9 @@ class NonInjectedLease extends React.Component<LeaseProps & Dependencies> {
             [columnId.age]: (lease) => -lease.getCreationTimestamp(),
           }}
           searchFilters={[(lease) => lease.getSearchFields()]}
+          columnFilters={{
+            [columnId.namespace]: (lease) => lease.getNs(),
+          }}
           renderHeaderTitle="Leases"
           renderTableHeader={[
             { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },

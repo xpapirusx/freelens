@@ -67,6 +67,10 @@ class NonInjectedRoleBindings extends React.Component<Dependencies> {
             [columnId.age]: (binding) => -binding.getCreationTimestamp(),
           }}
           searchFilters={[(binding) => binding.getSearchFields(), (binding) => binding.getSubjectNames()]}
+          columnFilters={{
+            [columnId.namespace]: (binding) => binding.getNs(),
+            [columnId.types]: (binding) => binding.getSubjectTypes(),
+          }}
           renderHeaderTitle="Role Bindings"
           renderTableHeader={[
             { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },

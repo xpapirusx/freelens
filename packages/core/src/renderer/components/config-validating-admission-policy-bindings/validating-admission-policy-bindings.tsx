@@ -49,6 +49,9 @@ const NonInjectedValidatingAdmissionPolicyBindings = observer((props: Dependenci
           [columnId.age]: (item) => -item.getCreationTimestamp(),
         }}
         searchFilters={[(item) => item.getSearchFields(), (item) => item.getLabels()]}
+        columnFilters={{
+          [columnId.actions]: (item) => item.getValidationActions(),
+        }}
         renderHeaderTitle="Validating Admission Policy Bindings"
         renderTableHeader={[
           { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },

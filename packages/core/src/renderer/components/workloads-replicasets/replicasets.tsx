@@ -16,6 +16,8 @@ import { NamespaceSelectBadge } from "../namespaces/namespace-select-badge";
 import { WithTooltip } from "../with-tooltip";
 import replicaSetStoreInjectable from "./store.injectable";
 
+import type { ReplicaSet } from "@freelensapp/kube-object";
+
 import type { EventStore } from "../events/store";
 import type { ReplicaSetStore } from "./store";
 
@@ -25,12 +27,23 @@ enum columnId {
   desired = "desired",
   current = "current",
   ready = "ready",
+  owner = "owner",
+  status = "status",
   age = "age",
 }
 
 interface Dependencies {
   replicaSetStore: ReplicaSetStore;
   eventStore: EventStore;
+}
+
+function getOwnerText(replicaSet: ReplicaSet): string {
+  const owner = replicaSet.metadata.ownerReferences?.[0];
+  return owner ? `${owner.kind}: ${owner.name}` : "";
+}
+
+function getStatusText(replicaSet: ReplicaSet): string {
+  return replicaSet.getDesired() > 0 ? "Active" : "Old";
 }
 
 const NonInjectedReplicaSets = observer((props: Dependencies) => {
@@ -50,9 +63,15 @@ const NonInjectedReplicaSets = observer((props: Dependencies) => {
           [columnId.desired]: (replicaSet) => replicaSet.getDesired(),
           [columnId.current]: (replicaSet) => replicaSet.getCurrent(),
           [columnId.ready]: (replicaSet) => replicaSet.getReady(),
+          [columnId.owner]: (replicaSet) => getOwnerText(replicaSet),
+          [columnId.status]: (replicaSet) => getStatusText(replicaSet),
           [columnId.age]: (replicaSet) => -replicaSet.getCreationTimestamp(),
         }}
         searchFilters={[(replicaSet) => replicaSet.getSearchFields()]}
+        columnFilters={{
+          [columnId.namespace]: (replicaSet) => replicaSet.getNs(),
+          [columnId.status]: (replicaSet) => getStatusText(replicaSet),
+        }}
         renderHeaderTitle="Replica Sets"
         renderTableHeader={[
           { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },
@@ -75,6 +94,13 @@ const NonInjectedReplicaSets = observer((props: Dependencies) => {
             id: columnId.current,
           },
           { title: "Ready", className: "ready", sortBy: columnId.ready, id: columnId.ready },
+          {
+            title: "Owner",
+            className: "owner",
+            sortBy: columnId.owner,
+            id: columnId.owner,
+          },
+          { title: "Status", className: "status", sortBy: columnId.status, id: columnId.status },
           { title: "Age", className: "age", sortBy: columnId.age, id: columnId.age },
         ]}
         renderTableContents={(replicaSet) => [
@@ -83,6 +109,8 @@ const NonInjectedReplicaSets = observer((props: Dependencies) => {
           replicaSet.getDesired(),
           replicaSet.getCurrent(),
           replicaSet.getReady(),
+          <WithTooltip>{getOwnerText(replicaSet)}</WithTooltip>,
+          <WithTooltip>{getStatusText(replicaSet)}</WithTooltip>,
           <KubeObjectAge key="age" object={replicaSet} />,
         ]}
       />

@@ -1039,14 +1039,18 @@ exports[`workloads / pods > when navigating to workloads / pods view > given a n
                           <div
                             class="TableCell cpu"
                           >
-                            <span>
+                            <span
+                              class="usageText"
+                            >
                               N/A
                             </span>
                           </div>
                           <div
                             class="TableCell memory"
                           >
-                            <span>
+                            <span
+                              class="usageText"
+                            >
                               N/A
                             </span>
                           </div>

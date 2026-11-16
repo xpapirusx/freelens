@@ -49,6 +49,10 @@ class NonInjectedEndpointSlices extends React.Component<Dependencies> {
             [columnId.age]: (endpointSlice) => -endpointSlice.getCreationTimestamp(),
           }}
           searchFilters={[(endpointSlice) => endpointSlice.getSearchFields()]}
+          columnFilters={{
+            [columnId.namespace]: (endpointSlice) => endpointSlice.getNs(),
+            [columnId.addressType]: (endpointSlice) => endpointSlice.addressType,
+          }}
           renderHeaderTitle="Endpoint Slices"
           renderTableHeader={[
             { title: "Name", className: columnId.name, sortBy: columnId.name, id: columnId.name },

@@ -17,6 +17,8 @@ import { NamespaceSelectBadge } from "../namespaces/namespace-select-badge";
 import { WithTooltip } from "../with-tooltip";
 import daemonSetStoreInjectable from "./store.injectable";
 
+import type { DaemonSet } from "@freelensapp/kube-object";
+
 import type { EventStore } from "../events/store";
 import type { DaemonSetStore } from "./store";
 
@@ -28,6 +30,7 @@ enum columnId {
   ready = "ready",
   updated = "updated",
   available = "available",
+  images = "images",
   labels = "labels",
   age = "age",
 }
@@ -35,6 +38,10 @@ enum columnId {
 interface Dependencies {
   daemonSetStore: DaemonSetStore;
   eventStore: EventStore;
+}
+
+function getImages(daemonSet: DaemonSet): string[] {
+  return Array.from(new Set(daemonSet.getImages().filter((image): image is string => Boolean(image))));
 }
 
 const NonInjectedDaemonSets = observer((props: Dependencies) => {
@@ -56,9 +63,13 @@ const NonInjectedDaemonSets = observer((props: Dependencies) => {
           [columnId.ready]: (daemonSet) => daemonSet.status?.numberReady,
           [columnId.updated]: (daemonSet) => daemonSet.status?.updatedNumberScheduled,
           [columnId.available]: (daemonSet) => daemonSet.status?.numberAvailable,
+          [columnId.images]: (daemonSet) => getImages(daemonSet)[0] ?? "",
           [columnId.age]: (daemonSet) => -daemonSet.getCreationTimestamp(),
         }}
         searchFilters={[(daemonSet) => daemonSet.getSearchFields(), (daemonSet) => daemonSet.getLabels()]}
+        columnFilters={{
+          [columnId.namespace]: (daemonSet) => daemonSet.getNs(),
+        }}
         renderHeaderTitle="Daemon Sets"
         renderTableHeader={[
           { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },
@@ -73,6 +84,12 @@ const NonInjectedDaemonSets = observer((props: Dependencies) => {
           { title: "Ready", className: "ready", sortBy: columnId.ready, id: columnId.ready },
           { title: "Updated", className: "updated", sortBy: columnId.updated, id: columnId.updated },
           { title: "Available", className: "available", sortBy: columnId.available, id: columnId.available },
+          {
+            title: <WithTooltip tooltip="Container images of the pod template">Images</WithTooltip>,
+            className: "images scrollable",
+            sortBy: columnId.images,
+            id: columnId.images,
+          },
           { title: "Node Selector", className: "labels scrollable", id: columnId.labels },
           { title: "Age", className: "age", sortBy: columnId.age, id: columnId.age },
         ]}
@@ -84,6 +101,9 @@ const NonInjectedDaemonSets = observer((props: Dependencies) => {
           daemonSet.status?.numberReady || 0,
           daemonSet.status?.updatedNumberScheduled || 0,
           daemonSet.status?.numberAvailable || 0,
+          getImages(daemonSet).map((image) => (
+            <Badge key={image} className="image" label={image} tooltip={image} small scrollable />
+          )),
           daemonSet
             .getNodeSelectors()
             .map((selector) => <Badge key={selector} label={selector} tooltip={selector} scrollable />),

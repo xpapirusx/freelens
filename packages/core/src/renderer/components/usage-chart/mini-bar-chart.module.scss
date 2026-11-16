@@ -1,0 +1,58 @@
+/**
+ * Copyright (c) Freelens Authors. All rights reserved.
+ * Licensed under MIT License. See LICENSE in root directory for more information.
+ */
+
+.MiniBarChart {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+
+  .plot {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    width: 100%;
+    border-bottom: 1px solid var(--borderFaintColor);
+  }
+
+  .bar {
+    position: relative;
+    z-index: 1;
+    flex: 1 1 0;
+    min-width: 2px;
+    border-radius: 1px 1px 0 0;
+    opacity: 0.85;
+  }
+
+  .refLine {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    border-top: 1px dashed;
+    opacity: 0.8;
+    pointer-events: none;
+  }
+
+  .caption {
+    margin-top: 4px;
+    font-family: var(--font-monospace);
+    font-size: 11px;
+    color: var(--textColorSecondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .peak {
+    color: var(--textColorTertiary);
+  }
+
+  .empty {
+    padding: 8px 0;
+    font-size: 12px;
+    color: var(--textColorTertiary);
+  }
+}

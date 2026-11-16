@@ -20,6 +20,7 @@ import { WithTooltip } from "../with-tooltip";
 import persistentVolumeStoreInjectable from "./store.injectable";
 
 import type { PersistentVolumeClaimApi, StorageClassApi } from "@freelensapp/kube-api";
+import type { PersistentVolume } from "@freelensapp/kube-object";
 
 import type { GetDetailsUrl } from "../kube-detail-params/get-details-url.injectable";
 import type { PersistentVolumeStore } from "./store";
@@ -28,10 +29,31 @@ enum columnId {
   name = "name",
   storageClass = "storage-class",
   capacity = "capacity",
+  accessModes = "access-modes",
   claim = "claim",
   status = "status",
   age = "age",
 }
+
+const accessModeAbbreviations: Record<string, string> = {
+  ReadWriteOnce: "RWO",
+  ReadOnlyMany: "ROX",
+  ReadWriteMany: "RWX",
+  ReadWriteOncePod: "RWOP",
+};
+
+const accessModeFullNames: Record<string, string> = {
+  RWO: "ReadWriteOnce",
+  ROX: "ReadOnlyMany",
+  RWX: "ReadWriteMany",
+  RWOP: "ReadWriteOncePod",
+};
+
+const getAccessModes = (volume: PersistentVolume): string[] =>
+  (volume.spec.accessModes ?? []).map((mode) => accessModeAbbreviations[mode] ?? mode);
+
+const accessModesTooltip = (modes: string[]): string =>
+  modes.map((mode) => `${mode} (${accessModeFullNames[mode] ?? mode})`).join(", ");
 
 interface Dependencies {
   storageClassApi: StorageClassApi;
@@ -56,10 +78,15 @@ class NonInjectedPersistentVolumes extends React.Component<Dependencies> {
             [columnId.name]: (volume) => volume.getName(),
             [columnId.storageClass]: (volume) => volume.getStorageClass(),
             [columnId.capacity]: (volume) => volume.getCapacity(true),
+            [columnId.accessModes]: (volume) => getAccessModes(volume).join(", "),
             [columnId.status]: (volume) => volume.getStatus(),
             [columnId.age]: (volume) => -volume.getCreationTimestamp(),
           }}
           searchFilters={[(volume) => volume.getSearchFields(), (volume) => volume.getClaimRefName()]}
+          columnFilters={{
+            [columnId.status]: (volume) => volume.getStatus(),
+            [columnId.accessModes]: (volume) => getAccessModes(volume),
+          }}
           renderHeaderTitle="Persistent Volumes"
           renderTableHeader={[
             { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },
@@ -70,6 +97,7 @@ class NonInjectedPersistentVolumes extends React.Component<Dependencies> {
               id: columnId.storageClass,
             },
             { title: "Capacity", className: "capacity", sortBy: columnId.capacity, id: columnId.capacity },
+            { title: "Access Modes", className: "accessModes", sortBy: columnId.accessModes, id: columnId.accessModes },
             { title: "Claim", className: "claim", id: columnId.claim },
             { title: "Age", className: "age", sortBy: columnId.age, id: columnId.age },
             { title: "Status", className: "status", sortBy: columnId.status, id: columnId.status },
@@ -88,6 +116,9 @@ class NonInjectedPersistentVolumes extends React.Component<Dependencies> {
                 <WithTooltip>{storageClassName}</WithTooltip>
               </Link>,
               <WithTooltip>{volume.getCapacity()}</WithTooltip>,
+              <WithTooltip key="access-modes" tooltip={accessModesTooltip(getAccessModes(volume))}>
+                {getAccessModes(volume).join(", ")}
+              </WithTooltip>,
               claimRef && (
                 <Link
                   to={getDetailsUrl(persistentVolumeClaimApi.formatUrlForNotListing(claimRef))}

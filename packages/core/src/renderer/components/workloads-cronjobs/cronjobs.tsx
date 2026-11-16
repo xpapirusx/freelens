@@ -18,6 +18,8 @@ import { WithTooltip } from "../with-tooltip";
 import cronJobStoreInjectable from "./store.injectable";
 import { getScheduleFullDescription } from "./utils";
 
+import type { CronJob } from "@freelensapp/kube-object";
+
 import type { EventStore } from "../events/store";
 import type { CronJobStore } from "./store";
 
@@ -27,6 +29,7 @@ enum columnId {
   schedule = "schedule",
   timezone = "timezone",
   resumed = "resumed",
+  status = "status",
   active = "active",
   lastSchedule = "last-schedule",
   age = "age",
@@ -35,6 +38,10 @@ enum columnId {
 interface Dependencies {
   cronJobStore: CronJobStore;
   eventStore: EventStore;
+}
+
+function getStatusText(cronJob: CronJob): string {
+  return cronJob.spec.suspend ? "Suspended" : "Active";
 }
 
 const NonInjectedCronJobs = observer((props: Dependencies) => {
@@ -53,12 +60,17 @@ const NonInjectedCronJobs = observer((props: Dependencies) => {
           [columnId.namespace]: (cronJob) => cronJob.getNs(),
           [columnId.timezone]: (cronJob) => cronJob.spec.timeZone ?? "",
           [columnId.resumed]: (cronJob) => String(!cronJob.spec.suspend),
+          [columnId.status]: (cronJob) => getStatusText(cronJob),
           [columnId.active]: (cronJob) => cronJobStore.getActiveJobsNum(cronJob),
           [columnId.lastSchedule]: (cronJob) =>
             cronJob.status?.lastScheduleTime ? Date.now() - new Date(cronJob.status.lastScheduleTime).getTime() : 0,
           [columnId.age]: (cronJob) => -cronJob.getCreationTimestamp(),
         }}
         searchFilters={[(cronJob) => cronJob.getSearchFields(), (cronJob) => cronJob.getSchedule()]}
+        columnFilters={{
+          [columnId.namespace]: (cronJob) => cronJob.getNs(),
+          [columnId.status]: (cronJob) => getStatusText(cronJob),
+        }}
         renderHeaderTitle="Cron Jobs"
         renderTableHeader={[
           { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },
@@ -66,6 +78,7 @@ const NonInjectedCronJobs = observer((props: Dependencies) => {
           { title: "Schedule", className: "schedule", id: columnId.schedule },
           { title: "Timezone", className: "timezone", id: columnId.timezone },
           { title: "Resumed", className: "resumed", sortBy: columnId.resumed, id: columnId.resumed },
+          { title: "Status", className: "status", sortBy: columnId.status, id: columnId.status },
           { title: "Active", className: "active", sortBy: columnId.active, id: columnId.active },
           {
             title: "Last schedule",
@@ -83,6 +96,7 @@ const NonInjectedCronJobs = observer((props: Dependencies) => {
           </WithTooltip>,
           <WithTooltip>{cronJob.spec.timeZone}</WithTooltip>,
           <BadgeBoolean value={!cronJob.spec.suspend} />,
+          <WithTooltip>{getStatusText(cronJob)}</WithTooltip>,
           cronJobStore.getActiveJobsNum(cronJob),
           <WithTooltip
             tooltip={cronJob.status?.lastScheduleTime ? new Date(cronJob.status?.lastScheduleTime) : undefined}

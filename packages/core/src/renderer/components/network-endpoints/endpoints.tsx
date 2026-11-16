@@ -45,6 +45,7 @@ class NonInjectedEndpoints extends React.Component<Dependencies> {
             [columnId.age]: (endpoint) => -endpoint.getCreationTimestamp(),
           }}
           searchFilters={[(endpoint) => endpoint.getSearchFields()]}
+          columnFilters={{ [columnId.namespace]: (endpoint) => endpoint.getNs() }}
           renderHeaderTitle="Endpoints"
           renderTableHeader={[
             { title: "Name", className: "name", sortBy: columnId.name, id: columnId.name },

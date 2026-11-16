@@ -1,14 +1,15 @@
 /**
  * Copyright (c) Freelens Authors. All rights reserved.
- * Copyright (c) OpenLens Authors. All rights reserved.
  * Licensed under MIT License. See LICENSE in root directory for more information.
  */
 
+import { interval } from "@freelensapp/utilities";
 import { withInjectables } from "@ogre-tools/injectable-react";
 import { observer } from "mobx-react";
-import { TimeRangedResourceMetrics } from "../resource-metrics";
+import { useEffect } from "react";
 import podMetricsInjectable from "./metrics.injectable";
-import { PodCharts, podMetricTabs } from "./pod-charts";
+import { ResourceUsageSection } from "../usage-chart/resource-usage-section";
+import { seriesLastValue } from "../usage-chart/metrics-series";
 
 import type { Pod } from "@freelensapp/kube-object";
 
@@ -20,13 +21,29 @@ interface Dependencies {
   metrics: IAsyncComputed<Partial<PodMetricData>>;
 }
 
-const NonInjectedPodMetricsDetailsComponent = observer(
-  ({ object, metrics }: KubeObjectDetailsProps<Pod> & Dependencies) => (
-    <TimeRangedResourceMetrics tabs={podMetricTabs} object={object} metrics={metrics}>
-      <PodCharts />
-    </TimeRangedResourceMetrics>
-  ),
-);
+const NonInjectedPodMetricsDetailsComponent = observer(({ metrics }: KubeObjectDetailsProps<Pod> & Dependencies) => {
+  const data = metrics.value.get();
+
+  useEffect(() => {
+    const watcher = interval(30, () => metrics.invalidate());
+
+    watcher.start();
+
+    return () => watcher.stop();
+  }, [metrics]);
+
+  return (
+    <ResourceUsageSection
+      cpu={data?.cpuUsage}
+      memory={data?.memoryUsage}
+      cpuRequest={seriesLastValue(data?.cpuRequests)}
+      cpuLimit={seriesLastValue(data?.cpuLimits)}
+      memoryRequest={seriesLastValue(data?.memoryRequests)}
+      memoryLimit={seriesLastValue(data?.memoryLimits)}
+      isPending={metrics.pending.get()}
+    />
+  );
+});
 
 const PodMetricsDetailsComponent = withInjectables<Dependencies, KubeObjectDetailsProps<Pod>>(
   NonInjectedPodMetricsDetailsComponent,

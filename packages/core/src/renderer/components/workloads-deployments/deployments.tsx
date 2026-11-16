@@ -9,6 +9,7 @@ import "./deployments.scss";
 import { withInjectables } from "@ogre-tools/injectable-react";
 import { observer } from "mobx-react";
 import React from "react";
+import { Badge } from "../badge";
 import eventStoreInjectable from "../events/store.injectable";
 import { KubeObjectAge } from "../kube-object/age";
 import { KubeObjectConditionsList } from "../kube-object-conditions";
@@ -31,6 +32,7 @@ enum columnId {
   desired = "desired",
   updated = "updated",
   available = "available",
+  images = "images",
   age = "age",
   condition = "condition",
 }
@@ -44,6 +46,16 @@ function getReplicas(deployment: Deployment) {
   const replicas = deployment.status?.replicas || 0;
   const availableReplicas = deployment.status?.availableReplicas || 0;
   return `${availableReplicas}/${replicas}`;
+}
+
+function getImages(deployment: Deployment): string[] {
+  return Array.from(
+    new Set(
+      (deployment.spec.template?.spec?.containers ?? [])
+        .map((container) => container.image)
+        .filter((image): image is string => Boolean(image)),
+    ),
+  );
 }
 
 @observer
@@ -68,10 +80,15 @@ class NonInjectedDeployments extends React.Component<Dependencies> {
             [columnId.desired]: (deployment) => deployment.getReplicas(),
             [columnId.updated]: (deployment) => deployment.status?.updatedReplicas || 0,
             [columnId.available]: (deployment) => deployment.status?.availableReplicas || 0,
+            [columnId.images]: (deployment) => getImages(deployment)[0] ?? "",
             [columnId.age]: (deployment) => -deployment.getCreationTimestamp(),
             [columnId.condition]: (deployment) => deployment.getConditionsText(),
           }}
           searchFilters={[(deployment) => deployment.getSearchFields(), (deployment) => deployment.getConditionsText()]}
+          columnFilters={{
+            [columnId.namespace]: (deployment) => deployment.getNs(),
+            [columnId.condition]: (deployment) => deployment.getConditions(true).map(({ type }) => type),
+          }}
           renderHeaderTitle="Deployments"
           defaultHiddenTableColumns={[columnId.replicas]}
           renderTableHeader={[
@@ -87,6 +104,12 @@ class NonInjectedDeployments extends React.Component<Dependencies> {
             { title: "Desired", className: "desired", sortBy: columnId.desired, id: columnId.desired },
             { title: "Updated", className: "updated", sortBy: columnId.updated, id: columnId.updated },
             { title: "Available", className: "available", sortBy: columnId.available, id: columnId.available },
+            {
+              title: <WithTooltip tooltip="Container images of the pod template">Images</WithTooltip>,
+              className: "images scrollable",
+              sortBy: columnId.images,
+              id: columnId.images,
+            },
             { title: "Age", className: "age", sortBy: columnId.age, id: columnId.age },
             {
               title: "Conditions",
@@ -103,6 +126,9 @@ class NonInjectedDeployments extends React.Component<Dependencies> {
             deployment.getReplicas(),
             deployment.status?.updatedReplicas || 0,
             deployment.status?.availableReplicas || 0,
+            getImages(deployment).map((image) => (
+              <Badge key={image} className="image" label={image} tooltip={image} small scrollable />
+            )),
             <KubeObjectAge key="age" object={deployment} />,
             <KubeObjectConditionsList key="conditions" object={deployment} />,
           ]}

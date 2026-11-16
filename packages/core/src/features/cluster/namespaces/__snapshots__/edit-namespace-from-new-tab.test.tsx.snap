@@ -624,7 +624,37 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                       <div
                         class="content"
                       >
-                        Status
+                        <span
+                          class="header-cell-content"
+                        >
+                          Status
+                        </span>
+                        <div
+                          class="ColumnFilterDropdown"
+                          data-testid="column-filter-status"
+                        >
+                          <div
+                            id="column-filter-namespaces-status"
+                          >
+                            <button
+                              aria-label="Filter by Status"
+                              aria-pressed="false"
+                              class="ColumnFilterDropdown-toggle"
+                              type="button"
+                            >
+                              <i
+                                class="Icon material focusable small"
+                              >
+                                <span
+                                  class="icon"
+                                  data-icon-name="filter_alt"
+                                >
+                                  filter_alt
+                                </span>
+                              </i>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <i
                         class="Icon sortIcon material focusable"
@@ -1465,7 +1495,37 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                       <div
                         class="content"
                       >
-                        Status
+                        <span
+                          class="header-cell-content"
+                        >
+                          Status
+                        </span>
+                        <div
+                          class="ColumnFilterDropdown"
+                          data-testid="column-filter-status"
+                        >
+                          <div
+                            id="column-filter-namespaces-status"
+                          >
+                            <button
+                              aria-label="Filter by Status"
+                              aria-pressed="false"
+                              class="ColumnFilterDropdown-toggle"
+                              type="button"
+                            >
+                              <i
+                                class="Icon material focusable small"
+                              >
+                                <span
+                                  class="icon"
+                                  data-icon-name="filter_alt"
+                                >
+                                  filter_alt
+                                </span>
+                              </i>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <i
                         class="Icon sortIcon material focusable"
@@ -2311,7 +2371,37 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                       <div
                         class="content"
                       >
-                        Status
+                        <span
+                          class="header-cell-content"
+                        >
+                          Status
+                        </span>
+                        <div
+                          class="ColumnFilterDropdown"
+                          data-testid="column-filter-status"
+                        >
+                          <div
+                            id="column-filter-namespaces-status"
+                          >
+                            <button
+                              aria-label="Filter by Status"
+                              aria-pressed="false"
+                              class="ColumnFilterDropdown-toggle"
+                              type="button"
+                            >
+                              <i
+                                class="Icon material focusable small"
+                              >
+                                <span
+                                  class="icon"
+                                  data-icon-name="filter_alt"
+                                >
+                                  filter_alt
+                                </span>
+                              </i>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <i
                         class="Icon sortIcon material focusable"
@@ -3256,7 +3346,37 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                       <div
                         class="content"
                       >
-                        Status
+                        <span
+                          class="header-cell-content"
+                        >
+                          Status
+                        </span>
+                        <div
+                          class="ColumnFilterDropdown"
+                          data-testid="column-filter-status"
+                        >
+                          <div
+                            id="column-filter-namespaces-status"
+                          >
+                            <button
+                              aria-label="Filter by Status"
+                              aria-pressed="false"
+                              class="ColumnFilterDropdown-toggle"
+                              type="button"
+                            >
+                              <i
+                                class="Icon material focusable small"
+                              >
+                                <span
+                                  class="icon"
+                                  data-icon-name="filter_alt"
+                                >
+                                  filter_alt
+                                </span>
+                              </i>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <i
                         class="Icon sortIcon material focusable"
@@ -4149,7 +4269,37 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                       <div
                         class="content"
                       >
-                        Status
+                        <span
+                          class="header-cell-content"
+                        >
+                          Status
+                        </span>
+                        <div
+                          class="ColumnFilterDropdown"
+                          data-testid="column-filter-status"
+                        >
+                          <div
+                            id="column-filter-namespaces-status"
+                          >
+                            <button
+                              aria-label="Filter by Status"
+                              aria-pressed="false"
+                              class="ColumnFilterDropdown-toggle"
+                              type="button"
+                            >
+                              <i
+                                class="Icon material focusable small"
+                              >
+                                <span
+                                  class="icon"
+                                  data-icon-name="filter_alt"
+                                >
+                                  filter_alt
+                                </span>
+                              </i>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <i
                         class="Icon sortIcon material focusable"
@@ -5144,7 +5294,37 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                       <div
                         class="content"
                       >
-                        Status
+                        <span
+                          class="header-cell-content"
+                        >
+                          Status
+                        </span>
+                        <div
+                          class="ColumnFilterDropdown"
+                          data-testid="column-filter-status"
+                        >
+                          <div
+                            id="column-filter-namespaces-status"
+                          >
+                            <button
+                              aria-label="Filter by Status"
+                              aria-pressed="false"
+                              class="ColumnFilterDropdown-toggle"
+                              type="button"
+                            >
+                              <i
+                                class="Icon material focusable small"
+                              >
+                                <span
+                                  class="icon"
+                                  data-icon-name="filter_alt"
+                                >
+                                  filter_alt
+                                </span>
+                              </i>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <i
                         class="Icon sortIcon material focusable"
@@ -6141,7 +6321,37 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                       <div
                         class="content"
                       >
-                        Status
+                        <span
+                          class="header-cell-content"
+                        >
+                          Status
+                        </span>
+                        <div
+                          class="ColumnFilterDropdown"
+                          data-testid="column-filter-status"
+                        >
+                          <div
+                            id="column-filter-namespaces-status"
+                          >
+                            <button
+                              aria-label="Filter by Status"
+                              aria-pressed="false"
+                              class="ColumnFilterDropdown-toggle"
+                              type="button"
+                            >
+                              <i
+                                class="Icon material focusable small"
+                              >
+                                <span
+                                  class="icon"
+                                  data-icon-name="filter_alt"
+                                >
+                                  filter_alt
+                                </span>
+                              </i>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <i
                         class="Icon sortIcon material focusable"
@@ -7100,7 +7310,37 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                       <div
                         class="content"
                       >
-                        Status
+                        <span
+                          class="header-cell-content"
+                        >
+                          Status
+                        </span>
+                        <div
+                          class="ColumnFilterDropdown"
+                          data-testid="column-filter-status"
+                        >
+                          <div
+                            id="column-filter-namespaces-status"
+                          >
+                            <button
+                              aria-label="Filter by Status"
+                              aria-pressed="false"
+                              class="ColumnFilterDropdown-toggle"
+                              type="button"
+                            >
+                              <i
+                                class="Icon material focusable small"
+                              >
+                                <span
+                                  class="icon"
+                                  data-icon-name="filter_alt"
+                                >
+                                  filter_alt
+                                </span>
+                              </i>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <i
                         class="Icon sortIcon material focusable"
@@ -8054,7 +8294,37 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                       <div
                         class="content"
                       >
-                        Status
+                        <span
+                          class="header-cell-content"
+                        >
+                          Status
+                        </span>
+                        <div
+                          class="ColumnFilterDropdown"
+                          data-testid="column-filter-status"
+                        >
+                          <div
+                            id="column-filter-namespaces-status"
+                          >
+                            <button
+                              aria-label="Filter by Status"
+                              aria-pressed="false"
+                              class="ColumnFilterDropdown-toggle"
+                              type="button"
+                            >
+                              <i
+                                class="Icon material focusable small"
+                              >
+                                <span
+                                  class="icon"
+                                  data-icon-name="filter_alt"
+                                >
+                                  filter_alt
+                                </span>
+                              </i>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <i
                         class="Icon sortIcon material focusable"
@@ -8999,7 +9269,37 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                       <div
                         class="content"
                       >
-                        Status
+                        <span
+                          class="header-cell-content"
+                        >
+                          Status
+                        </span>
+                        <div
+                          class="ColumnFilterDropdown"
+                          data-testid="column-filter-status"
+                        >
+                          <div
+                            id="column-filter-namespaces-status"
+                          >
+                            <button
+                              aria-label="Filter by Status"
+                              aria-pressed="false"
+                              class="ColumnFilterDropdown-toggle"
+                              type="button"
+                            >
+                              <i
+                                class="Icon material focusable small"
+                              >
+                                <span
+                                  class="icon"
+                                  data-icon-name="filter_alt"
+                                >
+                                  filter_alt
+                                </span>
+                              </i>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <i
                         class="Icon sortIcon material focusable"
@@ -9944,7 +10244,37 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                       <div
                         class="content"
                       >
-                        Status
+                        <span
+                          class="header-cell-content"
+                        >
+                          Status
+                        </span>
+                        <div
+                          class="ColumnFilterDropdown"
+                          data-testid="column-filter-status"
+                        >
+                          <div
+                            id="column-filter-namespaces-status"
+                          >
+                            <button
+                              aria-label="Filter by Status"
+                              aria-pressed="false"
+                              class="ColumnFilterDropdown-toggle"
+                              type="button"
+                            >
+                              <i
+                                class="Icon material focusable small"
+                              >
+                                <span
+                                  class="icon"
+                                  data-icon-name="filter_alt"
+                                >
+                                  filter_alt
+                                </span>
+                              </i>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <i
                         class="Icon sortIcon material focusable"
@@ -10889,7 +11219,37 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                       <div
                         class="content"
                       >
-                        Status
+                        <span
+                          class="header-cell-content"
+                        >
+                          Status
+                        </span>
+                        <div
+                          class="ColumnFilterDropdown"
+                          data-testid="column-filter-status"
+                        >
+                          <div
+                            id="column-filter-namespaces-status"
+                          >
+                            <button
+                              aria-label="Filter by Status"
+                              aria-pressed="false"
+                              class="ColumnFilterDropdown-toggle"
+                              type="button"
+                            >
+                              <i
+                                class="Icon material focusable small"
+                              >
+                                <span
+                                  class="icon"
+                                  data-icon-name="filter_alt"
+                                >
+                                  filter_alt
+                                </span>
+                              </i>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <i
                         class="Icon sortIcon material focusable"
@@ -11639,7 +11999,37 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                       <div
                         class="content"
                       >
-                        Status
+                        <span
+                          class="header-cell-content"
+                        >
+                          Status
+                        </span>
+                        <div
+                          class="ColumnFilterDropdown"
+                          data-testid="column-filter-status"
+                        >
+                          <div
+                            id="column-filter-namespaces-status"
+                          >
+                            <button
+                              aria-label="Filter by Status"
+                              aria-pressed="false"
+                              class="ColumnFilterDropdown-toggle"
+                              type="button"
+                            >
+                              <i
+                                class="Icon material focusable small"
+                              >
+                                <span
+                                  class="icon"
+                                  data-icon-name="filter_alt"
+                                >
+                                  filter_alt
+                                </span>
+                              </i>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <i
                         class="Icon sortIcon material focusable"
@@ -12593,7 +12983,37 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                       <div
                         class="content"
                       >
-                        Status
+                        <span
+                          class="header-cell-content"
+                        >
+                          Status
+                        </span>
+                        <div
+                          class="ColumnFilterDropdown"
+                          data-testid="column-filter-status"
+                        >
+                          <div
+                            id="column-filter-namespaces-status"
+                          >
+                            <button
+                              aria-label="Filter by Status"
+                              aria-pressed="false"
+                              class="ColumnFilterDropdown-toggle"
+                              type="button"
+                            >
+                              <i
+                                class="Icon material focusable small"
+                              >
+                                <span
+                                  class="icon"
+                                  data-icon-name="filter_alt"
+                                >
+                                  filter_alt
+                                </span>
+                              </i>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <i
                         class="Icon sortIcon material focusable"
@@ -13538,7 +13958,37 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                       <div
                         class="content"
                       >
-                        Status
+                        <span
+                          class="header-cell-content"
+                        >
+                          Status
+                        </span>
+                        <div
+                          class="ColumnFilterDropdown"
+                          data-testid="column-filter-status"
+                        >
+                          <div
+                            id="column-filter-namespaces-status"
+                          >
+                            <button
+                              aria-label="Filter by Status"
+                              aria-pressed="false"
+                              class="ColumnFilterDropdown-toggle"
+                              type="button"
+                            >
+                              <i
+                                class="Icon material focusable small"
+                              >
+                                <span
+                                  class="icon"
+                                  data-icon-name="filter_alt"
+                                >
+                                  filter_alt
+                                </span>
+                              </i>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <i
                         class="Icon sortIcon material focusable"
@@ -14483,7 +14933,37 @@ exports[`cluster/namespaces - edit namespace from new tab > when navigating to n
                       <div
                         class="content"
                       >
-                        Status
+                        <span
+                          class="header-cell-content"
+                        >
+                          Status
+                        </span>
+                        <div
+                          class="ColumnFilterDropdown"
+                          data-testid="column-filter-status"
+                        >
+                          <div
+                            id="column-filter-namespaces-status"
+                          >
+                            <button
+                              aria-label="Filter by Status"
+                              aria-pressed="false"
+                              class="ColumnFilterDropdown-toggle"
+                              type="button"
+                            >
+                              <i
+                                class="Icon material focusable small"
+                              >
+                                <span
+                                  class="icon"
+                                  data-icon-name="filter_alt"
+                                >
+                                  filter_alt
+                                </span>
+                              </i>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <i
                         class="Icon sortIcon material focusable"

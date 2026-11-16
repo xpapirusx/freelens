@@ -7,6 +7,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import type { Injectable } from "@ogre-tools/injectable";
 import "@testing-library/jest-dom/vitest";
+import { screen } from "@testing-library/react";
 import React from "react";
 import { getDiForUnitTesting } from "../../getDiForUnitTesting";
 import namespaceMetricsInjectable from "../namespaces/metrics.injectable";
@@ -26,7 +27,6 @@ import jobMetricsInjectable from "../workloads-jobs/metrics.injectable";
 import { JobMetricsDetailsComponent } from "../workloads-jobs/metrics-details-component";
 import podContainerMetricsInjectable from "../workloads-pods/container-metrics.injectable";
 import podMetricsInjectable from "../workloads-pods/metrics.injectable";
-import { podMetricTabs } from "../workloads-pods/pod-charts";
 import { PodDetailsContainerMetrics } from "../workloads-pods/pod-details-container-metrics";
 import PodMetricsDetailsComponent from "../workloads-pods/pod-metrics-details-component";
 import replicaSetMetricsInjectable from "../workloads-replicasets/metrics.injectable";
@@ -48,26 +48,53 @@ import type {
   StatefulSet,
 } from "@freelensapp/kube-object";
 
+import type { MetricData } from "../../../common/k8s-api/endpoints/metrics.api";
+import type { IAsyncComputed } from "../../../common/utils/async-computed";
 import type { AtLeastOneMetricTab, ResourceMetricsProps } from "./resource-metrics";
 
-let capturedProps: ResourceMetricsProps<string> | undefined;
+let capturedTimeRangedProps: ResourceMetricsProps<string> | undefined;
+let capturedSectionProps: Record<string, unknown> | undefined;
+let capturedWorkloadProps: Record<string, unknown> | undefined;
 
 vi.mock("./index", () => ({
   TimeRangedResourceMetrics: (props: ResourceMetricsProps<string>) => {
-    capturedProps = props;
+    capturedTimeRangedProps = props;
 
     return <div data-testid="time-ranged-resource-metrics" />;
   },
 }));
 
-type AdapterCase = {
-  name: string;
-  injectable: Injectable<unknown, unknown, any>;
-  renderElement: () => React.ReactElement;
-  expectedObject: unknown;
-  expectedTabs: AtLeastOneMetricTab;
-  expectedParams: unknown;
-};
+vi.mock("../usage-chart/resource-usage-section", () => ({
+  ResourceUsageSection: (props: Record<string, unknown>) => {
+    capturedSectionProps = props;
+
+    return <div data-testid="resource-usage-section" />;
+  },
+}));
+
+vi.mock("../usage-chart/workload-usage-details", () => ({
+  WorkloadUsageDetails: (props: Record<string, unknown>) => {
+    capturedWorkloadProps = props;
+
+    return <div data-testid="workload-usage-details" />;
+  },
+}));
+
+vi.mock("../usage-chart/mini-bar-chart", () => ({
+  MiniBarChart: () => <div data-testid="mini-bar-chart" />,
+}));
+
+const metricData = (values: [string, string][]): MetricData =>
+  ({
+    data: { result: [{ metric: {}, values }] },
+  }) as unknown as MetricData;
+
+const fakeMetrics = <T,>(data: T | undefined): IAsyncComputed<T> =>
+  ({
+    value: { get: () => data as T },
+    pending: { get: () => false },
+    invalidate: vi.fn(),
+  }) as unknown as IAsyncComputed<T>;
 
 const namespace = {
   getId: () => "namespace-id",
@@ -133,159 +160,226 @@ const statefulSet = {
   getNs: () => "stateful-set-ns",
 } as unknown as StatefulSet;
 
+type AdapterCase = {
+  name: string;
+  injectable: Injectable<unknown, unknown, any>;
+  renderElement: () => React.ReactElement;
+  expectedParams: unknown;
+  expectWiring: (metrics: IAsyncComputed<never>) => void;
+};
+
 const adapterCases: AdapterCase[] = [
   {
     name: "namespace details",
     injectable: namespaceMetricsInjectable,
     renderElement: () => <NamespaceMetricsDetailsComponent object={namespace} />,
-    expectedObject: namespace,
-    expectedTabs: podMetricTabs,
     expectedParams: {
       namespace,
+    },
+    expectWiring: (metrics) => {
+      expect(capturedWorkloadProps).toEqual(expect.objectContaining({ metrics }));
     },
   },
   {
     name: "ingress details",
     injectable: ingressMetricsInjectable,
     renderElement: () => <IngressMetricsDetailsComponent object={ingress} />,
-    expectedObject: ingress,
-    expectedTabs: ["Network", "Duration"] as AtLeastOneMetricTab,
     expectedParams: {
       ingress,
+    },
+    expectWiring: (metrics) => {
+      expect(capturedTimeRangedProps).toEqual(
+        expect.objectContaining({
+          object: ingress,
+          tabs: ["Network", "Duration"] as AtLeastOneMetricTab,
+          metrics,
+        }),
+      );
     },
   },
   {
     name: "node details",
     injectable: nodeMetricsInjectable,
     renderElement: () => <NodeMetricsDetailsComponent object={node} />,
-    expectedObject: node,
-    expectedTabs: ["CPU", "Memory", "Disk", "Pods"] as AtLeastOneMetricTab,
     expectedParams: {
       node,
+    },
+    expectWiring: () => {
+      expect(capturedSectionProps).toEqual(
+        expect.objectContaining({
+          cpu: nodeMetricData.cpuUsage,
+          memory: nodeMetricData.workloadMemoryUsage,
+          cpuLimit: 3,
+          memoryLimit: 4,
+          limitTitle: "Allocatable",
+        }),
+      );
     },
   },
   {
     name: "persistent volume claim details",
     injectable: persistentVolumeClaimMetricsInjectable,
     renderElement: () => <PersistentVolumeClaimMetricsDetailsComponent object={persistentVolumeClaim} />,
-    expectedObject: persistentVolumeClaim,
-    expectedTabs: ["Disk"] as AtLeastOneMetricTab,
     expectedParams: {
       persistentVolumeClaim,
+    },
+    expectWiring: (metrics) => {
+      expect(capturedTimeRangedProps).toEqual(
+        expect.objectContaining({
+          object: persistentVolumeClaim,
+          tabs: ["Disk"] as AtLeastOneMetricTab,
+          metrics,
+        }),
+      );
     },
   },
   {
     name: "daemon set details",
     injectable: daemonSetMetricsInjectable,
     renderElement: () => <DaemonSetMetricsDetailsComponent object={daemonSet} />,
-    expectedObject: daemonSet,
-    expectedTabs: podMetricTabs,
     expectedParams: {
       daemonSet,
+    },
+    expectWiring: (metrics) => {
+      expect(capturedWorkloadProps).toEqual(expect.objectContaining({ metrics, templateContainers: [] }));
     },
   },
   {
     name: "deployment details",
     injectable: deploymentMetricsInjectable,
     renderElement: () => <DeploymentMetricsDetailsComponent object={deployment} />,
-    expectedObject: deployment,
-    expectedTabs: podMetricTabs,
     expectedParams: {
       deployment,
+    },
+    expectWiring: (metrics) => {
+      expect(capturedWorkloadProps).toEqual(expect.objectContaining({ metrics, templateContainers: [] }));
     },
   },
   {
     name: "job details",
     injectable: jobMetricsInjectable,
     renderElement: () => <JobMetricsDetailsComponent object={job} />,
-    expectedObject: job,
-    expectedTabs: podMetricTabs,
     expectedParams: {
       job,
+    },
+    expectWiring: (metrics) => {
+      expect(capturedWorkloadProps).toEqual(expect.objectContaining({ metrics, templateContainers: [] }));
     },
   },
   {
     name: "pod details",
     injectable: podMetricsInjectable,
     renderElement: () => <PodMetricsDetailsComponent object={pod} />,
-    expectedObject: pod,
-    expectedTabs: podMetricTabs,
     expectedParams: {
       pod,
+    },
+    expectWiring: () => {
+      expect(capturedSectionProps).toEqual(
+        expect.objectContaining({
+          cpu: podMetricData.cpuUsage,
+          memory: podMetricData.memoryUsage,
+          cpuRequest: 1,
+          cpuLimit: 2,
+          memoryRequest: 1,
+          memoryLimit: 2,
+        }),
+      );
     },
   },
   {
     name: "pod container details",
     injectable: podContainerMetricsInjectable,
     renderElement: () => <PodDetailsContainerMetrics pod={pod} container={container} />,
-    expectedObject: pod,
-    expectedTabs: ["CPU", "Memory", "Filesystem"] as AtLeastOneMetricTab,
     expectedParams: {
       pod,
       container,
+    },
+    expectWiring: () => {
+      expect(screen.getAllByTestId("mini-bar-chart")).toHaveLength(2);
     },
   },
   {
     name: "replica set details",
     injectable: replicaSetMetricsInjectable,
     renderElement: () => <ReplicaSetMetricsDetailsComponent object={replicaSet} />,
-    expectedObject: replicaSet,
-    expectedTabs: podMetricTabs,
     expectedParams: {
       replicaSet,
+    },
+    expectWiring: (metrics) => {
+      expect(capturedWorkloadProps).toEqual(expect.objectContaining({ metrics, templateContainers: [] }));
     },
   },
   {
     name: "stateful set details",
     injectable: statefulSetMetricsInjectable,
     renderElement: () => <StatefulSetMetricsDetailsComponent object={statefulSet} />,
-    expectedObject: statefulSet,
-    expectedTabs: podMetricTabs,
     expectedParams: {
       statefulSet,
+    },
+    expectWiring: (metrics) => {
+      expect(capturedWorkloadProps).toEqual(expect.objectContaining({ metrics, templateContainers: [] }));
     },
   },
 ];
 
+const podMetricData = {
+  cpuUsage: metricData([["0", "5"]]),
+  cpuRequests: metricData([["0", "1"]]),
+  cpuLimits: metricData([["0", "2"]]),
+  memoryUsage: metricData([["0", "6"]]),
+  memoryRequests: metricData([["0", "1"]]),
+  memoryLimits: metricData([["0", "2"]]),
+};
+
+const nodeMetricData = {
+  cpuUsage: metricData([["0", "5"]]),
+  cpuRequests: metricData([["0", "1"]]),
+  cpuAllocatableCapacity: metricData([["0", "3"]]),
+  memoryUsage: metricData([["0", "6"]]),
+  workloadMemoryUsage: metricData([["0", "7"]]),
+  memoryRequests: metricData([["0", "1"]]),
+  memoryAllocatableCapacity: metricData([["0", "4"]]),
+};
+
 describe("metrics details adapters", () => {
   beforeEach(() => {
-    capturedProps = undefined;
+    capturedTimeRangedProps = undefined;
+    capturedSectionProps = undefined;
+    capturedWorkloadProps = undefined;
   });
 
-  const runAdapterCase = ({
-    expectedObject,
-    expectedParams,
-    expectedTabs,
-    injectable,
-    name,
-    renderElement,
-  }: AdapterCase) => {
-    it(`wires ${name} through TimeRangedResourceMetrics`, () => {
+  const runAdapterCase = ({ expectedParams, expectWiring, injectable, name, renderElement }: AdapterCase) => {
+    it(`wires ${name} through the usage details`, async () => {
       const di = getDiForUnitTesting();
       const render = renderFor(di);
-      const metrics = {
-        value: { get: vi.fn() },
-        pending: { get: vi.fn() },
-        invalidate: vi.fn(),
-      };
-      let capturedParams: unknown;
+      let capturedInjectableParams: unknown;
+      const data =
+        name === "pod details"
+          ? podMetricData
+          : name === "node details"
+            ? nodeMetricData
+            : name === "pod container details"
+              ? {
+                  cpuUsage: metricData([["0", "5"]]),
+                  cpuRequests: metricData([["0", "1"]]),
+                  cpuLimits: metricData([["0", "2"]]),
+                  memoryUsage: metricData([["0", "6"]]),
+                  memoryRequests: metricData([["0", "1"]]),
+                  memoryLimits: metricData([["0", "2"]]),
+                }
+              : undefined;
+      const metrics = fakeMetrics(data);
 
       di.override(injectable, (_di, params) => {
-        capturedParams = params;
+        capturedInjectableParams = params;
 
         return metrics as never;
       });
 
       render(renderElement());
 
-      expect(capturedParams).toEqual(expectedParams);
-      expect(capturedProps).toEqual(
-        expect.objectContaining({
-          object: expectedObject,
-          tabs: expectedTabs,
-          metrics,
-        }),
-      );
+      expect(capturedInjectableParams).toEqual(expectedParams);
+      expectWiring(metrics as never);
     });
   };
 

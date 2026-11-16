@@ -8,16 +8,13 @@ import { bytesToUnits } from "@freelensapp/utilities";
 import { getInjectable } from "@ogre-tools/injectable";
 import { observer } from "mobx-react";
 import podStoreInjectable from "../../workloads-pods/store.injectable";
+import { UsageCell } from "../../usage-cell/usage-cell";
 import { COLUMN_PRIORITY } from "./column-priority";
+import { podResourceTotals } from "../pod-resources";
 
 import type { Pod } from "@freelensapp/kube-object";
 
 import type { PodStore } from "../store";
-
-interface PodMemoryCellProps {
-  pod: Pod;
-  podStore: PodStore;
-}
 
 function bytesToUnitsAligned(bytes: number): string {
   if (bytes < 1024) {
@@ -26,10 +23,43 @@ function bytesToUnitsAligned(bytes: number): string {
   return bytesToUnits(bytes, { precision: 1 }).replace(/B$/, "");
 }
 
+interface PodMemoryCellProps {
+  pod: Pod;
+  podStore: PodStore;
+}
+
 const PodMemoryCell = observer(({ pod, podStore }: PodMemoryCellProps) => {
   const { memory } = podStore.getPodKubeMetrics(pod);
+  const { requests, limits } = podResourceTotals(pod, "memory");
+  const hasMetrics = !isNaN(memory);
 
-  return <span>{bytesToUnitsAligned(memory)}</span>;
+  const tooltipLines: string[] = [];
+
+  if (hasMetrics) {
+    tooltipLines.push(`Usage: ${bytesToUnits(memory, { precision: 3 })}`);
+  }
+
+  if (requests > 0) {
+    tooltipLines.push(`Requests: ${bytesToUnitsAligned(requests)}`);
+  }
+
+  if (limits > 0) {
+    tooltipLines.push(`Limit: ${bytesToUnitsAligned(limits)}`);
+  }
+
+  if (hasMetrics && limits > 0) {
+    tooltipLines.push(`${((memory * 100) / limits).toFixed(1)}% of limit`);
+  }
+
+  return (
+    <UsageCell
+      usage={memory}
+      capacity={limits}
+      requests={requests}
+      format={bytesToUnitsAligned}
+      tooltipLines={tooltipLines}
+    />
+  );
 });
 
 const columnId = "memoryUsage";

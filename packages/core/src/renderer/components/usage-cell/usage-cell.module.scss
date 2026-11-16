@@ -1,0 +1,23 @@
+/**
+ * Copyright (c) Freelens Authors. All rights reserved.
+ * Licensed under MIT License. See LICENSE in root directory for more information.
+ */
+
+.UsageCell {
+  display: flex;
+  align-items: center;
+  gap: var(--flex-gap, 8px);
+  min-width: 0;
+
+  .bar {
+    flex: 1 1 auto;
+    min-width: 24px;
+  }
+
+  .usageText {
+    flex: none;
+    font-size: calc(var(--font-size, 12px) * 1);
+    color: var(--text-secondary-color, inherit);
+    white-space: nowrap;
+  }
+}
