@@ -179,6 +179,11 @@ class NonInjectedEvents extends React.Component<Dependencies & EventsProps> {
           onSort: (params) => Object.assign(this.sorting, params),
         }}
         sortingCallbacks={this.sortingCallbacks}
+        columnFilters={{
+          [columnId.type]: (event) => event.type,
+          [columnId.source]: (event) => event.getSource(),
+          [columnId.namespace]: (event) => event.getNs(),
+        }}
         searchFilters={[
           (event) => event.getSearchFields(),
           (event) => event.message,

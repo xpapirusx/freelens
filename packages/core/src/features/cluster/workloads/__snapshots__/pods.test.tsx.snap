@@ -869,7 +869,37 @@ exports[`workloads / pods > when navigating to workloads / pods view > given a n
                       <div
                         class="content"
                       >
-                        Status
+                        <span
+                          class="header-cell-content"
+                        >
+                          Status
+                        </span>
+                        <div
+                          class="ColumnFilterDropdown"
+                          data-testid="column-filter-status"
+                        >
+                          <div
+                            id="column-filter-workloads_pods-status"
+                          >
+                            <button
+                              aria-label="Filter by Status"
+                              aria-pressed="false"
+                              class="ColumnFilterDropdown-toggle"
+                              type="button"
+                            >
+                              <i
+                                class="Icon material focusable small"
+                              >
+                                <span
+                                  class="icon"
+                                  data-icon-name="filter_alt"
+                                >
+                                  filter_alt
+                                </span>
+                              </i>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <i
                         class="Icon sortIcon material focusable"
@@ -2103,7 +2133,37 @@ exports[`workloads / pods > when navigating to workloads / pods view > given no 
                       <div
                         class="content"
                       >
-                        Status
+                        <span
+                          class="header-cell-content"
+                        >
+                          Status
+                        </span>
+                        <div
+                          class="ColumnFilterDropdown"
+                          data-testid="column-filter-status"
+                        >
+                          <div
+                            id="column-filter-workloads_pods-status"
+                          >
+                            <button
+                              aria-label="Filter by Status"
+                              aria-pressed="false"
+                              class="ColumnFilterDropdown-toggle"
+                              type="button"
+                            >
+                              <i
+                                class="Icon material focusable small"
+                              >
+                                <span
+                                  class="icon"
+                                  data-icon-name="filter_alt"
+                                >
+                                  filter_alt
+                                </span>
+                              </i>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <i
                         class="Icon sortIcon material focusable"
@@ -3179,7 +3239,37 @@ exports[`workloads / pods > when navigating to workloads / pods view > given pod
                       <div
                         class="content"
                       >
-                        Status
+                        <span
+                          class="header-cell-content"
+                        >
+                          Status
+                        </span>
+                        <div
+                          class="ColumnFilterDropdown"
+                          data-testid="column-filter-status"
+                        >
+                          <div
+                            id="column-filter-workloads_pods-status"
+                          >
+                            <button
+                              aria-label="Filter by Status"
+                              aria-pressed="false"
+                              class="ColumnFilterDropdown-toggle"
+                              type="button"
+                            >
+                              <i
+                                class="Icon material focusable small"
+                              >
+                                <span
+                                  class="icon"
+                                  data-icon-name="filter_alt"
+                                >
+                                  filter_alt
+                                </span>
+                              </i>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                       <i
                         class="Icon sortIcon material focusable"

@@ -20,6 +20,7 @@ export const podsQosColumnInjectable = getInjectable({
     content: (pod) => pod.getQosClass(),
     header: { title: "QoS", className: "qos", sortBy: columnId, id: columnId },
     sortingCallBack: (pod) => pod.getQosClass(),
+    filterValues: (pod) => pod.getQosClass(),
   }),
   injectionToken: podListLayoutColumnInjectionToken,
 });

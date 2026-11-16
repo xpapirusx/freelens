@@ -74,6 +74,81 @@
   }
 }
 
+.ColumnFiltersBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px;
+  border-bottom: 1px solid var(--borderFaintColor);
+  background: var(--contentColor);
+
+  .ColumnFiltersBar-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 6px 2px 8px;
+    border-radius: 6px;
+    background: color-mix(in srgb, var(--primary) 14%, transparent);
+    color: var(--primary);
+    font-size: 11px;
+
+    .chip-label {
+      color: var(--textColorSecondary);
+    }
+
+    .chip-mode {
+      opacity: 0.7;
+    }
+
+    .chip-values {
+      max-width: 220px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .Icon {
+      cursor: pointer;
+      opacity: 0.7;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .ColumnFiltersBar-clear {
+    margin-left: auto;
+    background: none;
+    color: var(--textColorTertiary);
+    font-size: 11px;
+
+    &:hover {
+      color: var(--textColorAccent);
+    }
+  }
+}
+
+.TableHead .TableCell .content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.TableHead .TableCell .header-cell-content {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.TableHead .TableCell .ColumnFilterDropdown {
+  margin-left: auto;
+  margin-right: 14px;
+}
+
 .ItemListLayoutVisibilityMenu {
   min-width: 240px;
 

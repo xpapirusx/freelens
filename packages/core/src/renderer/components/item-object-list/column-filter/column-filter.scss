@@ -1,0 +1,217 @@
+/**
+ * Copyright (c) Freelens Authors. All rights reserved.
+ * Licensed under MIT License. See LICENSE in root directory for more information.
+ */
+
+@use "../../vars" as *;
+
+.ColumnFilterDropdown {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: $padding * 0.5;
+
+  &-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 1px 3px;
+    border-radius: 4px;
+    background: none;
+    color: var(--textColorTertiary);
+    opacity: 0.45;
+    transition:
+      background-color 120ms ease,
+      color 120ms ease,
+      opacity 120ms ease;
+
+    &:hover {
+      color: var(--textColorAccent);
+      opacity: 1;
+    }
+
+    .Icon {
+      width: 13px;
+      height: 13px;
+      font-size: 13px;
+    }
+
+    .count {
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 1;
+    }
+  }
+
+  &.active &-toggle {
+    background: color-mix(in srgb, var(--primary) 16%, transparent);
+    color: var(--primary);
+    opacity: 1;
+
+    &:hover {
+      background: color-mix(in srgb, var(--primary) 24%, transparent);
+    }
+  }
+
+  .TableHead:hover &-toggle,
+  .TableCell:hover &-toggle {
+    opacity: 1;
+  }
+}
+
+.ColumnFilterMenu {
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+  max-width: 300px;
+  list-style: none;
+
+  &-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: $padding;
+    padding: 4px 6px 6px;
+    border-bottom: 1px solid var(--borderFaintColor);
+  }
+
+  &-title {
+    color: var(--textColorTertiary);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &-clear {
+    background: none;
+    color: var(--primary);
+    font-size: 11px;
+
+    &:hover {
+      color: var(--textColorAccent);
+    }
+  }
+
+  &-modes {
+    display: flex;
+    gap: 2px;
+    padding: 6px 0 4px;
+
+    > button {
+      flex: 1;
+      padding: 4px 6px;
+      border-radius: 5px;
+      background: none;
+      color: var(--textColorSecondary);
+      font-size: 11px;
+
+      &:hover {
+        background: var(--inputControlBackground);
+        color: var(--textColorAccent);
+      }
+
+      &.pressed {
+        background: color-mix(in srgb, var(--primary) 16%, transparent);
+        color: var(--primary);
+      }
+    }
+  }
+
+  &-search {
+    padding: 2px 0 4px;
+
+    input {
+      width: 100%;
+      padding: 5px 8px;
+      border-radius: 6px;
+      background: var(--inputControlBackground);
+      box-shadow: 0 0 0 1px var(--borderColor);
+      color: var(--textColorPrimary);
+      font: inherit;
+      font-size: 12px;
+
+      &::placeholder {
+        color: var(--textColorDimmed);
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 1px var(--primary);
+      }
+    }
+  }
+
+  &-options {
+    display: flex;
+    flex-direction: column;
+    max-height: 260px;
+    overflow-y: auto;
+    padding: 2px 0;
+  }
+
+  &-empty {
+    padding: 8px 6px;
+    color: var(--textColorDimmed);
+    font-size: 12px;
+  }
+}
+
+.ColumnFilterOption {
+  display: flex;
+  align-items: center;
+  gap: $padding * 0.75;
+  width: 100%;
+  padding: 4px 6px;
+  border-radius: 5px;
+  background: none;
+  color: var(--textColorSecondary);
+  font-size: 12px;
+  text-align: left;
+
+  &:hover {
+    background: var(--inputControlBackground);
+    color: var(--textColorAccent);
+  }
+
+  &.selected {
+    color: var(--textColorAccent);
+  }
+
+  &-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--borderColor);
+    border-radius: 4px;
+    color: var(--textColorOnPrimary);
+    flex-shrink: 0;
+
+    .Icon {
+      width: 10px;
+      height: 10px;
+      font-size: 10px;
+    }
+  }
+
+  &.selected &-check {
+    background: var(--primary);
+    border-color: var(--primary);
+  }
+
+  &-value {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &-count {
+    color: var(--textColorDimmed);
+    font-size: 11px;
+    flex-shrink: 0;
+  }
+}

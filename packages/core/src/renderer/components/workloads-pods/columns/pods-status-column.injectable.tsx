@@ -24,6 +24,7 @@ export const podsStatusColumnInjectable = getInjectable({
     }),
     header: { title: "Status", className: "status", sortBy: columnId, id: columnId },
     sortingCallBack: (pod) => pod.getStatusMessage(),
+    filterValues: (pod) => pod.getStatusMessage(),
     searchFilter: (pod) => pod.getStatusMessage(),
   }),
   injectionToken: podListLayoutColumnInjectionToken,

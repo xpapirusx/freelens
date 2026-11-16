@@ -24,8 +24,11 @@ import { MenuItem } from "../menu";
 import { MenuActions } from "../menu/menu-actions";
 import { NoItems } from "../no-items";
 import { Table, TableCell, TableHead, TableRow } from "../table";
+import { ColumnFilterDropdown } from "./column-filter/column-filter-dropdown";
 import columnResizeStorageInjectable from "./column-resize-storage/storage.injectable";
 import pageFiltersStoreInjectable from "./page-filters/store.injectable";
+import { hasActiveColumnFilters } from "./table-column-filters/apply-column-filters";
+import tableColumnFiltersStorageInjectable from "./table-column-filters/storage.injectable";
 import { getColumnIds, moveColumnInOrder } from "./table-column-order/order";
 import tableColumnOrderStorageInjectable from "./table-column-order/storage.injectable";
 
@@ -45,6 +48,8 @@ import type { TableProps, TableRowProps, TableSortCallbacks } from "../table";
 import type { ColumnResizeStorageState } from "./column-resize-storage/storage.injectable";
 import type { ItemListStore } from "./list-layout";
 import type { Filter, PageFiltersStore } from "./page-filters/store";
+import type { ColumnFilterSpec } from "./table-column-filters/apply-column-filters";
+import type { TableColumnFilter, TableColumnFiltersStorageState } from "./table-column-filters/storage.injectable";
 import type { TableColumnOrderStorageState } from "./table-column-order/storage.injectable";
 
 interface ResizeState {
@@ -60,6 +65,15 @@ export interface ItemListLayoutContentProps<Item extends ItemObject, PreLoadStor
   tableId?: string;
   className: IClassName;
   getItems: () => Item[];
+  /**
+   * The items before this table's column filters narrowed them, which is what a column filter
+   * offers its values from.
+   */
+  getColumnFilterItems: () => Item[];
+  /**
+   * The getters of the columns that offer a filter by the values they hold, by column identifier.
+   */
+  columnFilters?: ColumnFilterSpec<Item>;
   store: ItemListStore<Item, PreLoadStores>;
   getIsReady: () => boolean; // show loading indicator while not ready
   isSelectable?: boolean; // show checkbox in rows for selecting items
@@ -100,6 +114,7 @@ interface Dependencies {
   isTableColumnHidden: IsTableColumnHidden;
   columnResizeStorage: StorageLayer<ColumnResizeStorageState>;
   tableColumnOrderStorage: StorageLayer<TableColumnOrderStorageState>;
+  tableColumnFiltersStorage: StorageLayer<TableColumnFiltersStorageState>;
 }
 
 @observer
@@ -459,6 +474,18 @@ export class NonInjectedItemListLayoutContent<
     });
   }
 
+  private clearColumnFilters() {
+    const { tableId, tableColumnFiltersStorage } = this.props;
+
+    if (!tableId) {
+      return;
+    }
+
+    tableColumnFiltersStorage.merge((draft) => {
+      delete draft[tableId];
+    });
+  }
+
   renderNoItems() {
     if (this.failedToLoad) {
       return <NoItems>{this.props.failedToLoadMessage}</NoItems>;
@@ -468,12 +495,21 @@ export class NonInjectedItemListLayoutContent<
       return <Spinner center data-testid={this.props.spinnerTestId} />;
     }
 
-    if (this.props.getFilters().length > 0) {
+    const { tableId, tableColumnFiltersStorage } = this.props;
+    const hasColumnFilters = Boolean(tableId && hasActiveColumnFilters(tableColumnFiltersStorage.get()[tableId]));
+
+    if (this.props.getFilters().length > 0 || hasColumnFilters) {
       return (
         <NoItems>
           No items found.
           <p>
-            <a onClick={() => this.props.pageFiltersStore.reset()} className="contrast">
+            <a
+              onClick={() => {
+                this.props.pageFiltersStore.reset();
+                this.clearColumnFilters();
+              }}
+              className="contrast"
+            >
               Reset filters?
             </a>
           </p>
@@ -514,29 +550,130 @@ export class NonInjectedItemListLayoutContent<
             )}
           </Observer>
         )}
-        {renderTableHeader.filter(isDefined).map(
-          (cellProps, index) =>
-            this.showColumn(cellProps) && (
-              <TableCell
-                key={cellProps.id ?? index}
-                onResizeStart={cellProps.id ? (event) => this.handleResizeStart(cellProps.id!, event) : undefined}
-                onResizeReset={cellProps.id ? () => this.handleResizeReset(cellProps.id!) : undefined}
-                {...cellProps}
-                resizable={cellProps.id !== "logs" && !!cellProps.id}
-                style={{
-                  ...cellProps.style,
-                  flex:
-                    cellProps.id && this.columnFlexGrow.has(cellProps.id)
-                      ? `${this.columnFlexGrow.get(cellProps.id)} 0`
-                      : cellProps.style?.flex,
-                }}
-              />
-            ),
-        )}
+        {renderTableHeader.filter(isDefined).map((cellProps, index) => {
+          if (!this.showColumn(cellProps)) {
+            return null;
+          }
+
+          const columnId = cellProps.id;
+          const getFilterValues = columnId ? this.props.columnFilters?.[columnId] : undefined;
+          const tableFilters = tableId ? this.props.tableColumnFiltersStorage.get()[tableId] : undefined;
+
+          const updateFilter = (filter: TableColumnFilter | undefined) => {
+            if (!tableId || !columnId) {
+              return;
+            }
+
+            this.props.tableColumnFiltersStorage.merge((draft) => {
+              const filtersOfTable = (draft[tableId] ??= {});
+
+              if (filter) {
+                filtersOfTable[columnId] = filter;
+              } else {
+                delete filtersOfTable[columnId];
+              }
+
+              if (Object.keys(filtersOfTable).length === 0) {
+                delete draft[tableId];
+              }
+            });
+          };
+
+          const filterable = Boolean(getFilterValues && columnId && tableId);
+
+          return (
+            <TableCell
+              key={columnId ?? index}
+              onResizeStart={columnId ? (event) => this.handleResizeStart(columnId, event) : undefined}
+              onResizeReset={columnId ? () => this.handleResizeReset(columnId) : undefined}
+              {...cellProps}
+              title={
+                filterable && columnId && tableId ? (
+                  <>
+                    <span className="header-cell-content">{cellProps.title ?? cellProps.children}</span>
+                    <ColumnFilterDropdown
+                      tableId={tableId}
+                      columnId={columnId}
+                      label={cellProps.title ?? columnId}
+                      items={this.props.getColumnFilterItems()}
+                      getValues={getFilterValues!}
+                      filter={tableFilters?.[columnId]}
+                      onChange={updateFilter}
+                    />
+                  </>
+                ) : (
+                  cellProps.title
+                )
+              }
+              resizable={columnId !== "logs" && !!columnId}
+              style={{
+                ...cellProps.style,
+                flex:
+                  columnId && this.columnFlexGrow.has(columnId)
+                    ? `${this.columnFlexGrow.get(columnId)} 0`
+                    : cellProps.style?.flex,
+              }}
+            />
+          );
+        })}
         <TableCell className="menu">
           {isConfigurable && tableId ? this.renderColumnVisibilityMenu(tableId) : undefined}
         </TableCell>
       </TableHead>
+    );
+  }
+
+  renderColumnFilters() {
+    const { tableId, renderTableHeader = [], columnFilters, tableColumnFiltersStorage } = this.props;
+
+    if (!tableId || !columnFilters) {
+      return null;
+    }
+
+    const filters = tableColumnFiltersStorage.get()[tableId];
+
+    if (!hasActiveColumnFilters(filters)) {
+      return null;
+    }
+
+    const labels = new Map(
+      renderTableHeader
+        .filter(isDefined)
+        .filter((cellProps) => !!cellProps.id)
+        .map((cellProps) => [cellProps.id!, cellProps.title ?? cellProps.children]),
+    );
+
+    const removeColumnFilter = (columnId: string) =>
+      tableColumnFiltersStorage.merge((draft) => {
+        const filtersOfTable = draft[tableId];
+
+        if (!filtersOfTable) {
+          return;
+        }
+
+        delete filtersOfTable[columnId];
+
+        if (Object.keys(filtersOfTable).length === 0) {
+          delete draft[tableId];
+        }
+      });
+
+    return (
+      <div className="ColumnFiltersBar">
+        {Object.entries(filters ?? {}).map(([columnId, filter]) =>
+          filter.values.length === 0 ? null : (
+            <span className="ColumnFiltersBar-chip" key={columnId}>
+              <span className="chip-label">{labels.get(columnId) ?? columnId}</span>
+              <span className="chip-mode">{filter.excluded ? "≠" : "="}</span>
+              <span className="chip-values">{filter.values.join(", ")}</span>
+              <Icon material="close" smallest onClick={() => removeColumnFilter(columnId)} />
+            </span>
+          ),
+        )}
+        <button type="button" className="ColumnFiltersBar-clear" onClick={() => this.clearColumnFilters()}>
+          Clear filters
+        </button>
+      </div>
     );
   }
 
@@ -568,6 +705,7 @@ export class NonInjectedItemListLayoutContent<
             style={{ right: `calc(100% - ${this.resizeGuideX}px)` }}
           />
         )}
+        {this.renderColumnFilters()}
         <Table
           tableId={tableId}
           virtual={virtual}
@@ -709,6 +847,7 @@ export const ItemListLayoutContent = withInjectables<Dependencies, ItemListLayou
       isTableColumnHidden: di.inject(isTableColumnHiddenInjectable),
       columnResizeStorage: di.inject(columnResizeStorageInjectable),
       tableColumnOrderStorage: di.inject(tableColumnOrderStorageInjectable),
+      tableColumnFiltersStorage: di.inject(tableColumnFiltersStorageInjectable),
     }),
   },
 ) as <Item extends ItemObject, PreLoadStores extends boolean>(

@@ -38,6 +38,7 @@ import type { SubscribableStore, SubscribeStores } from "../../kube-watch-api/ku
 import type { PageParam } from "../../navigation/page-param";
 import type { StorageLayer } from "../../utils/storage-helper";
 import type { ItemListLayoutProps, ItemListStore } from "../item-object-list/list-layout";
+import type { ColumnFilterSpec } from "../item-object-list/table-column-filters/apply-column-filters";
 import type { TableColumnOrderStorageState } from "../item-object-list/table-column-order/storage.injectable";
 import type { ToggleKubeDetailsPane } from "../kube-detail-params/toggle-details.injectable";
 
@@ -64,6 +65,11 @@ export interface KubeObjectListLayoutProps<
    */
   resourceName?: string;
   columns?: SpecificKubeListLayoutColumn<K>[];
+  /**
+   * The getters of the columns that offer a filter by the values they hold, by column identifier, in
+   * addition to those of the injected columns.
+   */
+  columnFilters?: ColumnFilterSpec<K>;
 }
 
 interface Dependencies {
@@ -188,12 +194,19 @@ class NonInjectedKubeObjectListLayout<
       renderTableHeader,
       columns,
       generalColumns,
+      columnFilters: columnFiltersFromViews,
       sortingCallbacks = {},
       customizeTableRowProps,
       ...layoutProps
     } = this.props;
     const resourceName = this.props.resourceName || ResourceNames[ResourceKindMap[store.api.kind]] || store.api.kind;
     const targetColumns = [...(columns ?? []), ...generalColumns.filter(matchesApiFor(store.api))];
+    const columnFilters = {
+      ...columnFiltersFromViews,
+      ...Object.fromEntries(
+        targetColumns.filter((column) => column.filterValues).map((column) => [column.id, column.filterValues!]),
+      ),
+    };
 
     void dependentStores;
 
@@ -295,6 +308,7 @@ class NonInjectedKubeObjectListLayout<
         )}
         onDetails={onDetails ?? ((item) => toggleDetails(item.selfLink))}
         sortingCallbacks={sortingCallbacks}
+        columnFilters={columnFilters}
         renderTableHeader={headers}
         renderTableContents={(item) => {
           const contentEntries = sortBy(

@@ -27,6 +27,7 @@ export const podsNodeColumnInjectable = getInjectable({
       ),
       header: { title: "Node", className: "node", sortBy: columnId, id: columnId },
       sortingCallBack: (pod) => pod.getNodeName(),
+      filterValues: (pod) => pod.getNodeName(),
     };
   },
   injectionToken: podListLayoutColumnInjectionToken,

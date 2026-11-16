@@ -25,6 +25,8 @@ import { FilterType } from "./page-filters/store";
 import pageFiltersStoreInjectable from "./page-filters/store.injectable";
 import { createSearchMatcher } from "./search-matcher";
 import itemListLayoutStorageInjectable from "./storage.injectable";
+import { applyColumnFilters } from "./table-column-filters/apply-column-filters";
+import tableColumnFiltersStorageInjectable from "./table-column-filters/storage.injectable";
 
 import type { ItemObject, TableCellProps } from "@freelensapp/list-layout";
 import type { IClassName, SingleOrMany, StrictReactNode } from "@freelensapp/utilities";
@@ -38,6 +40,8 @@ import type { ConfirmDialogParams } from "../confirm-dialog";
 import type { SearchInputUrlProps } from "../input";
 import type { TableProps, TableRowProps, TableSortCallbacks } from "../table";
 import type { PageFiltersStore } from "./page-filters/store";
+import type { ColumnFilterSpec } from "./table-column-filters/apply-column-filters";
+import type { TableColumnFiltersStorageState } from "./table-column-filters/storage.injectable";
 
 export type ListLayoutSearchFilter<I extends ItemObject> = (
   item: I,
@@ -112,6 +116,10 @@ export type ItemListLayoutProps<Item extends ItemObject, PreLoadStores extends b
   defaultHiddenTableColumns?: string[];
   copyClassNameFromHeadCells?: boolean;
   sortingCallbacks?: TableSortCallbacks<Item>;
+  /**
+   * The getters of the columns that offer a filter by the values they hold, by column identifier.
+   */
+  columnFilters?: ColumnFilterSpec<Item>;
   tableProps?: Partial<TableProps<Item>>; // low-level table configuration
   renderTableHeader?: (TableCellProps | undefined | null)[];
   renderTableContents: (item: Item) => (StrictReactNode | TableCellProps)[];
@@ -174,6 +182,7 @@ interface Dependencies {
   itemListLayoutStorage: StorageLayer<ItemListLayoutStorage>;
   pageFiltersStore: PageFiltersStore;
   userPreferencesState: UserPreferencesState;
+  tableColumnFiltersStorage: StorageLayer<TableColumnFiltersStorageState>;
 }
 
 @observer
@@ -280,7 +289,7 @@ export class NonInjectedItemListLayout<I extends ItemObject, PreLoadStores exten
   // Computed: the content reads the items once for every row it renders, each
   // row in an observer of its own, so the filters run once for every change of
   // the items or of the filters instead of once for every row.
-  @computed get items() {
+  @computed get itemsBeforeColumnFilters() {
     const filterGroups = groupBy(this.filters, ({ type }) => type);
     const filterItems: ListLayoutItemsFilter<I>[] = [];
 
@@ -295,6 +304,17 @@ export class NonInjectedItemListLayout<I extends ItemObject, PreLoadStores exten
     const items = this.observableProps.getItems();
 
     return applyFilters(filterItems.concat(this.observableProps.filterItems ?? []), items);
+  }
+
+  /**
+   * The rows the table shows: those the search and the page filters keep, narrowed by the filters
+   * of the columns whose values the user chose.
+   */
+  @computed get items(): I[] {
+    const { tableId, columnFilters, tableColumnFiltersStorage } = this.observableProps;
+    const filters = tableId ? tableColumnFiltersStorage.get()[tableId] : undefined;
+
+    return applyColumnFilters(this.itemsBeforeColumnFilters, filters, columnFilters);
   }
 
   render() {
@@ -326,8 +346,10 @@ export class NonInjectedItemListLayout<I extends ItemObject, PreLoadStores exten
 
         <ItemListLayoutContent<I, PreLoadStores>
           getItems={() => this.items}
+          getColumnFilterItems={() => this.itemsBeforeColumnFilters}
           getFilters={() => this.filters}
           tableId={this.props.tableId}
+          columnFilters={this.props.columnFilters}
           className={this.props.className}
           store={this.props.store}
           getIsReady={() => this.isReady}
@@ -365,6 +387,7 @@ export const ItemListLayout = withInjectables<Dependencies, ItemListLayoutProps<
       itemListLayoutStorage: di.inject(itemListLayoutStorageInjectable),
       pageFiltersStore: di.inject(pageFiltersStoreInjectable),
       userPreferencesState: di.inject(userPreferencesStateInjectable),
+      tableColumnFiltersStorage: di.inject(tableColumnFiltersStorageInjectable),
     }),
   },
 ) as <I extends ItemObject, PreLoadStores extends boolean = true>(

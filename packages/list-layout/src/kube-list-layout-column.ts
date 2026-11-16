@@ -14,6 +14,11 @@ export interface BaseKubeObjectListLayoutColumn<K extends KubeObject> {
   priority: number;
   sortingCallBack?: TableSortCallback<K>;
   searchFilter?: SearchFilter<K>;
+  /**
+   * The values the column offers to filter the list by, one or more per item. Omit to make the
+   * column unfilterable.
+   */
+  filterValues?: (item: K) => string | string[] | undefined;
   header: TableCellProps | undefined | null;
   content: (item: K) => StrictReactNode | TableCellProps;
 }
